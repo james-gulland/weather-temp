@@ -18,7 +18,7 @@ class WeatherData(models.Model):
         ('december', 'December'),
     ]
 
-    destination = models.ForeignKey('destinations.Destination', on_delete=models.CASCADE)
+    destination = models.ForeignKey('destinations.Destination', on_delete=models.CASCADE, related_name='weatherdata')
     month = models.CharField(choices=MONTH_CHOICES)
     average_temperature = models.FloatField()
     highest_temperature = models.FloatField()
