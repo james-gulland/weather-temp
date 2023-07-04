@@ -10,5 +10,113 @@
     "longitude": 2.16,
     "description": "Vibrant city with Gaudi\\'s architecture and Mediterranean beaches."
   }
+},
+{
+  "model": "destinations.destination",
+  "pk": 2,
+  "fields": {
+    "name": "Val d\\'Isère",
+    "country": "France",
+    "continent": "Europe",
+    "latitude": 45.45,
+    "longitude": 6.98,
+    "description": "Ski resort in the French Alps with picturesque mountain views."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 3,
+  "fields": {
+    "name": "London",
+    "country": "England",
+    "continent": "Europe",
+    "latitude": 51.51,
+    "longitude": -0.13,
+    "description": "Capital city of England with iconic landmarks and rich history."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 4,
+  "fields": {
+    "name": "Rome",
+    "country": "Italy",
+    "continent": "Europe",
+    "latitude": 41.89,
+    "longitude": 12.51,
+    "description": "Eternal city with ancient ruins and stunning Renaissance art."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 5,
+  "fields": {
+    "name": "Munich",
+    "country": "Germany",
+    "continent": "Europe",
+    "latitude": 48.14,
+    "longitude": 11.58,
+    "description": "German city known for beer gardens and rich cultural heritage."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 6,
+  "fields": {
+    "name": "Amsterdam",
+    "country": "Netherlands",
+    "continent": "Europe",
+    "latitude": 52.37,
+    "longitude": 4.89,
+    "description": "Picturesque city with canals, cycling culture and art museums."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 7,
+  "fields": {
+    "name": "Stockholm",
+    "country": "Sweden",
+    "continent": "Europe",
+    "latitude": 59.33,
+    "longitude": 18.07,
+    "description": "Scandinavian city with charming Old Town and modern design."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 8,
+  "fields": {
+    "name": "Copenhagen",
+    "country": "Denmark",
+    "continent": "Europe",
+    "latitude": 55.68,
+    "longitude": 12.57,
+    "description": "Bicycle-friendly city with colorful waterfront and cozy cafes."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 9,
+  "fields": {
+    "name": "Paris",
+    "country": "France",
+    "continent": "Europe",
+    "latitude": 48.85,
+    "longitude": 2.35,
+    "description": "City of lights with iconic landmarks, art museums, and cuisine."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 10,
+  "fields": {
+    "name": "Madrid",
+    "country": "Spain",
+    "continent": "Europe",
+    "latitude": 55.68,
+    "longitude": 12.57,
+    "description": "Capital city of Spain with lively nightlife and world-class art."
+  }
 }
 ]
