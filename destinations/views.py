@@ -3,6 +3,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 # from rest_framework import status
 from .serializers.common import DestinationSerializer
+from weatherdata.serializers.common import WeatherDataSerializer
 from .serializers.populated import PopulatedDestinationSerializer
 from .models import Destination
 
@@ -27,4 +28,5 @@ class DestinationDetailView(APIView):
       destination = Destination.objects.get(pk=pk)
       # serialized_destination = DestinationSerializer(destination)
       serialized_destination = PopulatedDestinationSerializer(destination)
+
       return Response(serialized_destination.data)
