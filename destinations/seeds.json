@@ -1,0 +1,14 @@
+[
+{
+  "model": "destinations.destination",
+  "pk": 1,
+  "fields": {
+    "name": "Barcelona",
+    "country": "Spain",
+    "continent": "Europe",
+    "latitude": 41.29,
+    "longitude": 2.16,
+    "description": "Vibrant city with Gaudi\\'s architecture and Mediterranean beaches."
+  }
+}
+]
