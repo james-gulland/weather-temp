@@ -1,0 +1,230 @@
+[
+{
+  "model": "weatherdata.weatherdata",
+  "pk": 1,
+  "fields": {
+    "destination": 1,
+    "month": "january",
+    "average_temperature": 10.4,
+    "highest_temperature": 17.2,
+    "lowest_temperature": 3.6,
+    "average_feels_like_temperature": 9.2,
+    "highest_feels_like_temperature": 15.6,
+    "lowest_feels_like_temperature": 3.1,
+    "relative_humidity": 76.0,
+    "heat_index": 15.5,
+    "precipitation_levels": 46.6,
+    "air_quality_index": 35.0,
+    "cloud_cover": 69.0
+  }
+},
+{
+  "model": "weatherdata.weatherdata",
+  "pk": 2,
+  "fields": {
+    "destination": 1,
+    "month": "february",
+    "average_temperature": 11.6,
+    "highest_temperature": 18.7,
+    "lowest_temperature": 4.5,
+    "average_feels_like_temperature": 10.4,
+    "highest_feels_like_temperature": 16.8,
+    "lowest_feels_like_temperature": 4.2,
+    "relative_humidity": 74.0,
+    "heat_index": 16.7,
+    "precipitation_levels": 38.7,
+    "air_quality_index": 38.0,
+    "cloud_cover": 70.0
+  }
+},
+{
+  "model": "weatherdata.weatherdata",
+  "pk": 3,
+  "fields": {
+    "destination": 1,
+    "month": "march",
+    "average_temperature": 14.2,
+    "highest_temperature": 22.2,
+    "lowest_temperature": 6.2,
+    "average_feels_like_temperature": 13.0,
+    "highest_feels_like_temperature": 20.4,
+    "lowest_feels_like_temperature": 5.8,
+    "relative_humidity": 72.0,
+    "heat_index": 19.0,
+    "precipitation_levels": 32.8,
+    "air_quality_index": 41.0,
+    "cloud_cover": 71.0
+  }
+},
+{
+  "model": "weatherdata.weatherdata",
+  "pk": 4,
+  "fields": {
+    "destination": 1,
+    "month": "april",
+    "average_temperature": 17.1,
+    "highest_temperature": 25.5,
+    "lowest_temperature": 9.7,
+    "average_feels_like_temperature": 15.9,
+    "highest_feels_like_temperature": 24.3,
+    "lowest_feels_like_temperature": 9.5,
+    "relative_humidity": 70.0,
+    "heat_index": 22.2,
+    "precipitation_levels": 26.9,
+    "air_quality_index": 44.0,
+    "cloud_cover": 71.0
+  }
+},
+{
+  "model": "weatherdata.weatherdata",
+  "pk": 5,
+  "fields": {
+    "destination": 1,
+    "month": "may",
+    "average_temperature": 20.4,
+    "highest_temperature": 29.2,
+    "lowest_temperature": 11.6,
+    "average_feels_like_temperature": 19.2,
+    "highest_feels_like_temperature": 27.6,
+    "lowest_feels_like_temperature": 11.4,
+    "relative_humidity": 68.0,
+    "heat_index": 25.5,
+    "precipitation_levels": 19.9,
+    "air_quality_index": 47.0,
+    "cloud_cover": 72.0
+  }
+},
+{
+  "model": "weatherdata.weatherdata",
+  "pk": 6,
+  "fields": {
+    "destination": 1,
+    "month": "june",
+    "average_temperature": 23.9,
+    "highest_temperature": 33.2,
+    "lowest_temperature": 14.6,
+    "average_feels_like_temperature": 22.7,
+    "highest_feels_like_temperature": 31.1,
+    "lowest_feels_like_temperature": 14.4,
+    "relative_humidity": 66.0,
+    "heat_index": 28.8,
+    "precipitation_levels": 13.9,
+    "air_quality_index": 50.0,
+    "cloud_cover": 72.0
+  }
+},
+{
+  "model": "weatherdata.weatherdata",
+  "pk": 7,
+  "fields": {
+    "destination": 1,
+    "month": "july",
+    "average_temperature": 26.4,
+    "highest_temperature": 35.8,
+    "lowest_temperature": 17.2,
+    "average_feels_like_temperature": 25.2,
+    "highest_feels_like_temperature": 33.7,
+    "lowest_feels_like_temperature": 17.0,
+    "relative_humidity": 64.0,
+    "heat_index": 32.0,
+    "precipitation_levels": 10.9,
+    "air_quality_index": 53.0,
+    "cloud_cover": 72.0
+  }
+},
+{
+  "model": "weatherdata.weatherdata",
+  "pk": 8,
+  "fields": {
+    "destination": 1,
+    "month": "august",
+    "average_temperature": 26.5,
+    "highest_temperature": 36.0,
+    "lowest_temperature": 17.3,
+    "average_feels_like_temperature": 25.3,
+    "highest_feels_like_temperature": 33.9,
+    "lowest_feels_like_temperature": 17.1,
+    "relative_humidity": 64.0,
+    "heat_index": 32.1,
+    "precipitation_levels": 11.0,
+    "air_quality_index": 53.0,
+    "cloud_cover": 72.0
+  }
+},
+{
+  "model": "weatherdata.weatherdata",
+  "pk": 9,
+  "fields": {
+    "destination": 1,
+    "month": "september",
+    "average_temperature": 23.6,
+    "highest_temperature": 32.6,
+    "lowest_temperature": 14.6,
+    "average_feels_like_temperature": 22.4,
+    "highest_feels_like_temperature": 30.8,
+    "lowest_feels_like_temperature": 14.4,
+    "relative_humidity": 66.0,
+    "heat_index": 27.7,
+    "precipitation_levels": 17.0,
+    "air_quality_index": 50.0,
+    "cloud_cover": 72.0
+  }
+},
+{
+  "model": "weatherdata.weatherdata",
+  "pk": 10,
+  "fields": {
+    "destination": 1,
+    "month": "october",
+    "average_temperature": 19.4,
+    "highest_temperature": 27.8,
+    "lowest_temperature": 11.0,
+    "average_feels_like_temperature": 18.2,
+    "highest_feels_like_temperature": 26.0,
+    "lowest_feels_like_temperature": 10.8,
+    "relative_humidity": 68.0,
+    "heat_index": 23.6,
+    "precipitation_levels": 22.9,
+    "air_quality_index": 47.0,
+    "cloud_cover": 71.0
+  }
+},
+{
+  "model": "weatherdata.weatherdata",
+  "pk": 11,
+  "fields": {
+    "destination": 1,
+    "month": "november",
+    "average_temperature": 15.4,
+    "highest_temperature": 23.2,
+    "lowest_temperature": 7.6,
+    "average_feels_like_temperature": 14.2,
+    "highest_feels_like_temperature": 21.6,
+    "lowest_feels_like_temperature": 7.4,
+    "relative_humidity": 70.0,
+    "heat_index": 19.5,
+    "precipitation_levels": 35.9,
+    "air_quality_index": 44.0,
+    "cloud_cover": 70.0
+  }
+},
+{
+  "model": "weatherdata.weatherdata",
+  "pk": 12,
+  "fields": {
+    "destination": 1,
+    "month": "december",
+    "average_temperature": 12.2,
+    "highest_temperature": 19.0,
+    "lowest_temperature": 5.4,
+    "average_feels_like_temperature": 11.0,
+    "highest_feels_like_temperature": 16.4,
+    "lowest_feels_like_temperature": 5.2,
+    "relative_humidity": 74.0,
+    "heat_index": 16.3,
+    "precipitation_levels": 46.6,
+    "air_quality_index": 35.0,
+    "cloud_cover": 69.0
+  }
+}
+]
