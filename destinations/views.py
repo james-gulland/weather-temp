@@ -16,3 +16,12 @@ class DestinationViewList(APIView):
 
       return Response(serialized_destinations.data)
       # return Response('GET /api/destinations/ endpoint hit')
+
+class DestinationDetailView(APIView):
+   
+   def get(self, request, pk):
+      print('pk captured ->', pk)
+
+      destination = Destination.objects.get(pk=pk)
+      serialized_destination = DestinationSerializer(destination)
+      return Response(serialized_destination.data)
