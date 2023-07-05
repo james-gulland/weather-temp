@@ -13,6 +13,11 @@ from weatherdata.models import WeatherData
 from destinations.models import Destination
 
 def import_weather_data_from_csv(file_path):
+    
+    # BE WARNED!! Default disabled.
+    # Delete existing WeatherData objects
+    WeatherData.objects.all().delete()
+
     with open(file_path, 'r') as file:
         reader = csv.DictReader(file)
         for row in reader:
@@ -48,5 +53,5 @@ def import_weather_data_from_csv(file_path):
             )
 
 if __name__ == '__main__':
-    csv_file_path = 'scripts/test_weather_data.csv'
+    csv_file_path = 'scripts/test_weather_data_2.csv'
     import_weather_data_from_csv(csv_file_path)
