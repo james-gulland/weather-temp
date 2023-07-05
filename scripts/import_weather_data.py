@@ -1,7 +1,20 @@
+# NOT WORKING!
+
 import pandas as pd
+import sys
+import os
+import django
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "weather-temp.settings")
+django.setup()
+
+# Add parent_folder to the Python path
+parent_folder = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(parent_folder)
+
 from django.db import transaction
-from weatherdata.models import WeatherData
-from destinations.models import Destination
+from ..weatherdata.models import WeatherData
+from ..destinations.models import Destination
 
 def import_weather_data():
     csv_path = 'import_weather_data.csv'
