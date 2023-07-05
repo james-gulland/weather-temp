@@ -4,18 +4,18 @@ from django.db import models
 class WeatherData(models.Model):
     
     MONTH_CHOICES = [
-        ('january', 'January'),
-        ('february', 'February'),
-        ('march', 'March'),
-        ('april', 'April'),
-        ('may', 'May'),
-        ('june', 'June'),
-        ('july', 'July'),
-        ('august', 'August'),
-        ('september', 'September'),
-        ('october', 'October'),
-        ('november', 'November'),
-        ('december', 'December'),
+        ('January', 'January'),
+        ('February', 'February'),
+        ('March', 'March'),
+        ('April', 'April'),
+        ('May', 'May'),
+        ('June', 'June'),
+        ('July', 'July'),
+        ('August', 'August'),
+        ('September', 'September'),
+        ('October', 'October'),
+        ('November', 'November'),
+        ('December', 'December'),
     ]
 
     destination = models.ForeignKey('destinations.Destination', on_delete=models.CASCADE, related_name='weatherdata')
