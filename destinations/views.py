@@ -53,5 +53,6 @@ class FilteredDestinationViewList(APIView):
         if min_temp and max_temp:
             destinations = destinations.filter(weatherdata__average_temperature__gte=min_temp, weatherdata__average_temperature__lte=max_temp)
 
-        serialized_destinations = PopulatedDestinationSerializer(destinations, many=True)
+        # serialized_destinations = PopulatedDestinationSerializer(destinations, many=True)
+        serialized_destinations = DestinationSerializer(destinations, many=True)
         return Response(serialized_destinations.data)
