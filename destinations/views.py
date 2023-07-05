@@ -3,7 +3,6 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 # from rest_framework import status
 from .serializers.common import DestinationSerializer
-from weatherdata.serializers.common import WeatherDataSerializer
 from .serializers.populated import PopulatedDestinationSerializer
 from .models import Destination
 
