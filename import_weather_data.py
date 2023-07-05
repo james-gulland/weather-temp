@@ -18,7 +18,7 @@ def import_weather_data_from_csv(file_path):
         for row in reader:
             destination_id = int(row['destination'])
             destination = Destination.objects.get(pk=destination_id)
-            month = row['month'].lower()
+            month = row['month']
             average_temperature = float(row['average_temperature'])
             highest_temperature = float(row['highest_temperature'])
             lowest_temperature = float(row['lowest_temperature'])
