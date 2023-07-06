@@ -1,4 +1,7 @@
 # WORKING!
+# HOW TO USE: 
+# 1) Update the filename to upload at the bottom
+# 2) at the parent dir (weather-temp), type 'python import_weather_data.py'
 
 # import pandas as pd
 # import sys
@@ -53,5 +56,5 @@ def import_weather_data_from_csv(file_path):
             )
 
 if __name__ == '__main__':
-    csv_file_path = 'scripts/test_weather_data_2.csv'
+    csv_file_path = 'scripts/test_weather_data_3.csv'
     import_weather_data_from_csv(csv_file_path)
