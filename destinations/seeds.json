@@ -118,5 +118,473 @@
     "longitude": 12.57,
     "description": "Capital city of Spain with lively nightlife and world-class art."
   }
+},
+{
+  "model": "destinations.destination",
+  "pk": 11,
+  "fields": {
+    "name": "Monaco",
+    "country": "France",
+    "continent": "Europe",
+    "latitude": 55.68,
+    "longitude": 12.57,
+    "description": "Playground for the rich with glamorous casinos and luxury yachts."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 12,
+  "fields": {
+    "name": "Lisbon",
+    "country": "Portugal",
+    "continent": "Europe",
+    "latitude": 55.68,
+    "longitude": 12.57,
+    "description": "Picturesque city with colourful tiles, charming alleys, and seafood."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 13,
+  "fields": {
+    "name": "Zurich",
+    "country": "Switzerland",
+    "continent": "Europe",
+    "latitude": 55.68,
+    "longitude": 12.57,
+    "description": "Swiss city with scenic lake and mountains, and financial district."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 14,
+  "fields": {
+    "name": "New York",
+    "country": "United States of America",
+    "continent": "North America",
+    "latitude": 40.71,
+    "longitude": -74.01,
+    "description": "City that never sleeps with skyscrapers, Central Park and Broadway."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 15,
+  "fields": {
+    "name": "Seattle",
+    "country": "United States of America",
+    "continent": "North America",
+    "latitude": 47.61,
+    "longitude": -122.33,
+    "description": "Pacific Northwest city with coffee culture, seafood, and Space Needle."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 16,
+  "fields": {
+    "name": "San Francisco",
+    "country": "United States of America",
+    "continent": "North America",
+    "latitude": 37.77,
+    "longitude": -122.42,
+    "description": "City by the bay with Golden Gate Bridge, hills, and tech industry."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 17,
+  "fields": {
+    "name": "Rio de Janeiro",
+    "country": "Brazil",
+    "continent": "South America",
+    "latitude": -22.91,
+    "longitude": -43.18,
+    "description": "Brazilian city with Copacabana beach, Carnival, and Christ the Redeemer."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 18,
+  "fields": {
+    "name": "Santiago",
+    "country": "Chile",
+    "continent": "South America",
+    "latitude": -39.28,
+    "longitude": -71.95,
+    "description": "Capital city of Chile with museums, parks, and Andes views."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 19,
+  "fields": {
+    "name": "Istanbul",
+    "country": "Turkey",
+    "continent": "Asia",
+    "latitude": 41.01,
+    "longitude": 28.95,
+    "description": "City where Europe meets Asia, with bazaars, mosques, and palaces."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 20,
+  "fields": {
+    "name": "Bari",
+    "country": "Italy",
+    "continent": "Europe",
+    "latitude": 41.12,
+    "longitude": 16.87,
+    "description": "Coastal city in Southern Italy with Old Town and seaside promenade."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 21,
+  "fields": {
+    "name": "Tokyo",
+    "country": "Japan",
+    "continent": "Asia",
+    "latitude": 50.93,
+    "longitude": 0.53,
+    "description": "Metropolis with vibrant nightlife, technology, and traditional culture."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 22,
+  "fields": {
+    "name": "Chamonix",
+    "country": "France",
+    "continent": "Europe",
+    "latitude": 45.92,
+    "longitude": 6.87,
+    "description": "French Alpine town with Mont Blanc, skiing, and mountaineering."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 23,
+  "fields": {
+    "name": "Kochi",
+    "country": "India",
+    "continent": "Asia",
+    "latitude": 9.94,
+    "longitude": 76.26,
+    "description": "Historic city in Kerala, India with backwaters, temples, and spices."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 24,
+  "fields": {
+    "name": "Bangkok",
+    "country": "Thailand",
+    "continent": "Asia",
+    "latitude": 13.75,
+    "longitude": 100.5,
+    "description": "Thai capital city with street food, temples, and lively nightlife."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 25,
+  "fields": {
+    "name": "Prague",
+    "country": "Czech Republic",
+    "continent": "Europe",
+    "latitude": 50.93,
+    "longitude": 14.42,
+    "description": "City of a hundred spires with Gothic architecture and beer culture."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 26,
+  "fields": {
+    "name": "Florence",
+    "country": "Italy",
+    "continent": "Europe",
+    "latitude": 43.78,
+    "longitude": 11.25,
+    "description": "City of Renaissance art with Duomo, museums, and Tuscan cuisine."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 27,
+  "fields": {
+    "name": "Venice",
+    "country": "Italy",
+    "continent": "Europe",
+    "latitude": 45.44,
+    "longitude": 12.33,
+    "description": "City of canals with gondolas, palaces, and Italian cuisine."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 28,
+  "fields": {
+    "name": "Berlin",
+    "country": "Germany",
+    "continent": "Europe",
+    "latitude": 52.52,
+    "longitude": 13.41,
+    "description": "German capital city with history, culture, and vibrant nightlife."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 29,
+  "fields": {
+    "name": "Athens",
+    "country": "Greece",
+    "continent": "Europe",
+    "latitude": 37.98,
+    "longitude": 23.73,
+    "description": "Ancient city with iconic landmarks and Mediterranean charm."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 30,
+  "fields": {
+    "name": "Oslo",
+    "country": "Norway",
+    "continent": "Europe",
+    "latitude": 59.91,
+    "longitude": 10.75,
+    "description": "Scenic waterfront city with a rich cultural scene."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 31,
+  "fields": {
+    "name": "Helsinki",
+    "country": "Finland",
+    "continent": "Europe",
+    "latitude": 60.32,
+    "longitude": 24.96,
+    "description": "Design-centric city with a lively atmosphere and island charm."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 32,
+  "fields": {
+    "name": "Kyiv",
+    "country": "Ukraine",
+    "continent": "Europe",
+    "latitude": 50.45,
+    "longitude": 30.52,
+    "description": "City of golden domes and historic landmarks in Eastern Europe."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 33,
+  "fields": {
+    "name": "Bucharest",
+    "country": "Romania",
+    "continent": "Europe",
+    "latitude": 44.43,
+    "longitude": 26.11,
+    "description": "The Paris of the East with vibrant nightlife and cultural heritage."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 34,
+  "fields": {
+    "name": "Budapest",
+    "country": "Hungary",
+    "continent": "Europe",
+    "latitude": 47.5,
+    "longitude": 19.04,
+    "description": "Picturesque city with grand architecture and thermal baths."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 35,
+  "fields": {
+    "name": "Tunis",
+    "country": "Tunisia",
+    "continent": "Africa",
+    "latitude": 36.82,
+    "longitude": 10.17,
+    "description": "North African city with ancient ruins and coastal charm."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 36,
+  "fields": {
+    "name": "Marrakesh",
+    "country": "Morocco",
+    "continent": "Africa",
+    "latitude": 31.63,
+    "longitude": -8.0,
+    "description": "Moroccan city with vibrant souks and historic palaces."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 37,
+  "fields": {
+    "name": "Cape Town",
+    "country": "South Africa",
+    "continent": "Africa",
+    "latitude": -33.93,
+    "longitude": 18.42,
+    "description": "South African coastal city with stunning views and rich history."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 38,
+  "fields": {
+    "name": "Port Louis",
+    "country": "Mauritius",
+    "continent": "Africa",
+    "latitude": -20.16,
+    "longitude": 57.5,
+    "description": "Mauritian capital with colonial architecture and tropical vibes."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 39,
+  "fields": {
+    "name": "Cairo",
+    "country": "Egypt",
+    "continent": "Africa",
+    "latitude": 30.06,
+    "longitude": 31.25,
+    "description": "City of ancient pyramids and bustling markets in North Africa."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 40,
+  "fields": {
+    "name": "Dubai",
+    "country": "United Arab Emirates",
+    "continent": "Asia",
+    "latitude": 25.08,
+    "longitude": 55.31,
+    "description": "Modern metropolis with towering skyscrapers and luxury shopping."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 41,
+  "fields": {
+    "name": "New Delhi",
+    "country": "India",
+    "continent": "Asia",
+    "latitude": 28.64,
+    "longitude": 77.22,
+    "description": "Capital city of India with iconic landmarks and rich culture."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 42,
+  "fields": {
+    "name": "Goa",
+    "country": "India",
+    "continent": "Asia",
+    "latitude": 15.47,
+    "longitude": 73.9,
+    "description": "Indian state with sandy beaches and historic Portuguese architecture."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 43,
+  "fields": {
+    "name": "Kathmandu",
+    "country": "Nepal",
+    "continent": "Asia",
+    "latitude": 27.7,
+    "longitude": 85.32,
+    "description": "Nepalese city with ancient temples and Himalayan views."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 44,
+  "fields": {
+    "name": "Phuket",
+    "country": "Thailand",
+    "continent": "Asia",
+    "latitude": 7.89,
+    "longitude": 98.4,
+    "description": "Thai island with stunning beaches and vibrant nightlife."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 45,
+  "fields": {
+    "name": "Ko Phi Phi",
+    "country": "Thailand",
+    "continent": "Asia",
+    "latitude": 7.74,
+    "longitude": 98.77,
+    "description": "Island paradise in Thailand with crystal-clear waters and natural beauty."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 46,
+  "fields": {
+    "name": "Ha Long Bay",
+    "country": "Vietnam",
+    "continent": "Asia",
+    "latitude": 20.95,
+    "longitude": 107.07,
+    "description": "Vietnamese bay with towering limestone cliffs and peaceful waters."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 47,
+  "fields": {
+    "name": "Hanoi",
+    "country": "Vietnam",
+    "continent": "Asia",
+    "latitude": 21.02,
+    "longitude": 105.84,
+    "description": "Vietnamese city with historic landmarks and delicious cuisine."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 48,
+  "fields": {
+    "name": "Kuala Lumpur",
+    "country": "Malaysia",
+    "continent": "Asia",
+    "latitude": 3.14,
+    "longitude": 101.69,
+    "description": "Malaysian capital with modern architecture and vibrant street food."
+  }
+},
+{
+  "model": "destinations.destination",
+  "pk": 49,
+  "fields": {
+    "name": "Penang",
+    "country": "Malaysia",
+    "continent": "Asia",
+    "latitude": 5.37,
+    "longitude": 100.25,
+    "description": "Malaysian island with colonial heritage and street art."
+  }
 }
 ]

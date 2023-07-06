@@ -4,7 +4,9 @@ from rest_framework.response import Response
 # from rest_framework import status
 from .serializers.common import DestinationSerializer
 from .serializers.populated import PopulatedDestinationSerializer
+from weatherdata.serializers.common import WeatherDataSerializer
 from .models import Destination
+from django.db.models import Q
 
 # GET ALL
 # example usage: GET /api/destinations/
@@ -47,11 +49,14 @@ class FilteredDestinationViewList(APIView):
 
         # Filter by month
         if month:
-            destinations = destinations.filter(weatherdata__month__iexact=month)
+            destinations = destinations.filter(weatherdata__month__iexact=month).distinct()
+            print(destinations)
+
 
         # Filter by average temperature range
         if min_temp and max_temp:
             destinations = destinations.filter(weatherdata__average_temperature__gte=min_temp, weatherdata__average_temperature__lte=max_temp)
+            print('this should work', destinations)
 
         # serialized_destinations = PopulatedDestinationSerializer(destinations, many=True)
         serialized_destinations = DestinationSerializer(destinations, many=True)

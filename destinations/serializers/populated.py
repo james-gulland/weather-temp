@@ -10,6 +10,7 @@ class PopulatedDestinationSerializer(DestinationSerializer):
 
     weatherdata = WeatherDataSerializer(many=True, read_only=True)
 
+    # TRYING TO SORT SO DESTINATION FIRST AND THEN WEATHERDATA. NOT WORKING
     # def to_representation(self, instance):
     #     representation = super().to_representation(instance)
     #     representation['weatherdata'] = WeatherDataSerializer(instance.weatherdata.all(), many=True).data
