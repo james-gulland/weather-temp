@@ -42,6 +42,7 @@ class FilteredDestinationViewList(APIView):
         print('GET /api/destinations/filter/ endpoint hit')
 
         month = request.query_params.get('month', '')
+        print(month)
         min_temp = request.query_params.get('min_temp', '')
         max_temp = request.query_params.get('max_temp', '')
 
@@ -50,13 +51,12 @@ class FilteredDestinationViewList(APIView):
         # Filter by month
         if month:
             destinations = destinations.filter(weatherdata__month__iexact=month).distinct()
-            print(destinations)
-
+            # print(destinations)
 
         # Filter by average temperature range
         if min_temp and max_temp:
             destinations = destinations.filter(weatherdata__average_temperature__gte=min_temp, weatherdata__average_temperature__lte=max_temp)
-            print('this should work', destinations)
+            # print('this should work', destinations)
 
         # serialized_destinations = PopulatedDestinationSerializer(destinations, many=True)
         serialized_destinations = DestinationSerializer(destinations, many=True)
