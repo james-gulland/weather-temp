@@ -6,6 +6,7 @@ from .serializers.common import DestinationSerializer
 from .serializers.populated import PopulatedDestinationSerializer
 from weatherdata.serializers.common import WeatherDataSerializer
 from .models import Destination
+from weatherdata.models import WeatherData
 from django.db.models import Q
 
 # GET ALL
@@ -46,18 +47,37 @@ class FilteredDestinationViewList(APIView):
         min_temp = request.query_params.get('min_temp', '')
         max_temp = request.query_params.get('max_temp', '')
 
-        destinations = Destination.objects.all()
+        # destinations = Destination.objects.all()
 
-        # Filter by month
-        if month:
-            destinations = destinations.filter(weatherdata__month__iexact=month).distinct()
-            # print(destinations)
+        # # Filter by month
+        # if month:
+        #     destinations = destinations.filter(weatherdata__month__iexact=month).distinct()
+        #     # print(destinations)
 
-        # Filter by average temperature range
-        if min_temp and max_temp:
-            destinations = destinations.filter(weatherdata__average_temperature__gte=min_temp, weatherdata__average_temperature__lte=max_temp)
-            # print('this should work', destinations)
+        # # Filter by average temperature range
+        # if min_temp and max_temp:
+        #     destinations = destinations.filter(weatherdata__average_temperature__gte=min_temp, weatherdata__average_temperature__lte=max_temp)
+        #     # print('this should work', destinations)
 
-        # serialized_destinations = PopulatedDestinationSerializer(destinations, many=True)
-        serialized_destinations = DestinationSerializer(destinations, many=True)
-        return Response(serialized_destinations.data)
+        # # serialized_destinations = PopulatedDestinationSerializer(destinations, many=True)
+        # serialized_destinations = DestinationSerializer(destinations, many=True)
+        # return Response(serialized_destinations.data)
+
+
+        # Query the WeatherData model for all records where the month field matches the user's input 
+        # and the average_temperature field is within the user's temperature range. 
+        if month and min_temp and max_temp:
+            weather_data = WeatherData.objects.filter(
+                month__iexact=month,
+                average_temperature__range=(min_temp, max_temp)
+            )
+            # get the corresponding Destination record for each WeatherData record
+            destinations = []
+            for weather_data in weather_data:
+                destination = weather_data.destination
+                destinations.append(destination)
+
+            serialized_destinations = DestinationSerializer(destinations, many=True)
+            return Response(serialized_destinations.data)
+        else:
+            return Response({'message': 'Please provide month, min_temp, and max_temp'})
