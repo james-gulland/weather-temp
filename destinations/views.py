@@ -50,10 +50,12 @@ class FilteredDestinationViewList(APIView):
         # Query the WeatherData model for all records where the month field matches the user's input 
         # and the average_temperature field is within the user's temperature range. 
         if month and min_temp and max_temp:
+            
             weather_data = WeatherData.objects.filter(
                 month__iexact=month,
                 average_temperature__range=(min_temp, max_temp)
             )
+
             # get the corresponding Destination record for each WeatherData record
             destinations = []
             for weather_data in weather_data:

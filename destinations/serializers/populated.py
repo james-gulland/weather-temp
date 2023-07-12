@@ -15,5 +15,4 @@ class PopulatedDestinationSerializer(DestinationSerializer):
         model = Destination
         fields = ('name', 'country', 'continent', 'latitude', 'longitude', 'description', 'weatherdata')
 
-
     weatherdata = WeatherDataSerializer(many=True, read_only=True)
