@@ -1,19 +1,19 @@
 from .common import DestinationSerializer
 from weatherdata.serializers.common import WeatherDataSerializer
 from ..models import Destination
+# from weatherdata.models import WeatherData
 
 class PopulatedDestinationSerializer(DestinationSerializer):
     
+    # This works but shows weatherdata first before the destination data
+    # class Meta:
+    #     model = Destination
+    #     fields = '__all__'
+
+    # Fixes so that it shows destination data first, and then weatherdata
     class Meta:
         model = Destination
-        fields = '__all__'
+        fields = ('name', 'country', 'continent', 'latitude', 'longitude', 'description', 'weatherdata')
+
 
     weatherdata = WeatherDataSerializer(many=True, read_only=True)
-
-    # TRYING TO SORT SO DESTINATION FIRST AND THEN WEATHERDATA. NOT WORKING
-    # def to_representation(self, instance):
-    #     representation = super().to_representation(instance)
-    #     representation['weatherdata'] = WeatherDataSerializer(instance.weatherdata.all(), many=True).data
-    #     return representation
-
-    # weatherdata = WeatherDataSerializer(many=True)
