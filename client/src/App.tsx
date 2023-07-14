@@ -4,7 +4,34 @@ import { generateTemperatureRange } from './helpers/filter'
 
 function App() {
 
-  const [destinations, setDestinations] = useState([])
+  interface WeatherData {
+    id: number,
+    month: string,
+    average_temperature: number,
+    highest_temperature: number,
+    lowest_temperature: number,
+    average_feels_like_temperature: number
+    highest_feels_like_temperature: number,
+    lowest_feels_like_temperature: number,
+    relative_humidity: number,
+    heat_index: number,
+    precipitation_levels: number,
+    air_quality_index: number,
+    cloud_cover: number,
+    destination: number
+  }
+
+  interface Destination {
+    name: string,
+		country: string,
+		continent: string,
+		latitude: number,
+		longitude: number,
+		description: string,
+    weatherData: WeatherData[]
+  }
+
+  const [destinations, setDestinations] = useState<Destination[]>([])
   const [minTemp, setMinTemp] = useState<number>(20)
   const [maxTemp, setMaxTemp] = useState<number>(25)
 
@@ -14,9 +41,9 @@ function App() {
   const temperatureRange = generateTemperatureRange(defaultMinTemp, defaultMaxTemp)
 
   useEffect(() => {
-    const getData = async () => {
+    const getData = async (): Promise<void> => {
       try { 
-        const { data } = await axios.get('/api/destinations/')
+        const { data } = await axios.get<Destination[]>('/api/destinations/')
         setDestinations(data)
         console.log(data)
       } catch (err) {
