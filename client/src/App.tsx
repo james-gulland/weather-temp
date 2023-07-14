@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import axios from 'axios'
 import { generateTemperatureRange } from './helpers/filter'
 import { Destination } from './types/interfaces'
@@ -6,7 +6,7 @@ import { Destination } from './types/interfaces'
 function App() {
 
   // destination states
-  const [destinations, setDestinations] = useState<Destination[]>([])
+  // const [destinations, setDestinations] = useState<Destination[]>([])
   const [filteredDestinations, setFilteredDestinations] = useState<Destination[]>([])
 
   // month state
@@ -19,18 +19,18 @@ function App() {
   const rangeMaxTemp:number = 35
   const temperatureRange = generateTemperatureRange(rangeMinTemp, rangeMaxTemp)
 
-  useEffect(() => {
-    const getData = async (): Promise<void> => {
-      try { 
-        const { data } = await axios.get<Destination[]>('/api/destinations/')
-        setDestinations(data)
-        console.log('All destinations', data)
-      } catch (err) {
-        console.log(err)
-      }
-    }
-    getData()
-  }, [])
+  // useEffect(() => {
+  //   const getData = async (): Promise<void> => {
+  //     try { 
+  //       const { data } = await axios.get<Destination[]>('/api/destinations/')
+  //       setDestinations(data)
+  //       console.log('All destinations', data)
+  //     } catch (err) {
+  //       console.log(err)
+  //     }
+  //   }
+  //   getData()
+  // }, [])
 
   const retrieveDestinations = (month: string, minTemp: number, maxTemp: number) => {
     const getData = async (): Promise<void> => {
@@ -88,13 +88,18 @@ function App() {
         {filteredDestinations.length > 0 ? 
           <>
             <div className="destination-card">
-              {filteredDestinations.map((dest) => (
-                <ul>
-                  <li>{dest.name}, {dest.country}</li>
-                  {/* <li>{dest.weatherData[0].average_temperature}</li> */}
-                </ul>
-                ))
-              }
+              {filteredDestinations.map((dest) => {
+                // const weatherDataForMonth = dest.weatherData.find(data => data.month === month)
+                // console.log(weatherDataForMonth)
+                // const averageTemperature = weatherDataForMonth ? weatherDataForMonth.average_temperature : 'N/A'
+
+                return (
+                  <ul key={dest.name}>
+                    <li>{dest.name}, {dest.country}</li>
+                    {/* <li>Average Temperature: {averageTemperature}</li> */}
+                  </ul>
+                )
+              })}
             </div>
           </>
           :
