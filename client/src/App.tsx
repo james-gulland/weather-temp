@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { generateTemperatureRange } from './helpers/filter'
-import { WeatherData, Destination } from './types/interfaces'
+import { Destination } from './types/interfaces'
 
 function App() {
 
@@ -12,12 +12,12 @@ function App() {
   // month state
   const [month, setMonth] = useState<string>('July')
 
-  // temp states and variables
+  // temperature states and variables
   const [minTemp, setMinTemp] = useState<number>(20)
   const [maxTemp, setMaxTemp] = useState<number>(25)
-  const defaultMinTemp:number = 15
-  const defaultMaxTemp:number = 35
-  const temperatureRange = generateTemperatureRange(defaultMinTemp, defaultMaxTemp)
+  const rangeMinTemp:number = 15
+  const rangeMaxTemp:number = 35
+  const temperatureRange = generateTemperatureRange(rangeMinTemp, rangeMaxTemp)
 
   useEffect(() => {
     const getData = async (): Promise<void> => {
@@ -82,6 +82,24 @@ function App() {
           }
         </select>
         <button onClick={() => retrieveDestinations(month, minTemp, maxTemp)}>Go!</button>
+      </div>
+
+      <div className="filtered-destination-container">
+        {filteredDestinations.length > 0 ? 
+          <>
+            <div className="destination-card">
+              {filteredDestinations.map((dest) => (
+                <ul>
+                  <li>{dest.name}, {dest.country}</li>
+                  {/* <li>{dest.weatherData[0].average_temperature}</li> */}
+                </ul>
+                ))
+              }
+            </div>
+          </>
+          :
+            <div>None</div>
+        }
       </div>
     </>
   )
