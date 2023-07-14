@@ -32,6 +32,8 @@ function App() {
   }
 
   const [destinations, setDestinations] = useState<Destination[]>([])
+  const [filteredDestinations, setFilteredDestinations] = useState<Destination[]>([])
+  const [month, setMonth] = useState<string>('July')
   const [minTemp, setMinTemp] = useState<number>(20)
   const [maxTemp, setMaxTemp] = useState<number>(25)
 
@@ -53,13 +55,26 @@ function App() {
     getData()
   }, [])
 
+  // const retrieveDestinations = (month: string, minTemp: number, maxTemp: number) => {
+  //   const getData = async (): Promise<void> => {
+  //     try { 
+  //       const { data } = await axios.get<Destination[]>(`/api/destinations/filter/?month=${month}&min_temp=${minTemp}&max_temp=${maxTemp}`)
+  //       setFilteredDestinations(data)
+  //       console.log('Filtered destinations', data)
+  //     } catch (err) {
+  //       console.log(err)
+  //     }
+  //   }
+  //   getData()
+  // }
+
   return (
     <>
       <h1>Hello world</h1>
       <div className="month-container">
         <label htmlFor="months">Choose a month:</label>
 
-        <select name="months" id="months">
+        <select name="months" id="months" defaultValue={month} onChange={(e) => setMonth((e.target.value))}>
           <option value="January">January</option>
           <option value="February">February</option>
           <option value="March">March</option>
@@ -89,7 +104,8 @@ function App() {
           ))
           }
         </select>
-
+        {/* <button onClick={retrieveDestinations(month, minTemp, maxTemp)}>Go!</button> */}
+        <button>Go!</button>
       </div>
     </>
   )
