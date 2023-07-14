@@ -60,7 +60,7 @@ function App() {
       try { 
         const { data } = await axios.get<Destination[]>(`/api/destinations/filter/?month=${month}&min_temp=${minTemp}&max_temp=${maxTemp}`)
         setFilteredDestinations(data)
-        console.log('Filtered destinations', data)
+        console.log(`Filtered destinations by ${month} and ${minTemp}-${maxTemp}`, data)
       } catch (err) {
         console.log(err)
       }
