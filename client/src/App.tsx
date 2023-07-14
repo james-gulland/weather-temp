@@ -1,45 +1,22 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { generateTemperatureRange } from './helpers/filter'
+import { WeatherData, Destination } from './types/interfaces'
 
 function App() {
 
-  interface WeatherData {
-    id: number
-    month: string
-    average_temperature: number
-    highest_temperature: number
-    lowest_temperature: number
-    average_feels_like_temperature: number
-    highest_feels_like_temperature: number
-    lowest_feels_like_temperature: number
-    relative_humidity: number
-    heat_index: number
-    precipitation_levels: number
-    air_quality_index: number
-    cloud_cover: number
-    destination: number
-  }
-
-  interface Destination {
-    name: string
-		country: string
-		continent: string
-		latitude: number
-		longitude: number
-		description: string
-    weatherData: WeatherData[]
-  }
-
+  // destination states
   const [destinations, setDestinations] = useState<Destination[]>([])
   const [filteredDestinations, setFilteredDestinations] = useState<Destination[]>([])
+
+  // month state
   const [month, setMonth] = useState<string>('July')
+
+  // temp states and variables
   const [minTemp, setMinTemp] = useState<number>(20)
   const [maxTemp, setMaxTemp] = useState<number>(25)
-
   const defaultMinTemp:number = 15
   const defaultMaxTemp:number = 35
-
   const temperatureRange = generateTemperatureRange(defaultMinTemp, defaultMaxTemp)
 
   useEffect(() => {
