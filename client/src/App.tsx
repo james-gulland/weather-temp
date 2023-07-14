@@ -5,29 +5,29 @@ import { generateTemperatureRange } from './helpers/filter'
 function App() {
 
   interface WeatherData {
-    id: number,
-    month: string,
-    average_temperature: number,
-    highest_temperature: number,
-    lowest_temperature: number,
+    id: number
+    month: string
+    average_temperature: number
+    highest_temperature: number
+    lowest_temperature: number
     average_feels_like_temperature: number
-    highest_feels_like_temperature: number,
-    lowest_feels_like_temperature: number,
-    relative_humidity: number,
-    heat_index: number,
-    precipitation_levels: number,
-    air_quality_index: number,
-    cloud_cover: number,
+    highest_feels_like_temperature: number
+    lowest_feels_like_temperature: number
+    relative_humidity: number
+    heat_index: number
+    precipitation_levels: number
+    air_quality_index: number
+    cloud_cover: number
     destination: number
   }
 
   interface Destination {
-    name: string,
-		country: string,
-		continent: string,
-		latitude: number,
-		longitude: number,
-		description: string,
+    name: string
+		country: string
+		continent: string
+		latitude: number
+		longitude: number
+		description: string
     weatherData: WeatherData[]
   }
 
@@ -47,7 +47,7 @@ function App() {
       try { 
         const { data } = await axios.get<Destination[]>('/api/destinations/')
         setDestinations(data)
-        console.log(data)
+        console.log('All destinations', data)
       } catch (err) {
         console.log(err)
       }
@@ -55,18 +55,18 @@ function App() {
     getData()
   }, [])
 
-  // const retrieveDestinations = (month: string, minTemp: number, maxTemp: number) => {
-  //   const getData = async (): Promise<void> => {
-  //     try { 
-  //       const { data } = await axios.get<Destination[]>(`/api/destinations/filter/?month=${month}&min_temp=${minTemp}&max_temp=${maxTemp}`)
-  //       setFilteredDestinations(data)
-  //       console.log('Filtered destinations', data)
-  //     } catch (err) {
-  //       console.log(err)
-  //     }
-  //   }
-  //   getData()
-  // }
+  const retrieveDestinations = (month: string, minTemp: number, maxTemp: number) => {
+    const getData = async (): Promise<void> => {
+      try { 
+        const { data } = await axios.get<Destination[]>(`/api/destinations/filter/?month=${month}&min_temp=${minTemp}&max_temp=${maxTemp}`)
+        setFilteredDestinations(data)
+        console.log('Filtered destinations', data)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    getData()
+  }
 
   return (
     <>
@@ -104,8 +104,7 @@ function App() {
           ))
           }
         </select>
-        {/* <button onClick={retrieveDestinations(month, minTemp, maxTemp)}>Go!</button> */}
-        <button>Go!</button>
+        <button onClick={() => retrieveDestinations(month, minTemp, maxTemp)}>Go!</button>
       </div>
     </>
   )
