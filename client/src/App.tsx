@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { generateTemperatureRange } from './helpers/filter'
 
 function App() {
 
@@ -9,16 +10,6 @@ function App() {
 
   const defaultMinTemp:number = 15
   const defaultMaxTemp:number = 35
-
-  // this function takes a min temp and a max temp, and
-  // returns an array of all numbers within that temp range
-  function generateTemperatureRange(minTemp: number, maxTemp: number): number[] {
-    const range: number[] = [];
-    for (let i = minTemp; i <= maxTemp; i++) {
-      range.push(i);
-    }
-    return range
-  }
 
   const temperatureRange = generateTemperatureRange(defaultMinTemp, defaultMaxTemp)
 
@@ -59,13 +50,13 @@ function App() {
 
       <div className="temp-container">
         <label htmlFor="min-temp">Choose a temp:</label>
-        <select name="min-temp" id="min-temp" onChange={(e) => setMinTemp(parseInt(e.target.value))}>
+        <select name="min-temp" id="min-temp" defaultValue={minTemp} onChange={(e) => setMinTemp(parseInt(e.target.value))}>
           {temperatureRange.map((temp) => (
             <option key={temp} value={temp}>{temp}</option>
           ))
           }
         </select>
-        <select name="max-temp" id="max-temp" onChange={(e) => setMaxTemp(parseInt(e.target.value))}>
+        <select name="max-temp" id="max-temp" defaultValue={maxTemp} onChange={(e) => setMaxTemp(parseInt(e.target.value))}>
           {temperatureRange.map((temp) => (
             <option key={temp} value={temp}>{temp}</option>
           ))
