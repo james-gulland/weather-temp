@@ -20,19 +20,6 @@ const Home = () => {
   const rangeMaxTemp:number = 35
   const temperatureRange = generateTemperatureRange(rangeMinTemp, rangeMaxTemp)
 
-  // useEffect(() => {
-  //   const getData = async (): Promise<void> => {
-  //     try { 
-  //       const { data } = await axios.get<Destination[]>('/api/destinations/')
-  //       setDestinations(data)
-  //       console.log('All destinations', data)
-  //     } catch (err) {
-  //       console.log(err)
-  //     }
-  //   }
-  //   getData()
-  // }, [])
-
   const retrieveDestinations = (month: string, minTemp: number, maxTemp: number) => {
     const getData = async (): Promise<void> => {
       try { 
@@ -48,7 +35,7 @@ const Home = () => {
 
   return (
     <>
-      <h1>OnlySun Helping find you the best place to travel in {month} at {minTemp}-{maxTemp}°C</h1>
+      <h1>OnlySunshine Helping find you the best place to travel in {month} at {minTemp}-{maxTemp}°C</h1>
       <div className="month-container">
         <label htmlFor="months">Choose a month:</label>
 
@@ -91,8 +78,8 @@ const Home = () => {
             <div className="destination-card">
               {filteredDestinations.map((dest) => {
                 const weatherDataForMonth = dest.weatherdata.find(data => data.month === month)
-                const averageTemperature = weatherDataForMonth ? weatherDataForMonth.average_temperature : 'N/A'
-                const heatIndex = weatherDataForMonth ? weatherDataForMonth.heat_index : 'N/A'
+                const averageTemperature = weatherDataForMonth ? weatherDataForMonth.average_temperature : 'n/a'
+                const heatIndex = weatherDataForMonth ? weatherDataForMonth.heat_index : 'n/a'
 
                 return (
                   <ul key={dest.name}>
