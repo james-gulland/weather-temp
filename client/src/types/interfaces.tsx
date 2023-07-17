@@ -22,5 +22,5 @@ export interface Destination {
   latitude: number
   longitude: number
   description: string
-  weatherData: WeatherData[]
+  weatherdata: WeatherData[]
 }
