@@ -90,13 +90,14 @@ function App() {
             <div className="destination-card">
               {filteredDestinations.map((dest) => {
                 const weatherDataForMonth = dest.weatherdata.find(data => data.month === month)
-                console.log(weatherDataForMonth)
                 const averageTemperature = weatherDataForMonth ? weatherDataForMonth.average_temperature : 'N/A'
+                const heatIndex = weatherDataForMonth ? weatherDataForMonth.heat_index : 'N/A'
 
                 return (
                   <ul key={dest.name}>
                     <li>{dest.name}, {dest.country}</li>
                     <li>Average Temperature: {averageTemperature}</li>
+                    <li>Heat Index: {heatIndex}</li>
                   </ul>
                 )
               })}
