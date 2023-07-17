@@ -10,7 +10,8 @@ function App() {
   const [filteredDestinations, setFilteredDestinations] = useState<Destination[]>([])
 
   // month state
-  const [month, setMonth] = useState<string>('July')
+  const currentMonth:string = new Date().toLocaleString([], { month: 'long' })
+  const [month, setMonth] = useState<string>(currentMonth)
 
   // temperature states and variables
   const [minTemp, setMinTemp] = useState<number>(20)
@@ -47,7 +48,7 @@ function App() {
 
   return (
     <>
-      <h1>Hello world</h1>
+      <h1>OnlySun Helping find you the best place to travel in {month} at {minTemp}-{maxTemp}°C</h1>
       <div className="month-container">
         <label htmlFor="months">Choose a month:</label>
 
