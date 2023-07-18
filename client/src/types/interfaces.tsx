@@ -15,6 +15,11 @@ export interface WeatherData {
   destination: number
 }
 
+export interface WeatherSelection {
+  value: string
+  label: string
+}
+
 export interface Destination {
   name: string
   country: string
