@@ -1,9 +1,12 @@
 import { useState } from 'react'
 import axios from 'axios'
 import { generateTemperatureRange } from '../helpers/filter'
-import { Destination, WeatherSelection } from '../types/interfaces'
+import { Destination } from '../types/interfaces'
+import TemperatureControls from './TemperatureControls'
+import TempType from './TempType'
+import MonthDropdown from './MonthDropdown'
 
-const Home = () => {
+const Home: React.FC = () => {
 
   // destination states
   // const [destinations, setDestinations] = useState<Destination[]>([])
@@ -20,28 +23,23 @@ const Home = () => {
   const rangeMinTemp:number = 15
   const rangeMaxTemp:number = 35
   // const temperatureRange = generateTemperatureRange(rangeMinTemp, rangeMaxTemp)
+  
 
-  const weatherOptions: WeatherSelection[] = [
-    { value: 'average_temperature', label: 'Avg Temp' },
-    { value: 'average_feels_like_temperature', label: 'Feels Like' }
-  ]
-  const [weatherType, setWeatherType] = useState<WeatherSelection>(weatherOptions[1])
-
-  // NOT NEEDED: now that changing logic
-  // const retrieveDestinations = (month: string, minTemp: number, maxTemp: number) => {
-  //   const getData = async (): Promise<void> => {
-  //     try { 
-  //       const { data } = await axios.get<Destination[]>(`/api/destinations/filter/?month=${month}&min_temp=${minTemp}&max_temp=${maxTemp}`)
-  //       setFilteredDestinations(data)
-  //       console.log(`Filtered destinations by ${month} and ${minTemp}-${maxTemp}`, data)
-  //     } catch (err) {
-  //       console.log(err)
-  //     }
-  //   }
-  //   getData()
-  // }
+  const retrieveDestinations = (month: string, minTemp: number, maxTemp: number) => {
+    const getData = async (): Promise<void> => {
+      try { 
+        const { data } = await axios.get<Destination[]>(`/api/destinations/filter/?month=${month}&min_temp=${minTemp}&max_temp=${maxTemp}`)
+        setFilteredDestinations(data)
+        console.log(`Filtered destinations by ${month} and ${minTemp}-${maxTemp}`, data)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    getData()
+  }
 
   const handleTempChange = (minOrMaxTemp: string, e: React.ChangeEvent<HTMLSelectElement>) => {
+    // const handleTempChange = (minOrMaxTemp: string, e: React.FormEvent) => {
     const buttonClicked = e.target.value
     if (minOrMaxTemp === "min") {
       if (buttonClicked === '+')
@@ -62,57 +60,18 @@ const Home = () => {
           
           {/* TEMPERATURE controls container */}
           <div id="temperature-container">
-
-            {/* Min-temp controls */}
-            <div id="min-temp-container">
-              <div id="min-temp-number">{minTemp}</div>
-              <div id="min-temp-controls">
-                <button>+</button>
-                <button>-</button>
-              </div>
-            </div>
-
-            <div>to</div>
-
-            {/* Max-temp controls */}
-            <div id="max-temp-container">
-              <div id="min-temp-number">{maxTemp}</div>
-              <div id="min-temp-controls">
-                <button>+</button>
-                <button>-</button>
-              </div>
-            </div>
+            <TemperatureControls minTemp={minTemp} maxTemp={maxTemp} />
           </div>
 
           {/* DROP-DOWN containers */}
           <div id="dropdown-container">
-
-            <label htmlFor="temp-selector">in </label>
-            <select name="temp-selector" id="temp-selector" defaultValue={weatherType.value}>
-              <option value="avg-temp">Avg Temp</option>
-              <option value="feels-like">Feels Like</option>
-            </select>
-
-            <label htmlFor="months">in </label>
-            <select name="months" id="months" defaultValue={month} onChange={(e) => setMonth((e.target.value))}>
-              <option value="January">January</option>
-              <option value="February">February</option>
-              <option value="March">March</option>
-              <option value="April">April</option>
-              <option value="May">May</option>
-              <option value="June">June</option>
-              <option value="July">July</option>
-              <option value="August">August</option>
-              <option value="September">September</option>
-              <option value="October">October</option>
-              <option value="November">November</option>
-              <option value="December">December</option>
-            </select>
+            <TempType />
+            <MonthDropdown month={month} setMonth={setMonth}/>
           </div>
         </div>
 
-        {/* <div className="temp-container">
-          <label htmlFor="min-temp">Choose a temp:</label>
+        <div className="temp-container">
+          {/* <label htmlFor="min-temp">Choose a temp:</label>
           <select name="min-temp" id="min-temp" defaultValue={minTemp} onChange={(e) => setMinTemp(parseInt(e.target.value))}>
             {temperatureRange.map((temp) => (
               <option key={temp} value={temp}>{temp}</option>
@@ -124,9 +83,9 @@ const Home = () => {
               <option key={temp} value={temp}>{temp}</option>
             ))
             }
-          </select>
+          </select> */}
           <button onClick={() => retrieveDestinations(month, minTemp, maxTemp)}>Go!</button>
-        </div> */}
+        </div>
 
         <div className="filtered-destination-container">
           {filteredDestinations.length > 0 ? 
@@ -148,7 +107,7 @@ const Home = () => {
               </div>
             </>
             :
-              <div>Choose your preference and hit Go!</div>
+            <div>Choose your preference and hit Go!</div>
           }
         </div>
       </main>
