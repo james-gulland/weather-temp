@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import axios from 'axios'
-import { generateTemperatureRange } from '../helpers/filter'
 import { Destination } from '../types/interfaces'
 import TemperatureControls from './TemperatureControls'
 import TempType from './TempType'
@@ -17,14 +16,9 @@ const Home: React.FC = () => {
   const [month, setMonth] = useState<string>(currentMonth)
 
   // temperature states and variables
-  
   const [minTemp, setMinTemp] = useState<number>(20)
   const [maxTemp, setMaxTemp] = useState<number>(25)
-  const rangeMinTemp:number = 15
-  const rangeMaxTemp:number = 35
-  // const temperatureRange = generateTemperatureRange(rangeMinTemp, rangeMaxTemp)
   
-
   const retrieveDestinations = (month: string, minTemp: number, maxTemp: number) => {
     const getData = async (): Promise<void> => {
       try { 
@@ -38,17 +32,6 @@ const Home: React.FC = () => {
     getData()
   }
 
-  const handleTempChange = (minOrMaxTemp: string, e: React.ChangeEvent<HTMLSelectElement>) => {
-    // const handleTempChange = (minOrMaxTemp: string, e: React.FormEvent) => {
-    const buttonClicked = e.target.value
-    if (minOrMaxTemp === "min") {
-      if (buttonClicked === '+')
-        setMinTemp(minTemp + 1)
-      else
-        setMaxTemp(minTemp - 1)
-    }
-  }
-
   return (
     <>
       <header></header>
@@ -60,31 +43,15 @@ const Home: React.FC = () => {
           
           {/* TEMPERATURE controls container */}
           <div id="temperature-container">
-            <TemperatureControls minTemp={minTemp} maxTemp={maxTemp} />
+            <TemperatureControls minTemp={minTemp} maxTemp={maxTemp} setMinTemp={setMinTemp} setMaxTemp={setMaxTemp}/>
           </div>
 
           {/* DROP-DOWN containers */}
           <div id="dropdown-container">
             <TempType />
             <MonthDropdown month={month} setMonth={setMonth}/>
+            <button onClick={() => retrieveDestinations(month, minTemp, maxTemp)}>Go!</button>
           </div>
-        </div>
-
-        <div className="temp-container">
-          {/* <label htmlFor="min-temp">Choose a temp:</label>
-          <select name="min-temp" id="min-temp" defaultValue={minTemp} onChange={(e) => setMinTemp(parseInt(e.target.value))}>
-            {temperatureRange.map((temp) => (
-              <option key={temp} value={temp}>{temp}</option>
-            ))
-            }
-          </select>
-          <select name="max-temp" id="max-temp" defaultValue={maxTemp} onChange={(e) => setMaxTemp(parseInt(e.target.value))}>
-            {temperatureRange.map((temp) => (
-              <option key={temp} value={temp}>{temp}</option>
-            ))
-            }
-          </select> */}
-          <button onClick={() => retrieveDestinations(month, minTemp, maxTemp)}>Go!</button>
         </div>
 
         <div className="filtered-destination-container">

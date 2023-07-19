@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { WeatherSelection } from '../types/interfaces'
 
-const TempType = () => {
+const TempType: React.FC = () => {
   
   const weatherOptions: WeatherSelection[] = [
     { value: 'average_temperature', label: 'Avg Temp' },

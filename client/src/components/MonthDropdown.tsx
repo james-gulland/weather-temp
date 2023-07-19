@@ -3,7 +3,7 @@ interface Props {
   setMonth: React.Dispatch<React.SetStateAction<string>>
 }
 
-const MonthDropdown = ( {month, setMonth}: Props) => {
+const MonthDropdown: React.FC<Props> = ({ month, setMonth }) => {
   return (
     <>
       <label htmlFor="months">in </label>
