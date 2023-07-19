@@ -21,7 +21,7 @@ const TemperatureControls: React.FC<Props> = ({ minTemp, maxTemp, setMinTemp, se
     } else if (rangeType === "max") {
       const newMaxTemp = maxTemp + 1
       if (newMaxTemp >= minTemp && newMaxTemp <= rangeMaxTemp) {
-        setMaxTemp(newMaxTemp);
+        setMaxTemp(newMaxTemp)
       }
     }
   }
@@ -46,21 +46,21 @@ const TemperatureControls: React.FC<Props> = ({ minTemp, maxTemp, setMinTemp, se
     <>
       {/* Min-temp controls */}
       <div id="min-temp-container">
-        <div id="min-temp-number">{minTemp}</div>
+        <div id="min-temp-number">Min: {minTemp}</div>
         <div id="min-temp-controls">
-          <button onClick={() => handleTempIncrement("min")}>+</button>
-          <button onClick={() => handleTempDecrement("min")}>-</button>
+          <button onClick={() => handleTempIncrement("min")} disabled={minTemp >= maxTemp || minTemp >= rangeMaxTemp}>+</button>
+          <button onClick={() => handleTempDecrement("min")} disabled={minTemp <= rangeMinTemp}>-</button>
         </div>
       </div>
 
-      <div>to</div>
+      <div id="to-container">to</div>
 
       {/* Max-temp controls */}
       <div id="max-temp-container">
-        <div id="max-temp-number">{maxTemp}</div>
+        <div id="max-temp-number">Max: {maxTemp}</div>
         <div id="max-temp-controls">
-          <button onClick={() => handleTempIncrement("max")}>+</button>
-          <button onClick={() => handleTempDecrement("max")}>-</button>
+          <button onClick={() => handleTempIncrement("max")} disabled={maxTemp >= rangeMaxTemp}>+</button>
+          <button onClick={() => handleTempDecrement("max")} disabled={maxTemp <= minTemp}>-</button>
         </div>
       </div>
   </>
