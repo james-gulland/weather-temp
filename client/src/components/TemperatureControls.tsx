@@ -21,14 +21,32 @@ const TemperatureControls: React.FC<Props> = ({ minTemp, maxTemp, setMinTemp, se
   //   }
   // }
 
+  // this function takes a string to understand whether to change minTemp or maxTemp
+  // then INCREMENTS the temperature set
+  const handleTempIncrement = (rangeType: string) => {
+    if (rangeType === "min") {
+      setMinTemp(minTemp + 1)
+    } else if (rangeType === "max") {
+      setMaxTemp(maxTemp + 1)
+    }
+  }
+
+  const handleTempDecrement = (rangeType: string) => {
+    if (rangeType === "min") {
+      setMinTemp(minTemp - 1)
+    } else if (rangeType === "max") {
+      setMaxTemp(maxTemp - 1)
+    }
+  }
+
   return (
     <>
       {/* Min-temp controls */}
       <div id="min-temp-container">
         <div id="min-temp-number">{minTemp}</div>
         <div id="min-temp-controls">
-          <button>+</button>
-          <button>-</button>
+          <button onClick={() => handleTempIncrement("min")}>+</button>
+          <button onClick={() => handleTempDecrement("min")}>-</button>
         </div>
       </div>
 
@@ -38,8 +56,8 @@ const TemperatureControls: React.FC<Props> = ({ minTemp, maxTemp, setMinTemp, se
       <div id="max-temp-container">
         <div id="min-temp-number">{maxTemp}</div>
         <div id="min-temp-controls">
-          <button>+</button>
-          <button>-</button>
+          <button onClick={() => handleTempIncrement("max")}>+</button>
+          <button onClick={() => handleTempDecrement("min")}>-</button>
         </div>
       </div>
   </>

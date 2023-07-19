@@ -19,6 +19,9 @@ const Home: React.FC = () => {
   const [minTemp, setMinTemp] = useState<number>(20)
   const [maxTemp, setMaxTemp] = useState<number>(25)
   
+  // function that retrieves desinations from the API based on:
+  // MONTH selected, and the MIN-TEMP and MAX-TEMP ranges selected
+  // returns data into filteredDestinations
   const retrieveDestinations = (month: string, minTemp: number, maxTemp: number) => {
     const getData = async (): Promise<void> => {
       try { 
