@@ -7,35 +7,38 @@ interface Props {
 
 const TemperatureControls: React.FC<Props> = ({ minTemp, maxTemp, setMinTemp, setMaxTemp }) => {
 
-  // const rangeMinTemp:number = 15
-  // const rangeMaxTemp:number = 35
-
-  // const handleTempChange = (minOrMaxTemp: string, e: React.ChangeEvent<HTMLSelectElement>) => {
-  //   // const handleTempChange = (minOrMaxTemp: string, e: React.FormEvent) => {
-  //   const buttonClicked = e.target.value
-  //   if (minOrMaxTemp === "min") {
-  //     if (buttonClicked === '+')
-  //       setMinTemp(minTemp + 1)
-  //     else
-  //       setMaxTemp(minTemp - 1)
-  //   }
-  // }
+  const rangeMinTemp:number = 15
+  const rangeMaxTemp:number = 35
 
   // this function takes a string to understand whether to change minTemp or maxTemp
   // then INCREMENTS the temperature set
   const handleTempIncrement = (rangeType: string) => {
     if (rangeType === "min") {
-      setMinTemp(minTemp + 1)
+      const newMinTemp = minTemp + 1
+      if (newMinTemp <= maxTemp && newMinTemp <= rangeMaxTemp) {
+        setMinTemp(newMinTemp)
+      }
     } else if (rangeType === "max") {
-      setMaxTemp(maxTemp + 1)
+      const newMaxTemp = maxTemp + 1
+      if (newMaxTemp >= minTemp && newMaxTemp <= rangeMaxTemp) {
+        setMaxTemp(newMaxTemp);
+      }
     }
   }
 
+  // this function takes a string to understand whether to change minTemp or maxTemp
+  // then DECREMENTS the temperature set
   const handleTempDecrement = (rangeType: string) => {
     if (rangeType === "min") {
-      setMinTemp(minTemp - 1)
+      const newMinTemp = minTemp - 1;
+      if (newMinTemp >= rangeMinTemp && newMinTemp < maxTemp) {
+        setMinTemp(newMinTemp)
+      }
     } else if (rangeType === "max") {
-      setMaxTemp(maxTemp - 1)
+      const newMaxTemp = maxTemp - 1;
+      if (newMaxTemp >= minTemp && newMaxTemp >= rangeMinTemp) {
+        setMaxTemp(newMaxTemp)
+      }
     }
   }
 
@@ -54,10 +57,10 @@ const TemperatureControls: React.FC<Props> = ({ minTemp, maxTemp, setMinTemp, se
 
       {/* Max-temp controls */}
       <div id="max-temp-container">
-        <div id="min-temp-number">{maxTemp}</div>
-        <div id="min-temp-controls">
+        <div id="max-temp-number">{maxTemp}</div>
+        <div id="max-temp-controls">
           <button onClick={() => handleTempIncrement("max")}>+</button>
-          <button onClick={() => handleTempDecrement("min")}>-</button>
+          <button onClick={() => handleTempDecrement("max")}>-</button>
         </div>
       </div>
   </>
