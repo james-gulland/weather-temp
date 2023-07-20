@@ -11,6 +11,7 @@ const Home: React.FC = () => {
   // const [destinations, setDestinations] = useState<Destination[]>([])
   const [filteredDestinations, setFilteredDestinations] = useState<Destination[]>([])
 
+  // states between the types of weather (i.e. avg temp / feels like)
   const [weatherType, setWeatherType] = useState<WeatherSelection>(weatherOptions[1])
 
   // month state
