@@ -43,9 +43,11 @@ class FilteredDestinationViewList(APIView):
         print('GET /api/destinations/filter/ endpoint hit')
 
         month = request.query_params.get('month', '')
-        print(month)
         min_temp = request.query_params.get('min_temp', '')
         max_temp = request.query_params.get('max_temp', '')
+
+        # Add the new query parameter 'weather_type' to get the selected weather type
+        weather_type = request.query_params.get('weather_type', 'average_temperature')
 
         # Query the WeatherData model for all records where the month field matches the user's input 
         # and the average_temperature field is within the user's temperature range. 
@@ -53,7 +55,8 @@ class FilteredDestinationViewList(APIView):
             
             weather_data = WeatherData.objects.filter(
                 month__iexact=month,
-                average_temperature__range=(min_temp, max_temp)
+                # average_temperature__range=(min_temp, max_temp)
+                **{f'{weather_type}__range': (min_temp, max_temp)}
             )
 
             # get the corresponding Destination record for each WeatherData record

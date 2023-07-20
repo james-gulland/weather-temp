@@ -12,7 +12,7 @@ const Home: React.FC = () => {
   const [filteredDestinations, setFilteredDestinations] = useState<Destination[]>([])
 
   // states between the types of weather (i.e. avg temp / feels like)
-  const [weatherType, setWeatherType] = useState<WeatherSelection>(weatherOptions[1])
+  const [weatherType, setWeatherType] = useState<WeatherSelection>(weatherOptions[0])
 
   // month state
   const currentMonth:string = new Date().toLocaleString([], { month: 'long' })
@@ -25,10 +25,11 @@ const Home: React.FC = () => {
   // function that retrieves desinations from the API based on:
   // MONTH selected, and the MIN-TEMP and MAX-TEMP ranges selected
   // returns data into filteredDestinations
-  const retrieveDestinations = (month: string, minTemp: number, maxTemp: number) => {
+  const retrieveDestinations = (month: string, minTemp: number, maxTemp: number, weatherType: WeatherSelection) => {
     const getData = async (): Promise<void> => {
       try { 
-        const { data } = await axios.get<Destination[]>(`/api/destinations/filter/?month=${month}&min_temp=${minTemp}&max_temp=${maxTemp}`)
+        // const { data } = await axios.get<Destination[]>(`/api/destinations/filter/?month=${month}&min_temp=${minTemp}&max_temp=${maxTemp}`)
+        const { data } = await axios.get<Destination[]>(`/api/destinations/filter/?month=${month}&min_temp=${minTemp}&max_temp=${maxTemp}&weather_type=${weatherType.value}`)
         setFilteredDestinations(data)
         console.log(`Filtered destinations by ${month} and ${minTemp}-${maxTemp}`, data)
       } catch (err) {
@@ -56,7 +57,7 @@ const Home: React.FC = () => {
           <div id="dropdown-container">
             <TempType weatherType={weatherType} setWeatherType={setWeatherType} />
             <MonthDropdown month={month} setMonth={setMonth}/>
-            <button onClick={() => retrieveDestinations(month, minTemp, maxTemp)}>Go!</button>
+            <button onClick={() => retrieveDestinations(month, minTemp, maxTemp, weatherType)}>Go!</button>
           </div>
         </div>
 
