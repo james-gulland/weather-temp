@@ -1,20 +1,27 @@
-import { useState } from 'react'
-import { WeatherSelection } from '../types/interfaces'
+import { WeatherSelection, weatherOptions } from '../types/interfaces'
 
-const TempType: React.FC = () => {
-  
-  const weatherOptions: WeatherSelection[] = [
-    { value: 'average_temperature', label: 'Avg Temp' },
-    { value: 'average_feels_like_temperature', label: 'Feels Like' }
-  ]
-  const [weatherType, setWeatherType] = useState<WeatherSelection>(weatherOptions[1])
+interface Props {
+  weatherType: WeatherSelection
+  setWeatherType: React.Dispatch<React.SetStateAction<WeatherSelection>>
+}
+
+const TempType: React.FC<Props>= ( { weatherType, setWeatherType }) => {
+
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedWeatherType = e.target.value;
+    // Find the corresponding WeatherSelection object based on the selected value
+    const newWeatherType = weatherOptions.find((option) => option.value === selectedWeatherType)
+    if (newWeatherType) {
+      setWeatherType(newWeatherType)
+    }
+  }
 
   return (
     <>
       <label htmlFor="temp-selector">in </label>
-      <select name="temp-selector" id="temp-selector" defaultValue={weatherType.value}>
-        <option value="avg-temp">Avg Temp</option>
-        <option value="feels-like">Feels Like</option>
+      <select name="temp-selector" id="temp-selector" defaultValue={weatherType.value} onChange={handleChange}>
+        <option value={weatherOptions[0].value}>{weatherOptions[0].label}</option>
+        <option value={weatherOptions[1].value}>{weatherOptions[1].label}</option>
       </select>
     </>
   )

@@ -29,3 +29,8 @@ export interface Destination {
   description: string
   weatherdata: WeatherData[]
 }
+
+export const weatherOptions: WeatherSelection[] = [
+  { value: 'average_temperature', label: 'Avg Temp' },
+  { value: 'average_feels_like_temperature', label: 'Feels Like' }
+]

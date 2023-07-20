@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import axios from 'axios'
-import { Destination } from '../types/interfaces'
+import { Destination, WeatherSelection, weatherOptions } from '../types/interfaces'
 import TemperatureControls from './TemperatureControls'
 import TempType from './TempType'
 import MonthDropdown from './MonthDropdown'
@@ -10,6 +10,8 @@ const Home: React.FC = () => {
   // destination states
   // const [destinations, setDestinations] = useState<Destination[]>([])
   const [filteredDestinations, setFilteredDestinations] = useState<Destination[]>([])
+
+  const [weatherType, setWeatherType] = useState<WeatherSelection>(weatherOptions[1])
 
   // month state
   const currentMonth:string = new Date().toLocaleString([], { month: 'long' })
@@ -51,7 +53,7 @@ const Home: React.FC = () => {
 
           {/* DROP-DOWN containers */}
           <div id="dropdown-container">
-            <TempType />
+            <TempType weatherType={weatherType} setWeatherType={setWeatherType} />
             <MonthDropdown month={month} setMonth={setMonth}/>
             <button onClick={() => retrieveDestinations(month, minTemp, maxTemp)}>Go!</button>
           </div>
@@ -70,7 +72,7 @@ const Home: React.FC = () => {
                     <ul key={dest.name}>
                       <li>{dest.name}, {dest.country}</li>
                       <li>Average Temperature: {averageTemperature}</li>
-                      <li>Heat Index: {heatIndex}</li>
+                      <li>Feels like: {heatIndex}</li>
                     </ul>
                   )
                 })}
