@@ -12,7 +12,8 @@ const Home: React.FC = () => {
   const [filteredDestinations, setFilteredDestinations] = useState<Destination[]>([])
 
   // states between the types of weather (i.e. avg temp / feels like)
-  const [weatherType, setWeatherType] = useState<WeatherSelection>(weatherOptions[0])
+  // DEFAULTS to option 1: 'feels like'
+  const [weatherType, setWeatherType] = useState<WeatherSelection>(weatherOptions[1])
 
   // month state
   const currentMonth:string = new Date().toLocaleString([], { month: 'long' })
@@ -73,8 +74,8 @@ const Home: React.FC = () => {
                   return (
                     <ul key={dest.name}>
                       <li>{dest.name}, {dest.country}</li>
-                      <li>Average Temperature: {averageTemperature}</li>
-                      <li>Feels like: {heatIndex}</li>
+                      <li>{weatherOptions[0].label}: {averageTemperature}</li>
+                      <li>{weatherOptions[1].label}: {heatIndex}</li>
                     </ul>
                   )
                 })}
