@@ -46,7 +46,7 @@ const Home: React.FC = () => {
       <Nav />
       <main>
         <header>
-          <h1>OnlySun</h1><h2>Helping find you the best place to travel in {month} at {minTemp}-{maxTemp}°C</h2>
+          <h1>OnlySun</h1><h2>Helping find you the best place to travel at {minTemp}-{maxTemp}°C in {month}</h2>
         </header>
         
         {/* CONTROL container */}
