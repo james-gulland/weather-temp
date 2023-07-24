@@ -8,7 +8,7 @@ interface Props {
 const TemperatureControls: React.FC<Props> = ({ minTemp, maxTemp, setMinTemp, setMaxTemp }) => {
 
   const rangeMinTemp:number = 15
-  const rangeMaxTemp:number = 35
+  const rangeMaxTemp:number = 35 
 
   // this function takes a string to understand whether to change minTemp or maxTemp
   // then INCREMENTS the temperature set

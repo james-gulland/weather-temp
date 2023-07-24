@@ -31,9 +31,32 @@ select, #dropdown-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.2s ease-in-out;
 }
 
 #min-temp-controls, #max-temp-controls {
   display: flex;
   gap: 0.5rem;
 }
+
+// .lineUp {
+//   animation: 1s anim-lineUp ease-out;
+// }
+
+// @keyframes anim-lineUp {
+//   0% {
+//     opacity: 0;
+//     transform: translateY(50%);
+//   }
+//   20% {
+//     opacity: 0;
+//   }
+//   50% {
+//     opacity: 1;
+//     transform: translateY(0%);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: translateY(0%);
+//   }
+// }
