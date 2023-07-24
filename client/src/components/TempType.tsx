@@ -18,7 +18,7 @@ const TempType: React.FC<Props>= ( { weatherType, setWeatherType }) => {
 
   return (
     <>
-      <label htmlFor="temp-selector">in </label>
+      <label htmlFor="temp-selector"></label>
       <select name="temp-selector" id="temp-selector" defaultValue={weatherType.value} onChange={handleChange}>
         <option value={weatherOptions[0].value}>{weatherOptions[0].label}</option>
         <option value={weatherOptions[1].value}>{weatherOptions[1].label}</option>

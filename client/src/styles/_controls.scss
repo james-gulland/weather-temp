@@ -1,8 +1,39 @@
+#control-container {
+  border: 1px solid orange;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 #temperature-container {
   display: flex;
   margin: 1rem;
+  font-size: $big-font;
+  border: 1px solid red;
+}
+
+#dropdown-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+select, #dropdown-container {
+  font-size: $medium-font;
 }
 
 #min-temp-container, #to-container, #max-temp-container {
   margin: 0.25rem;
+  border: 1px solid green;
+}
+
+#min-temp-number, #max-temp-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#min-temp-controls, #max-temp-controls {
+  display: flex;
+  gap: 0.5rem;
 }
