@@ -4,6 +4,7 @@ import { Destination, WeatherSelection, weatherOptions } from '../types/interfac
 import TemperatureControls from './TemperatureControls'
 import TempType from './TempType'
 import MonthDropdown from './MonthDropdown'
+import Header from './Header'
 
 const Home: React.FC = () => {
 
@@ -42,7 +43,7 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <header></header>
+      <Header />
       <main>
         <h1>OnlySun Helping find you the best place to travel in {month} at {minTemp}-{maxTemp}°C</h1>
         

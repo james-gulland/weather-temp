@@ -1,0 +1,15 @@
+header {
+  height: 4svh;
+  display: flex;
+  gap: 0.25rem;
+  justify-content: flex-end;
+  align-items: center;
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.temp-unit {
+  border: 0.5px solid blueviolet;
+  border-radius: 20%;
+  padding: 4px;
+}

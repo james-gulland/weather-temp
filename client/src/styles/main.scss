@@ -1,4 +1,7 @@
+@import 'variables.scss';
 @import 'controls.scss';
+@import 'header.scss';
+@import 'home.scss';
 
 * {
   box-sizing: border-box;
@@ -7,4 +10,16 @@
 .site-wrapper {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+html {
+  background-color: $bckg-colour;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
 }
