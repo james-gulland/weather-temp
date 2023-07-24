@@ -1,15 +1,15 @@
-header {
+.nav {
   height: 4svh;
   display: flex;
   gap: 0.25rem;
   justify-content: flex-end;
   align-items: center;
   border: 1px solid black;
-  padding: 1rem;
+  padding-right: 0.5rem;
 }
 
 .temp-unit {
-  border: 0.5px solid blueviolet;
+  border: 0.5px solid $primary-colour;
   border-radius: 20%;
   padding: 4px;
 }

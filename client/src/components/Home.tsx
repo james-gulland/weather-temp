@@ -4,7 +4,7 @@ import { Destination, WeatherSelection, weatherOptions } from '../types/interfac
 import TemperatureControls from './TemperatureControls'
 import TempType from './TempType'
 import MonthDropdown from './MonthDropdown'
-import Header from './Header'
+import Nav from './Nav'
 
 const Home: React.FC = () => {
 
@@ -43,9 +43,11 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <Header />
+      <Nav />
       <main>
-        <h1>OnlySun Helping find you the best place to travel in {month} at {minTemp}-{maxTemp}°C</h1>
+        <header>
+          <h1>OnlySun</h1><h2>Helping find you the best place to travel in {month} at {minTemp}-{maxTemp}°C</h2>
+        </header>
         
         {/* CONTROL container */}
         <div id="control-container">

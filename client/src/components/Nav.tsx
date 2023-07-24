@@ -1,10 +1,10 @@
-const Header = () => {
+const Nav = () => {
   return (
-    <header>
+    <div className="nav">
       <div className="temp-unit">°C</div>
       <div className="temp-unit">°F</div>
-    </header>
+    </div>
   )
 }
 
-export default Header
+export default Nav
