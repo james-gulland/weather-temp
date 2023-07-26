@@ -39,6 +39,14 @@ select, #dropdown-container {
   gap: 0.5rem;
 }
 
+.filtered-destination-container {
+  border: 2px solid green;
+}
+
+.destination-card {
+   border: 1px solid red;
+}
+
 // .lineUp {
 //   animation: 1s anim-lineUp ease-out;
 // }
