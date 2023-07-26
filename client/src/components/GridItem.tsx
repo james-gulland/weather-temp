@@ -9,11 +9,14 @@ interface Props {
 const GridItem: React.FC<Props> = ({ dest, averageTemperature, heatIndex }) => {
   return (
     <div className="destination-card">
-      <ul key={dest.name}>
-        <li>{dest.name}, {dest.country}</li>
-        <li>{weatherOptions[0].label}: {averageTemperature}</li>
-        <li>{weatherOptions[1].label}: {heatIndex}</li>
-      </ul>
+      <div className="top-card">top part</div>
+      <div className="bottom-card">
+        <div className="dest-name">{dest.name}, {dest.country}</div>
+        <ul className="dest-weather" key={dest.name}>
+          <li>{weatherOptions[0].label}: {averageTemperature}</li>
+          <li>{weatherOptions[1].label}: {heatIndex}</li>
+        </ul>
+      </div>
     </div>
   )
 }
