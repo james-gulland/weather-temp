@@ -5,6 +5,7 @@ import TemperatureControls from './TemperatureControls'
 import TempType from './TempType'
 import MonthDropdown from './MonthDropdown'
 import Nav from './Nav'
+import Grid from './Grid'
 
 const Home: React.FC = () => {
 
@@ -65,30 +66,13 @@ const Home: React.FC = () => {
           </div>
         </div>
 
+        {/* GRID container */}
         <div className="filtered-destination-container">
-          {filteredDestinations.length > 0 ? 
-            <>
-              <div className="destination-card">
-                {filteredDestinations.map((dest) => {
-                  const weatherDataForMonth = dest.weatherdata.find(data => data.month === month)
-                  const averageTemperature = weatherDataForMonth ? weatherDataForMonth.average_temperature : 'n/a'
-                  const heatIndex = weatherDataForMonth ? weatherDataForMonth.heat_index : 'n/a'
-
-                  return (
-                    <ul key={dest.name}>
-                      <li>{dest.name}, {dest.country}</li>
-                      <li>{weatherOptions[0].label}: {averageTemperature}</li>
-                      <li>{weatherOptions[1].label}: {heatIndex}</li>
-                    </ul>
-                  )
-                })}
-              </div>
-            </>
-            :
-            <div>Choose your preference and hit Go!</div>
-          }
+          <Grid filteredDestinations={filteredDestinations} month={month}/>
         </div>
       </main>
+      
+      {/* FOOTER container */}
       <footer></footer>
     </>
   )
