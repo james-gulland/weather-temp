@@ -33,5 +33,7 @@ export interface Destination {
 
 export const weatherOptions: WeatherSelection[] = [
   { value: 'average_temperature', label: 'Avg Temp' },
-  { value: 'heat_index', label: 'Feels Like' }
+  { value: 'heat_index', label: 'Feels Like' },
+  { value: 'relative_humidity', label: 'Humidity' },
+  { value: 'precipitation_levels', label: 'Avg Rainfall' }
 ]
