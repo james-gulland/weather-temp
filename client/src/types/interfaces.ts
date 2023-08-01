@@ -15,6 +15,12 @@ export interface WeatherData {
   destination: number
 }
 
+export interface ImageData {
+  id: number
+  is_primary: boolean
+  image_parameter: string
+}
+
 export interface WeatherSelection {
   value: string
   label: string
@@ -29,6 +35,7 @@ export interface Destination {
   longitude: number
   description: string
   weatherdata: WeatherData[]
+  images: ImageData[]
 }
 
 export const weatherOptions: WeatherSelection[] = [
