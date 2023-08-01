@@ -19,7 +19,7 @@ const Grid: React.FC<Props> = ( { filteredDestinations, month }) => {
             const averageRainfall = weatherDataForMonth ? weatherDataForMonth.precipitation_levels : 'n/a'
 
             return (
-              <GridItem dest={dest} key={dest.id} averageTemperature={averageTemperature} heatIndex={heatIndex} humidity={humidity} averageRainfall={averageRainfall}/>
+              <GridItem dest={dest} key={dest.id} month={month} averageTemperature={averageTemperature} heatIndex={heatIndex} humidity={humidity} averageRainfall={averageRainfall}/>
             )
           })}
         </>
