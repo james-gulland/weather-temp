@@ -18,12 +18,6 @@ const Grid: React.FC<Props> = ( { filteredDestinations, month }) => {
             const heatIndex = weatherDataForMonth ? weatherDataForMonth.heat_index : 'n/a'
             const humidity = weatherDataForMonth ? weatherDataForMonth.relative_humidity : 'n/a'
             const averageRainfall = weatherDataForMonth ? weatherDataForMonth.precipitation_levels : 'n/a'
-            
-            // Get image data
-            const primaryImage = dest.images.find(img => img.is_primary === true)
-            if (primaryImage) {
-              console.log(primaryImage.image_parameter)
-            }
 
             return (
               <GridItem dest={dest} key={dest.id} month={month} averageTemperature={averageTemperature} heatIndex={heatIndex} humidity={humidity} averageRainfall={averageRainfall}/>

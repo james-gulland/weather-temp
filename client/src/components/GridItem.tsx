@@ -10,6 +10,16 @@ interface Props {
 }
 
 const GridItem: React.FC<Props> = ({ dest, month, averageTemperature, heatIndex, humidity, averageRainfall }) => {
+
+  // Get image data
+  // const primaryImage = dest.images.find(img => img.is_primary === true)
+  // if (primaryImage) {
+  //   console.log(primaryImage.image_parameter)
+  // }
+
+  // Map out images into image gallery
+  // console.log(dest.images.length > 0)
+
   return (
     <div className="destination-card">
       
