@@ -31,7 +31,6 @@ const Home: React.FC = () => {
   const retrieveDestinations = (month: string, minTemp: number, maxTemp: number, weatherType: WeatherSelection) => {
     const getData = async (): Promise<void> => {
       try { 
-        // const { data } = await axios.get<Destination[]>(`/api/destinations/filter/?month=${month}&min_temp=${minTemp}&max_temp=${maxTemp}`)
         const { data } = await axios.get<Destination[]>(`/api/destinations/filter/?month=${month}&min_temp=${minTemp}&max_temp=${maxTemp}&weather_type=${weatherType.value}`)
         setFilteredDestinations(data)
         console.log(`Filtered destinations by ${month} and ${minTemp}-${maxTemp}`, data)
