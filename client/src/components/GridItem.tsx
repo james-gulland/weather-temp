@@ -49,8 +49,8 @@ const GridItem: React.FC<Props> = ({ dest, month, averageTemperature, heatIndex,
   const callUnsplash = (imageParameter: string) => {
     const getData = async (): Promise<void> => {
       try { 
-
-        const authToken = 'Client-ID c2NIAZC2STrww8Qh8CVb1r_9MDNwPiEyJacvCON_90c'
+        
+        const authToken = process.env.REACT_APP_UNSPLASH_AUTH_TOKEN
         const config: AxiosRequestConfig = {
           headers: {
             Authorization: `Bearer ${authToken}`,

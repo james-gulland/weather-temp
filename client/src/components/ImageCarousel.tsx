@@ -14,10 +14,14 @@ interface Props {
   showBullets: boolean
 }
 
-
 const ImageCarousel: React.FC<Props> = ({ items, showThumbnails, showFullscreenButton, showPlayButton, showBullets }) => {
   return (
-    <ImageGallery items={items} showThumbnails={showThumbnails} showFullscreenButton={showFullscreenButton} showPlayButton={showPlayButton} showBullets={showBullets}/>
+    <ImageGallery 
+      items={items} 
+      showThumbnails={showThumbnails} 
+      showFullscreenButton={showFullscreenButton} 
+      showPlayButton={showPlayButton} 
+      showBullets={showBullets}/>
   )
 }
 
