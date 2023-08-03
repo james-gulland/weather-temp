@@ -49,7 +49,7 @@ const GridItem: React.FC<Props> = ({ dest, month, averageTemperature, heatIndex,
   const callUnsplash = (imageParameter: string) => {
     const getData = async (): Promise<void> => {
       try { 
-        
+
         const authToken = process.env.REACT_APP_UNSPLASH_AUTH_TOKEN
         const config: AxiosRequestConfig = {
           headers: {
@@ -80,7 +80,12 @@ const GridItem: React.FC<Props> = ({ dest, month, averageTemperature, heatIndex,
       {/* TOP SECTION of card */}
       <div className="top-card">
         <div className="top-weather">
-          <ImageCarousel items={images} showThumbnails={false} showFullscreenButton={false} showPlayButton={false} showBullets={true}/>
+          <ImageCarousel 
+            items={images} 
+            showThumbnails={false} 
+            showFullscreenButton={false} 
+            showPlayButton={false} 
+            showBullets={dest.images.length > 0 ? true : false} />
         </div>
       </div>
 
