@@ -1,4 +1,5 @@
 import { Destination, weatherOptions } from '../types/interfaces'
+import ImageCarousel from './ImageCarousel'
 
 interface Props {
   dest: Destination
@@ -20,12 +21,25 @@ const GridItem: React.FC<Props> = ({ dest, month, averageTemperature, heatIndex,
   // Map out images into image gallery
   // console.log(dest.images.length > 0)
 
+  const images = [
+    {
+      original: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0ODAzNDh8MHwxfGFsbHx8fHx8fHx8fDE2OTA5ODg5MTF8&ixlib=rb-4.0.3&q=80&w=400',
+      thumbnail: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0ODAzNDh8MHwxfGFsbHx8fHx8fHx8fDE2OTA5ODg5MTF8&ixlib=rb-4.0.3&q=80&w=200',
+    },
+    {
+      original: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0ODAzNDh8MHwxfGFsbHx8fHx8fHx8fDE2OTA5ODg5MTF8&ixlib=rb-4.0.3&q=80&w=400',
+      thumbnail: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0ODAzNDh8MHwxfGFsbHx8fHx8fHx8fDE2OTA5ODg5MTF8&ixlib=rb-4.0.3&q=80&w=200',
+    },
+  ]
+
   return (
     <div className="destination-card">
       
       {/* TOP SECTION of card */}
       <div className="top-card">
-        <div className="top-weather">{heatIndex}</div>
+        <div className="top-weather">
+          <ImageCarousel items={images} showThumbnails={false} showFullscreenButton={false} showPlayButton={false}/>
+        </div>
       </div>
 
       {/* BOTTOM SECTION of card */}
