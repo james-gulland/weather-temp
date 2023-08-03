@@ -11,51 +11,41 @@ interface Props {
   averageRainfall: number | string
 }
 
+interface ImageUrl {
+  urls: {
+    small: string;
+    thumb: string;
+  }
+}
+
 const GridItem: React.FC<Props> = ({ dest, month, averageTemperature, heatIndex, humidity, averageRainfall }) => {
 
-  // Get image data
-  // const primaryImage = dest.images.find(img => img.is_primary === true)
-  // if (primaryImage) {
-  //   console.log(primaryImage.image_parameter)
-  // }
-
-  // Map out images into image gallery
-  // console.log(dest.images.length > 0)
-
-  // DUMMY DATA to use
-  const images = [
-    {
+  const images: { original: string; thumbnail: string }[] = []
+  const defaultImages: { original: string; thumbnail: string } = {
       original: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0ODAzNDh8MHwxfGFsbHx8fHx8fHx8fDE2OTA5ODg5MTF8&ixlib=rb-4.0.3&q=80&w=400',
       thumbnail: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0ODAzNDh8MHwxfGFsbHx8fHx8fHx8fDE2OTA5ODg5MTF8&ixlib=rb-4.0.3&q=80&w=200',
-    },
-    {
-      original: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0ODAzNDh8MHwxfGFsbHx8fHx8fHx8fDE2OTA5ODg5MTF8&ixlib=rb-4.0.3&q=80&w=400',
-      thumbnail: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0ODAzNDh8MHwxfGFsbHx8fHx8fHx8fDE2OTA5ODg5MTF8&ixlib=rb-4.0.3&q=80&w=200',
-    },
-  ]
-
-  // const images = [
-  //   {
-  //     original: '',
-  //     thumbnail: '',
-  //   },
-  // ]
-
+  }
+  
+  // This function retrieves the image parameters from our database for each of the images within the destination
+  // Then it calls the Unsplash API
   const retrieveImageUrls = () => {
 
+    // checks if there are images stored or otherwise allocated default image
     if (dest.images.length > 0) {
-      
+      // loop through the images within the destination and call Unsplash API to retrieve URLs
       dest.images.map((image) => {
         const imageParameter = image.image_parameter
-        // console.log(imageParameter)
         callUnsplash(imageParameter)
       }
 
     )} else {
-
+      // If no images are present, push the default images defined above
+      images.push(defaultImages)
     }
   }
 
+  // This function takes in the image parameter stored in our database, and calls the Unsplash API for short and thumbnails
+  // These are then passed down into the ImageCarousel in the jsx
   const callUnsplash = (imageParameter: string) => {
     const getData = async (): Promise<void> => {
       try { 
@@ -67,8 +57,14 @@ const GridItem: React.FC<Props> = ({ dest, month, averageTemperature, heatIndex,
           },
         }
 
-        const { data } = await axios.get<ImageData[]>(`https://api.unsplash.com/photos/${imageParameter}`, config)
-        console.log(data)
+        const { data } = await axios.get<ImageUrl>(`https://api.unsplash.com/photos/${imageParameter}`, config)
+
+        const newImage = {
+          original: data.urls.small,
+          thumbnail: data.urls.thumb,
+        }
+        images.push(newImage)
+        
       } catch (err) {
         console.log(err)
       }
