@@ -3,6 +3,18 @@ header {
   // width: 50%;
 }
 
+body {
+
+  // background-image: radial-gradient(circle at center top,
+  //   #EE7600 10%, /* Orange at the center with 10% radius */
+  //   #EE7600 20%, /* Orange still, but with 15% radius */
+  //   #FFCC00 15%, /* Yellow starts at 15% radius */
+  //   #FFCC00 100% /* Yellow continues until the edge */
+  // );
+  // box-shadow: 0 0 20px 10px #FFA500;
+  // filter: blur(40px);
+}
+
 h1, h2 {
   display: inline;
   font-size: $header-size;
@@ -11,6 +23,7 @@ h1, h2 {
 h1 {
   padding-right: 0.5rem;
 }
+
 h2 {
   font-weight: lighter;
 }

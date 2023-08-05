@@ -43,6 +43,7 @@ const Home: React.FC = () => {
 
   return (
     <>
+      <div className="sun-gradient"></div>
       <Nav />
       <main>
         <header>
