@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Damion&display=swap');
+
+// fonts
+$brand-font: 'Damion', cursive;
+$main-font: 'Bellefair', serif;
+
 // colours
-$bckg-colour: rgb(249, 250, 251);
-$primary-colour: blueviolet;
+// $bckg-colour: rgb(249, 250, 251);
+$bckg-colour: #F0F2F5;
+$primary-colour: #EE7600;
+$secondary-colour: #FFCC00;
 
 // sizing
 $header-size: 2.25rem;
 $big-font: 2rem;
 $medium-font: 1rem;
+

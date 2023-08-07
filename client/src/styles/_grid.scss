@@ -1,12 +1,12 @@
 .filtered-destination-container {
-  border: 2px solid green;
+  // border: 2px solid green;
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(4, 1fr);
   // grid-template-columns: repeat(4, minmax(min-content, max-content));
 
   .destination-card {
-    border: 1px solid red;
+    border: 1px solid black;
 
     .top-card {
       border-bottom: 1px dotted black;

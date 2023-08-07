@@ -1,5 +1,5 @@
 #control-container {
-  border: 1px solid orange;
+  // border: 1px solid orange;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -10,7 +10,7 @@
   display: flex;
   margin: 1rem;
   font-size: $big-font;
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 
 #dropdown-container {
@@ -24,7 +24,7 @@ select, #dropdown-container {
 
 #min-temp-container, #to-container, #max-temp-container {
   margin: 0.25rem;
-  border: 1px solid green;
+  // border: 1px solid green;
 }
 
 #min-temp-number, #max-temp-number {
@@ -32,6 +32,11 @@ select, #dropdown-container {
   justify-content: center;
   align-items: center;
   transition: transform 0.2s ease-in-out;
+}
+
+#temperature-container {
+  font-family: $main-font;
+  // font-size: 1em;
 }
 
 #min-temp-controls, #max-temp-controls {

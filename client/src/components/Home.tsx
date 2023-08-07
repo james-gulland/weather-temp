@@ -43,12 +43,11 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <div className="sun-gradient"></div>
-      <Nav />
-      <main>
-        <header>
-          <h1>OnlySun</h1><h2>Helping find you the best place to travel at {minTemp}-{maxTemp}°C in {month}</h2>
-        </header>
+      <header>
+        <div className="sun-gradient"></div>
+        <Nav />
+      
+        <h1>OnlySun</h1><h2>Helping you find the best place to travel at {minTemp}-{maxTemp}°C in {month}</h2>
         
         {/* CONTROL container */}
         <div id="control-container">
@@ -65,7 +64,9 @@ const Home: React.FC = () => {
             <button onClick={() => retrieveDestinations(month, minTemp, maxTemp, weatherType)}>Go!</button>
           </div>
         </div>
-
+      </header>
+        
+        <main>
         {/* GRID container */}
         <div className="filtered-destination-container">
           <Grid filteredDestinations={filteredDestinations} month={month}/>
