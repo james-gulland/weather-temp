@@ -6,13 +6,31 @@
   // grid-template-columns: repeat(4, minmax(min-content, max-content));
 
   .destination-card {
-    border: 1px solid black;
+    border: 1px solid lightgrey;
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
 
     .top-card {
       border-bottom: 1px dotted black;
+      min-height: 12rem;
+      
+        // .top-weather {
+        //   .image-gallery {
+        //     height: 100%;
+        //   }
+      // }
+
+    }
+
+    .bottom-card {
+      font-family: $main-font;
+      padding: 0.5rem;
+
+      .dest-name {
+        font-size: 1.5rem;
+        // font-weight: 600;
+      }
     }
  }
 }
