@@ -46,10 +46,11 @@ const Home: React.FC = () => {
       <header>
         <div className="sun-gradient">
           <Nav />
-        
-          <h1>OnlySun</h1><h2>Helping you find the best place to travel at {minTemp}-{maxTemp}°C in {month}</h2>
-          </div>  
-          {/* CONTROL container */}
+          <h1>OnlySun</h1>
+          <h2>Helping you find the best place to travel at {minTemp}-{maxTemp}°C in {month}</h2>
+        </div>
+
+        {/* CONTROL container */}
         <div id="control-container">
           
           {/* TEMPERATURE controls container */}
