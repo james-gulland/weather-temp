@@ -25,7 +25,7 @@ const Grid: React.FC<Props> = ( { filteredDestinations, month }) => {
           })}
         </>
         :
-        <div>Choose your preference and hit Go!</div>
+        <div></div>
       }
     </>
   )

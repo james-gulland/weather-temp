@@ -1,23 +1,57 @@
 header {
-  margin-top: 2rem;
+  // margin: 1rem 0;
   // width: 50%;
+  // border: 1px solid black;
+
+
+
+  .sun-gradient {
+    // OLDER MIX OF YELLOW AND ORANGE
+    // background-image: radial-gradient(circle at center top,
+    // #EEE 10%,      /* Orange at the center with 10% radius */
+    // #EE7600 50%,  /* Orange at the center with 10% radius */
+    // #EE7600 40%,  /* Orange still, but with 15% radius */
+    // #FFCC00 15%  /* Yellow starts at 15% radius */
+    // );
+    // // #FFCC00 80% /* Yellow continues until the edge */
+    // // filter: blur(40px);
+    // backdrop-filter: blur(40px);
+
+
+    // NEWER MIX OF JUST ORANGE
+    // background-image: radial-gradient(circle at center top,
+    // #EEE 20%,      /* Orange at the center with 10% radius */
+    // #EE7600 50%,  /* Orange at the center with 10% radius */
+    // );
+    // #FFCC00 15%  /* Yellow starts at 15% radius */
+    // #FFCC00 80% /* Yellow continues until the edge */
+    // filter: blur(20px);
+    // backdrop-filter: blur(40px);
+  }
+
 }
 
-body {
-
-  // background-image: radial-gradient(circle at center top,
-  //   #EE7600 10%, /* Orange at the center with 10% radius */
-  //   #EE7600 20%, /* Orange still, but with 15% radius */
-  //   #FFCC00 15%, /* Yellow starts at 15% radius */
-  //   #FFCC00 100% /* Yellow continues until the edge */
-  // );
-  // box-shadow: 0 0 20px 10px #FFA500;
-  // filter: blur(40px);
-}
+// header::after {
+//   content: "";
+//   position: fixed;
+//   left: 0;
+//   right: 0;
+//   top: 0;
+//   z-index: -1;
+//   display: block;
+//   background-image: radial-gradient(circle at center top,
+//     #EEE 5%,      /* Orange at the center with 10% radius */
+//     #EE7600 50%,  /* Orange at the center with 10% radius */
+//     #EE7600 40%,  /* Orange still, but with 15% radius */
+//     #FFCC00 15%,  /* Yellow starts at 15% radius */
+//     #FFCC00 80% /* Yellow continues until the edge */
+//     );
+  
+//   filter: blur(40px);
+// }
 
 h1, h2 {
   display: inline;
-  font-size: $header-size;
 }
 
 h1 {
@@ -30,4 +64,5 @@ h1 {
 h2 {
   font-weight: lighter;
   font-family: $main-font;
+  font-size: $header-size;
 }

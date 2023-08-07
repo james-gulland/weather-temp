@@ -44,12 +44,12 @@ const Home: React.FC = () => {
   return (
     <>
       <header>
-        <div className="sun-gradient"></div>
-        <Nav />
-      
-        <h1>OnlySun</h1><h2>Helping you find the best place to travel at {minTemp}-{maxTemp}°C in {month}</h2>
+        <div className="sun-gradient">
+          <Nav />
         
-        {/* CONTROL container */}
+          <h1>OnlySun</h1><h2>Helping you find the best place to travel at {minTemp}-{maxTemp}°C in {month}</h2>
+          </div>  
+          {/* CONTROL container */}
         <div id="control-container">
           
           {/* TEMPERATURE controls container */}
@@ -64,6 +64,7 @@ const Home: React.FC = () => {
             <button onClick={() => retrieveDestinations(month, minTemp, maxTemp, weatherType)}>Go!</button>
           </div>
         </div>
+
       </header>
         
         <main>
