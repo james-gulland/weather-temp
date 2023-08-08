@@ -9,9 +9,9 @@
     width: 100%;
     height: 100%;
     background-image: radial-gradient(circle at center top,
-      $secondary-colour 35%,             /* Yellow core */
-      $secondary-colour 25%,             /* Yellow core */
-      $primary-colour 50%    /* Orange at the centre */
+      $secondary-colour 35%,  /* Yellow core */
+      $secondary-colour 25%,  /* Yellow core */
+      $primary-colour 55%     /* Orange at the edges */
     );
     filter: blur(70px);
     z-index: -1;

@@ -91,7 +91,7 @@ const GridItem: React.FC<Props> = ({ dest, month, averageTemperature, heatIndex,
       {/* BOTTOM SECTION of card */}
       <div className="bottom-card">
         <div className="dest-name">{dest.name}, {dest.country}</div>
-        {/* <div className="dest-month">in {month}</div> */}
+        <div className="dest-month">in {month}</div>
         <div className="dest-weather-data">
           <div className="weather-data">{weatherOptions[0].label}: <span>{averageTemperature}</span></div>
           <div className="weather-data">{weatherOptions[1].label}: <span>{heatIndex}</span></div>

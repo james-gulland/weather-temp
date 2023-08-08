@@ -29,12 +29,19 @@
               color: $secondary-colour;
             }
           }
+
+          .image-gallery-bullet {
+            &:hover {
+              border-color: $secondary-colour;;
+              background-color: $secondary-colour;
+            }
+          }
+
           .image-gallery-svg {
             height: 4rem;
           }
 
           .image-gallery-slides {
-    
             .image-gallery-slide img {
               width: 100%;
               height: $top-image;
