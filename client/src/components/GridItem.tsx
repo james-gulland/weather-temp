@@ -79,14 +79,12 @@ const GridItem: React.FC<Props> = ({ dest, month, averageTemperature, heatIndex,
       
       {/* TOP SECTION of card */}
       <div className="top-card">
-        <div className="top-weather">
-          <ImageCarousel 
-            items={images} 
-            showThumbnails={false} 
-            showFullscreenButton={false} 
-            showPlayButton={false} 
-            showBullets={dest.images.length > 0 ? true : false} />
-        </div>
+        <ImageCarousel 
+          items={images} 
+          showThumbnails={false} 
+          showFullscreenButton={false} 
+          showPlayButton={false} 
+          showBullets={dest.images.length > 0 ? true : false} />
       </div>
 
       {/* BOTTOM SECTION of card */}
