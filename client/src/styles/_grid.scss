@@ -23,6 +23,11 @@
 
           .image-gallery-right-nav, .image-gallery-left-nav {
             height: 100%;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            &:hover {
+              color: $secondary-colour;
+            }
           }
           .image-gallery-svg {
             height: 4rem;
@@ -36,6 +41,13 @@
               object-fit: cover;
             }
           }
+
+          &:hover {
+            .image-gallery-right-nav, .image-gallery-left-nav {
+              opacity: 1;
+            }
+          }
+
         }
     }
 
@@ -59,6 +71,10 @@
           display: block;
         }
       }
+    }
+
+    &:hover {
+      cursor: pointer;
     }
  }
 
