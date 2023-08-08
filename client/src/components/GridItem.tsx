@@ -50,7 +50,8 @@ const GridItem: React.FC<Props> = ({ dest, month, averageTemperature, heatIndex,
     const getData = async (): Promise<void> => {
       try { 
 
-        const authToken = process.env.REACT_APP_UNSPLASH_AUTH_TOKEN
+        // const authToken = process.env.REACT_APP_UNSPLASH_AUTH_TOKEN
+        const authToken = 'Client-ID c2NIAZC2STrww8Qh8CVb1r_9MDNwPiEyJacvCON_90c'
         const config: AxiosRequestConfig = {
           headers: {
             Authorization: `Bearer ${authToken}`,
