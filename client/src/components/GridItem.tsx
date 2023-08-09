@@ -82,7 +82,7 @@ const GridItem: React.FC<Props> = ({ dest, month, averageTemperature, heatIndex,
     } else {
       setImages([defaultImages])
     }
-  }, [dest.images])
+  }, [])
 
   return (
     <div className="destination-card">
