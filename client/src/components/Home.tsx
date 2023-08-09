@@ -61,14 +61,14 @@ const Home: React.FC = () => {
           {/* DROP-DOWN containers */}
           <div id="dropdown-container">
             <TempType weatherType={weatherType} setWeatherType={setWeatherType} />
+            <div>in</div>
             <MonthDropdown month={month} setMonth={setMonth}/>
-            <button onClick={() => retrieveDestinations(month, minTemp, maxTemp, weatherType)}>Go!</button>
+            <button className="go-btn" onClick={() => retrieveDestinations(month, minTemp, maxTemp, weatherType)}>Go!</button>
           </div>
         </div>
-
       </header>
         
-        <main>
+      <main>
         {/* GRID container */}
         <div className="filtered-destination-container">
           <Grid filteredDestinations={filteredDestinations} month={month}/>

@@ -6,7 +6,7 @@ interface Props {
 const MonthDropdown: React.FC<Props> = ({ month, setMonth }) => {
   return (
     <>
-      <label htmlFor="months">in </label>
+      <label htmlFor="months"></label>
       <select name="months" id="months" defaultValue={month} onChange={(e) => setMonth((e.target.value))}>
         <option value="January">January</option>
         <option value="February">February</option>

@@ -5,43 +5,62 @@
   justify-content: center;
   align-items: center;
   margin: 1.25rem;
-}
 
-#temperature-container {
-  display: flex;
-  margin: 1rem;
-  font-size: $big-font;
-  // border: 1px solid red;
-}
+  #temperature-container {
+    display: flex;
+    margin: 1rem;
+    font-size: $big-font;
+    font-family: $main-font;
+    // border: 1px solid red;
+  
+    button {
+      font-size: $medium-font;
+      font-family: $main-font;
+      border-radius: 5px;
+      // padding: 0 0.5rem;
+      border: 1px solid lightgray;
+      background-color: white;
+      text-align: center;
+      align-items: center;
+      width: 1.5em;
+    }
+    
+    // font-size: 1em;
+    #min-temp-container, #to-container, #max-temp-container {
+      margin: 0.25rem;
+      // border: 1px solid green;
+    }
+    
+    #min-temp-number, #max-temp-number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.2s ease-in-out;
+    }
+  
+    #min-temp-controls, #max-temp-controls {
+      display: flex;
+      gap: 0.5rem;
+    }
+  }
+  
+  #dropdown-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  
+    select, .go-btn {
+      font-size: $medium-font;
+      font-family: $main-font;
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: 1px solid lightgray;
+      background-color: white;
+    }
 
-#dropdown-container {
-  display: flex;
-  gap: 0.5rem;
-}
-
-select, #dropdown-container {
-  font-size: $medium-font;
-}
-
-#min-temp-container, #to-container, #max-temp-container {
-  margin: 0.25rem;
-  // border: 1px solid green;
-}
-
-#min-temp-number, #max-temp-number {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.2s ease-in-out;
-}
-
-#temperature-container {
-  font-family: $main-font;
-  // font-size: 1em;
-}
-
-#min-temp-controls, #max-temp-controls {
-  display: flex;
-  gap: 0.5rem;
+    .go-btn {
+      cursor: pointer;
+    }
+  }  
 }
 
