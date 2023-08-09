@@ -32,24 +32,21 @@ const GridItem: React.FC<Props> = ({ dest, month, averageTemperature, heatIndex,
 
     // This function retrieves the image parameters from our database for each of the images within the destination
     // Then it calls the Unsplash API
-    // const retrieveImageUrls = async () => {
-
     const retrieveImageUrls = async () => {
+      
       // checks if there are images stored or otherwise allocated default image
       if (dest.images.length > 0) {
         // loop through the images within the destination and call Unsplash API to retrieve URLs
-        await Promise.all(
-          dest.images.map((image) => {
-            const imageParameter = image.image_parameter;
-            return callUnsplash(imageParameter);
-          })
-        );
+        const imagePromises = dest.images.map((image) => {
+          const imageParameter = image.image_parameter
+          return callUnsplash(imageParameter)
+        })
+        await Promise.all(imagePromises)
       } else {
-        // If no images are present, push the default images defined above
-        // images.push(defaultImages);
+         // If no images are present, push the default images defined above
         setImages([defaultImages])
       }
-    };
+    }
 
     // This function takes in the image parameter stored in our database, and calls the Unsplash API for short and thumbnails
     // These are then passed down into the ImageCarousel in the jsx
@@ -57,7 +54,6 @@ const GridItem: React.FC<Props> = ({ dest, month, averageTemperature, heatIndex,
       const getData = async (): Promise<void> => {
         try { 
           const authToken = process.env.REACT_APP_UNSPLASH_AUTH_TOKEN
-          // const authToken = 'Client-ID c2NIAZC2STrww8Qh8CVb1r_9MDNwPiEyJacvCON_90c'
           const config: AxiosRequestConfig = {
             headers: {
               Authorization: `Bearer ${authToken}`,
@@ -72,7 +68,7 @@ const GridItem: React.FC<Props> = ({ dest, month, averageTemperature, heatIndex,
           }
           // images.push(newImage)
           setImages((prevImages) => [...prevImages, newImage])
-          
+
         } catch (err) {
           console.log(err)
         }
@@ -80,7 +76,12 @@ const GridItem: React.FC<Props> = ({ dest, month, averageTemperature, heatIndex,
       getData()
     }
 
-    retrieveImageUrls()
+    // retrieveImageUrls()
+    if (dest.images.length > 0) {
+      retrieveImageUrls()
+    } else {
+      setImages([defaultImages])
+    }
   }, [dest.images])
 
   return (
