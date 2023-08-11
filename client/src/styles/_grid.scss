@@ -90,23 +90,20 @@
       background-clip: content-box, border-box;
       animation: gradient-background 8s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
     }
-
-    @keyframes gradient-background {
-      0%, 100% {
-        background-image: linear-gradient(white, white), radial-gradient(circle at top left, $primary-colour, $secondary-colour);
-      }
-      25% {
-        background-image: linear-gradient(white, white), radial-gradient(circle at top right, $primary-colour, $secondary-colour);
-      }
-      50% {
-        background-image: linear-gradient(white, white), radial-gradient(circle at bottom right, $primary-colour, $secondary-colour);
-      }
-      75% {
-        background-image: linear-gradient(white, white), radial-gradient(circle at bottom left, $primary-colour, $secondary-colour);
-      }
-    }
-
-
   }
+}
 
+@keyframes gradient-background {
+  0%, 100% {
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, $primary-colour, $secondary-colour);
+  }
+  25% {
+    background-image: linear-gradient(white, white), radial-gradient(circle at top right, $primary-colour, $secondary-colour);
+  }
+  50% {
+    background-image: linear-gradient(white, white), radial-gradient(circle at bottom right, $primary-colour, $secondary-colour);
+  }
+  75% {
+    background-image: linear-gradient(white, white), radial-gradient(circle at bottom left, $primary-colour, $secondary-colour);
+  }
 }
