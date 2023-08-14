@@ -1,6 +1,9 @@
+import { useParams } from 'react-router-dom'
+
 const DestinationSingle = () => {
+  const { slug } = useParams()
   return (
-    <div>Hello!</div>
+    <div>Hello {slug}!</div>
   )
 }
 

@@ -16,6 +16,6 @@ class PopulatedDestinationSerializer(DestinationSerializer):
     # Fixes so that it shows destination data first, and then weatherdata
     class Meta:
         model = Destination
-        fields = ('id', 'name', 'country', 'continent', 'latitude', 'longitude', 'description', 'weatherdata', 'images')
+        fields = ('id', 'name', 'country', 'continent', 'latitude', 'longitude', 'description', 'slug', 'weatherdata', 'images')
 
     
