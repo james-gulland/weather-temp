@@ -1,4 +1,5 @@
 # from django.shortcuts import render
+from django.http import Http404
 from rest_framework.views import APIView
 from rest_framework.response import Response
 # from rest_framework import status
@@ -7,7 +8,6 @@ from .serializers.populated import PopulatedDestinationSerializer
 # from weatherdata.serializers.common import WeatherDataSerializer
 from .models import Destination
 from weatherdata.models import WeatherData
-from django.db.models import Q
 
 # GET ALL
 # example usage: GET /api/destinations/
@@ -25,16 +25,28 @@ class DestinationViewList(APIView):
 
 # GET SINGLE DESTINATION
 # example usage: GET /api/destinations/5/
-class DestinationDetailView(APIView):
+# class DestinationDetailView(APIView):
    
-   def get(self, request, pk):
-      print('pk captured ->', pk)
+#    def get(self, request, pk):
+#       print('pk captured ->', pk)
 
-      destination = Destination.objects.get(pk=pk)
-      # serialized_destination = DestinationSerializer(destination)
-      serialized_destination = PopulatedDestinationSerializer(destination)
+#       destination = Destination.objects.get(pk=pk)
+#       # serialized_destination = DestinationSerializer(destination)
+#       serialized_destination = PopulatedDestinationSerializer(destination)
 
-      return Response(serialized_destination.data)
+#       return Response(serialized_destination.data)
+
+class DestinationDetailView(APIView):
+    def get_object(self, slug):
+        try:
+            return Destination.objects.get(slug=slug)
+        except Destination.DoesNotExist:
+            raise Http404
+
+    def get(self, request, slug):  # Change 'pk' to 'slug'
+        destination = self.get_object(slug)
+        serialized_destination = PopulatedDestinationSerializer(destination)
+        return Response(serialized_destination.data)
 
 # GET FILTERED DESTINATION BASED ON MONTH AND AVG TEMP RANGE
 # example usage: GET /api/destinations/filter/?month=july&min_temp=20&max_temp=25  
