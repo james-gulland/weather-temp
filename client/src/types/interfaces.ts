@@ -34,6 +34,7 @@ export interface Destination {
   latitude: number
   longitude: number
   description: string
+  slug: string
   weatherdata: WeatherData[]
   images: ImageData[]
 }

@@ -24,6 +24,7 @@ class DestinationViewList(APIView):
       # return Response('GET /api/destinations/ endpoint hit')
 
 # GET SINGLE DESTINATION
+# REPLACED with slug request, see below
 # example usage: GET /api/destinations/5/
 # class DestinationDetailView(APIView):
    
@@ -36,6 +37,8 @@ class DestinationViewList(APIView):
 
 #       return Response(serialized_destination.data)
 
+# GET SINGLE DESTINATION
+# example usage: GET /api/destinations/london-england
 class DestinationDetailView(APIView):
     def get_object(self, slug):
         try:
@@ -43,7 +46,7 @@ class DestinationDetailView(APIView):
         except Destination.DoesNotExist:
             raise Http404
 
-    def get(self, request, slug):  # Change 'pk' to 'slug'
+    def get(self, request, slug):
         destination = self.get_object(slug)
         serialized_destination = PopulatedDestinationSerializer(destination)
         return Response(serialized_destination.data)
