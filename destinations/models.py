@@ -10,14 +10,7 @@ class Destination(models.Model):
     latitude = models.FloatField()
     longitude = models.FloatField()
     description = models.TextField(max_length=300)
-    # slug = models.SlugField(unique=True, blank=True)
-    slug = models.SlugField()
-
-    # def save(self, *args, **kwargs):
-    #   if not self.slug:
-    #       slug_text = f"{self.name}-{self.country}"
-    #       self.slug = slugify(slug_text)
-    #   super().save(*args, **kwargs)
+    slug = models.SlugField(unique=True)
 
     def __str__(self):
         return f"{self.id}: {self.name}, {self.country}"
