@@ -7,6 +7,7 @@ class ImageInline(admin.StackedInline):  # Use TabularInline if you prefer a tab
 
 # Customize the DestinationAdmin class to include the ImageInline
 class DestinationAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug': ('name', 'country')}
     inlines = [ImageInline]
 
 # Register your models here.
