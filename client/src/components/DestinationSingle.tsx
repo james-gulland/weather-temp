@@ -16,7 +16,6 @@ const DestinationSingle = () => {
       try { 
         const { data } = await axios.get<Destination[]>(`/api/destinations/${slug}/`)
         setDestination(data)
-        console.log('Slug data', data)
       } catch (err) {
         console.log(err)
       }
