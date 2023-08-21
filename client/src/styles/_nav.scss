@@ -1,13 +1,23 @@
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}
+
 .nav {
   height: 4svh;
   display: flex;
   gap: 0.5rem;
   justify-content: flex-end;
   align-items: center;
-  // border: 1px solid black;
   padding-right: 0.5rem;
   font-family: $main-font;
   font-size: 1.25em;
+}
+
+.nav-logo {
+  font-family: $brand-font;
+  font-size: 2em;
 }
 
 .temp-unit {

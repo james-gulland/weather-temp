@@ -2,10 +2,10 @@ import NavComponent from "./NavComponent"
 
 const Nav = () => {
   return (
-    <>
-      <h1>OnlySun</h1>
+    <div className="nav-container">
+      <div className="nav-logo">OnlySun</div>
       <NavComponent />
-    </>
+    </div>
   )
 }
 
