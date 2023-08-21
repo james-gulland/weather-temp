@@ -1,9 +1,11 @@
+import NavComponent from "./NavComponent"
+
 const Nav = () => {
   return (
-    <div className="nav">
-      <div className="temp-unit">°C</div>
-      <div className="temp-unit">°F</div>
-    </div>
+    <>
+      <h1>OnlySun</h1>
+      <NavComponent />
+    </>
   )
 }
 

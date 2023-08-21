@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Destination } from '../types/interfaces'
+import Nav from './Nav'
 import axios from 'axios'
 
 const DestinationSingle = () => {
@@ -24,7 +25,13 @@ const DestinationSingle = () => {
   }, [])
 
   return (
-    <div>Hello {slug}!</div>
+    <>
+      <div className="sun-gradient">
+        <Nav />
+        <div>Hello {slug}!</div>
+      </div>
+      
+    </>
   )
 }
 

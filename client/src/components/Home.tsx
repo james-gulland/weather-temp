@@ -4,7 +4,7 @@ import { Destination, WeatherSelection, weatherOptions } from '../types/interfac
 import TemperatureControls from './TemperatureControls'
 import TempType from './TempType'
 import MonthDropdown from './MonthDropdown'
-import Nav from './Nav'
+import HomeNav from './HomeNav'
 import Grid from './Grid'
 
 const Home: React.FC = () => {
@@ -45,7 +45,7 @@ const Home: React.FC = () => {
     <>
       <header>
         <div className="sun-gradient">
-          <Nav />
+          <HomeNav />
           <h1>OnlySun</h1>
           <h2>Helping you find the best place to travel at {minTemp}-{maxTemp}°C in {month}</h2>
         </div>
