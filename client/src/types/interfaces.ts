@@ -48,7 +48,8 @@ export const weatherOptions: WeatherSelection[] = [
 
 export interface ImageUrl {
   urls: {
-    small: string;
-    thumb: string;
+    small?: string
+    regular?: string
+    thumb: string
   }
 }
