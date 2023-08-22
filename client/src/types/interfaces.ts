@@ -45,3 +45,10 @@ export const weatherOptions: WeatherSelection[] = [
   { value: 'relative_humidity', label: 'Humidity' },
   { value: 'precipitation_levels', label: 'Avg Rainfall' }
 ]
+
+export interface ImageUrl {
+  urls: {
+    small: string;
+    thumb: string;
+  }
+}

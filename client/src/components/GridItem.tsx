@@ -1,6 +1,6 @@
 import { Destination, weatherOptions } from '../types/interfaces'
 import ImageCarousel from './ImageCarousel'
-import axios, { AxiosRequestConfig } from 'axios'
+import { retrieveImageUrls } from '../helpers/filter'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -11,13 +11,6 @@ interface Props {
   heatIndex: number | string
   humidity: number | string
   averageRainfall: number | string
-}
-
-interface ImageUrl {
-  urls: {
-    small: string;
-    thumb: string;
-  }
 }
 
 const GridItem: React.FC<Props> = ({ dest, month, averageTemperature, heatIndex, humidity, averageRainfall }) => {
@@ -31,55 +24,9 @@ const GridItem: React.FC<Props> = ({ dest, month, averageTemperature, heatIndex,
 
   useEffect(() => {
 
-    // This function retrieves the image parameters from our database for each of the images within the destination
-    // Then it calls the Unsplash API
-    const retrieveImageUrls = async () => {
-      
-      // checks if there are images stored or otherwise allocated default image
-      if (dest.images.length > 0) {
-        // loop through the images within the destination and call Unsplash API to retrieve URLs
-        const imagePromises = dest.images.map((image) => {
-          const imageParameter = image.image_parameter
-          return callUnsplash(imageParameter)
-        })
-        await Promise.all(imagePromises)
-      } else {
-         // If no images are present, push the default images defined above
-        setImages([defaultImages])
-      }
-    }
-
-    // This function takes in the image parameter stored in our database, and calls the Unsplash API for short and thumbnails
-    // These are then passed down into the ImageCarousel in the jsx
-    const callUnsplash = (imageParameter: string) => {
-      const getData = async (): Promise<void> => {
-        try { 
-          const authToken = process.env.REACT_APP_UNSPLASH_AUTH_TOKEN
-          const config: AxiosRequestConfig = {
-            headers: {
-              Authorization: `Bearer ${authToken}`,
-            },
-          }
-
-          const { data } = await axios.get<ImageUrl>(`https://api.unsplash.com/photos/${imageParameter}`, config)
-
-          const newImage = {
-            original: data.urls.small,
-            thumbnail: data.urls.thumb,
-          }
-          // images.push(newImage)
-          setImages((prevImages) => [...prevImages, newImage])
-
-        } catch (err) {
-          console.log(err)
-        }
-      }
-      getData()
-    }
-
-    // retrieveImageUrls()
+    // retrieve the images from helpers function to set the images.
     if (dest.images.length > 0) {
-      retrieveImageUrls()
+      retrieveImageUrls(dest, setImages, defaultImages)
     } else {
       setImages([defaultImages])
     }
