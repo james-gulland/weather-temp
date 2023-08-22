@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Destination } from '../types/interfaces'
+
 import Nav from './Nav'
 import axios from 'axios'
 
@@ -25,14 +26,14 @@ const DestinationSingle = () => {
     getData()
   }, [slug])
 
-
   return (
     <>
       <header className="sun-gradient">
         <Nav />
-        <h1>{`${destination?.name}, ${destination?.country}` || 'Loading...'}</h1>
+        <h2 className="destination-title">
+          {`${destination?.name}, ${destination?.country}` || 'Loading...'}
+        </h2>
       </header>
-      
     </>
   )
 }
