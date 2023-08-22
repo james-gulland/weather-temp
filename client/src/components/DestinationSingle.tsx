@@ -54,13 +54,14 @@ const DestinationSingle = () => {
 
       <main>
         <div className="destination-top">
-          <ImageCarousel 
+          <ImageCarousel
             items={images} 
             showThumbnails={true} 
             showFullscreenButton={true} 
             showPlayButton={false} 
             showBullets={true}
-            />
+          />
+          <div>test</div>
         </div>
       </main>
     </>

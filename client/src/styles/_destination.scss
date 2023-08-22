@@ -2,3 +2,9 @@
   display: block;
   margin: 2rem 0;
 }
+
+.destination-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
