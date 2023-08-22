@@ -2,8 +2,8 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Destination } from '../types/interfaces'
 import { retrieveImageUrls } from '../helpers/filter'
-
 import Nav from './Nav'
+import ImageCarousel from './ImageCarousel'
 import axios from 'axios'
 
 const DestinationSingle = () => {
@@ -13,9 +13,8 @@ const DestinationSingle = () => {
   const [destination, setDestination] = useState<Destination | null>(null)
   const [images, setImages] = useState<{ original: string; thumbnail: string }[]>([])
 
+  // get destination data once slug established
   useEffect(() => {
-
-    // on pageload, get destination data based on the entered slug
     const getData = async (): Promise<void> => {
       try { 
         const { data } = await axios.get<Destination>(`/api/destinations/${slug}/`)
@@ -26,11 +25,10 @@ const DestinationSingle = () => {
       }
     }
     getData()
-
   }, [slug])
 
+  // get images once destination available
   useEffect(() => {
-
     const defaultImages: { original: string; thumbnail: string } = {
       original: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0ODAzNDh8MHwxfGFsbHx8fHx8fHx8fDE2OTA5ODg5MTF8&ixlib=rb-4.0.3&q=80&w=400',
       thumbnail: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0ODAzNDh8MHwxfGFsbHx8fHx8fHx8fDE2OTA5ODg5MTF8&ixlib=rb-4.0.3&q=80&w=200',
@@ -53,6 +51,18 @@ const DestinationSingle = () => {
           {`${destination?.name}, ${destination?.country}` || 'Loading...'}
         </h2>
       </header>
+
+      <main>
+        <div className="destination-top">
+          <ImageCarousel 
+            items={images} 
+            showThumbnails={true} 
+            showFullscreenButton={true} 
+            showPlayButton={false} 
+            showBullets={true}
+            />
+        </div>
+      </main>
     </>
   )
 }
