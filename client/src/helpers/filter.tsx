@@ -23,7 +23,6 @@ const callUnsplash = async (imageParameter: string, setImages: Function, imageSi
     }
 
     const { data } = await axios.get<ImageUrl>(`https://api.unsplash.com/photos/${imageParameter}`, config)
-    console.log('Here is the image data ->', data)
     const newImage = {
       original: data.urls[imageSize],
       thumbnail: data.urls.thumb,
