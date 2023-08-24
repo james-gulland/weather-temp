@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Destination } from '../types/interfaces'
-import { retrieveImageUrls } from '../helpers/filter'
+import { retrieveImageUrls, defaultImages } from '../helpers/filter'
 import Nav from './Nav'
 import ImageCarousel from './ImageCarousel'
 import axios from 'axios'
@@ -29,11 +29,6 @@ const DestinationSingle = () => {
 
   // get images once destination available
   useEffect(() => {
-    const defaultImages: { original: string; thumbnail: string } = {
-      original: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0ODAzNDh8MHwxfGFsbHx8fHx8fHx8fDE2OTA5ODg5MTF8&ixlib=rb-4.0.3&q=80&w=400',
-      thumbnail: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0ODAzNDh8MHwxfGFsbHx8fHx8fHx8fDE2OTA5ODg5MTF8&ixlib=rb-4.0.3&q=80&w=200',
-    }
-
     if (destination) {
       if (destination.images.length > 0) {
         retrieveImageUrls(destination, setImages, defaultImages, 'regular')

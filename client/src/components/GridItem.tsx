@@ -1,6 +1,6 @@
 import { Destination, weatherOptions } from '../types/interfaces'
 import ImageCarousel from './ImageCarousel'
-import { retrieveImageUrls } from '../helpers/filter'
+import { retrieveImageUrls, defaultImages } from '../helpers/filter'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -20,11 +20,6 @@ const GridItem: React.FC<Props> = ({ dest, month, averageTemperature, heatIndex,
 
   // on load 
   useEffect(() => {
-
-    const defaultImages: { original: string; thumbnail: string } = {
-      original: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0ODAzNDh8MHwxfGFsbHx8fHx8fHx8fDE2OTA5ODg5MTF8&ixlib=rb-4.0.3&q=80&w=400',
-      thumbnail: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0ODAzNDh8MHwxfGFsbHx8fHx8fHx8fDE2OTA5ODg5MTF8&ixlib=rb-4.0.3&q=80&w=200',
-    }
 
     // retrieve the images from helpers function to set the images.
     if (dest.images.length > 0) {
