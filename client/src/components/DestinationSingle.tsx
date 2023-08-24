@@ -49,13 +49,15 @@ const DestinationSingle = () => {
 
       <main>
         <div className="destination-top">
-          <ImageCarousel
-            items={images} 
-            showThumbnails={true} 
-            showFullscreenButton={true} 
-            showPlayButton={false} 
-            showBullets={true}
-          />
+          <div className="destination-image-carousel">
+            <ImageCarousel
+              items={images} 
+              showThumbnails={true} 
+              showFullscreenButton={true} 
+              showPlayButton={false} 
+              showBullets={true}
+            />
+          </div>
           <div>test</div>
         </div>
       </main>

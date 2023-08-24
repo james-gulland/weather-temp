@@ -22,22 +22,6 @@
           overflow: hidden;
           object-fit: cover;
 
-          .image-gallery-right-nav, .image-gallery-left-nav {
-            height: 100%;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-            &:hover {
-              color: $secondary-colour;
-            }
-          }
-
-          .image-gallery-bullet {
-            &:hover {
-              border-color: $secondary-colour;;
-              background-color: $secondary-colour;
-            }
-          }
-
           .image-gallery-svg {
             height: 4rem;
           }
@@ -47,12 +31,6 @@
               width: 100%;
               height: $top-image;
               object-fit: cover;
-            }
-          }
-
-          &:hover {
-            .image-gallery-right-nav, .image-gallery-left-nav {
-              opacity: 1;
             }
           }
 
@@ -91,6 +69,34 @@
       animation: gradient-background 8s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
     }
   }
+}
+
+// shared image gallery properties on Grid and Destination Single
+.image-gallery {
+  .image-gallery-right-nav, .image-gallery-left-nav {
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    &:hover {
+      color: $secondary-colour;
+    }
+  }
+
+  &:hover {
+    .image-gallery-right-nav, .image-gallery-left-nav {
+      opacity: 1;
+    }
+  }
+
+  .image-gallery-bullets {
+    .image-gallery-bullet {
+      &:hover {
+        border-color: $secondary-colour;;
+        background-color: $secondary-colour;
+      }
+    }
+  }
+
 }
 
 @keyframes gradient-background {

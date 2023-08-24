@@ -7,4 +7,31 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  // border: 1px solid red;
+  // max-height: 60svh;
+  height: 30rem;
+  object-fit: cover;
+  
+  .destination-image-carousel {
+    // border: 1px solid blueviolet;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
+
+    .image-gallery {
+      height: 100%;
+      object-fit: cover;
+
+      .image-gallery-slides {
+        .image-gallery-slide img {
+          // border-radius: 10px;
+          // border: 2px solid lightgray;
+          overflow: hidden; 
+          height: 24rem;
+          object-fit: cover;
+        }
+      }
+    }
+  }
 }
