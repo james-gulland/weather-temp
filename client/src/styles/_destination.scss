@@ -25,8 +25,9 @@
 
       .image-gallery-slides {
         .image-gallery-slide img {
-          // border-radius: 10px;
-          // border: 2px solid lightgray;
+          border-radius: 10px 10px 0 0;
+          border: 1px solid lightgray;
+          // box-shadow: rgba(0, 0, 0, 0.16) 1px 2px 2px;
           overflow: hidden; 
           height: 24rem;
           object-fit: cover;
