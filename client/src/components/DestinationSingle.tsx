@@ -4,6 +4,7 @@ import { Destination } from '../types/interfaces'
 import { retrieveImageUrls, defaultImages } from '../helpers/filter'
 import Nav from './Nav'
 import ImageCarousel from './ImageCarousel'
+import Map from './Map'
 import axios from 'axios'
 
 const DestinationSingle = () => {
@@ -58,7 +59,9 @@ const DestinationSingle = () => {
               showBullets={true}
             />
           </div>
-          <div>test</div>
+          <div>
+            <Map />
+          </div>
         </div>
       </main>
     </>
