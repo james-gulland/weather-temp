@@ -50,7 +50,9 @@ const Home: React.FC = () => {
           <h1>OnlySun</h1>
           <h2>Helping you find the best place to travel at {minTemp}-{maxTemp}°C in {month}</h2>
         </div>
-
+      </header>
+        
+      <main>
         {/* CONTROL container */}
         <div id="control-container">
           
@@ -67,9 +69,7 @@ const Home: React.FC = () => {
             <button className="go-btn" onClick={() => retrieveDestinations(month, minTemp, maxTemp, weatherType)}>Go!</button>
           </div>
         </div>
-      </header>
         
-      <main>
         {/* GRID container */}
         <div className="filtered-destination-container">
           <Grid filteredDestinations={filteredDestinations} month={month}/>
