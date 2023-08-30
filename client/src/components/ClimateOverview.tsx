@@ -1,4 +1,4 @@
-import { WeatherData } from "../types/interfaces"
+import { WeatherData, weatherOptions } from "../types/interfaces"
 
 interface Props {
   weatherdata: WeatherData[]
@@ -6,20 +6,37 @@ interface Props {
 
 const ClimateOverview: React.FC<Props> = ({ weatherdata }) => {
   return (
-    <>
-    {weatherdata.map((data) => {
-        return (
-          <div key={data.id}>
-            <div>{data.month}</div>
-            <div>Avg feels like: {data.average_feels_like_temperature}</div>
-            <div>Avg temp: {data.average_temperature}</div>
-            <div>Humidity: {data.relative_humidity}</div>
-            <div>Avg rainfall: {data.precipitation_levels}</div>
-          </div>
-        )
-      })
-    }
-    </>
+    <table>
+      {/* COLUMN HEADINGS */}
+      <tr>
+        <th></th>
+        {weatherdata.map((month) => <th key={month.id}>{month.month.substring(0,3)}</th>)}
+      </tr> 
+
+      {/* AVG FEELS ROW */}
+      <tr>
+        <td>{weatherOptions[1].label}</td>
+        {weatherdata.map((month) => <td key={month.id}>{month.average_feels_like_temperature}</td>)}
+      </tr>
+
+      {/* AVG TEMP ROW */}
+      <tr>
+        <td>{weatherOptions[0].label}</td>
+        {weatherdata.map((month) => <td key={month.id}>{month.average_temperature}</td>)}
+      </tr>
+
+      {/* REL HUMIDITY ROW */}
+      <tr>
+        <td>{weatherOptions[2].label}</td>
+        {weatherdata.map((month) => <td key={month.id}>{month.relative_humidity}</td>)}
+      </tr>
+
+      {/* PRECIPITATION ROW */}
+      <tr>
+        <td>{weatherOptions[3].label}</td>
+        {weatherdata.map((month) => <td key={month.id}>{month.precipitation_levels}</td>)}
+      </tr>
+    </table>
   )
 }
 
