@@ -2,10 +2,11 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Destination } from '../types/interfaces'
 import { retrieveImageUrls, defaultImages } from '../helpers/filter'
+import axios from 'axios'
 import Nav from './Nav'
 import ImageCarousel from './ImageCarousel'
 import Map from './Map'
-import axios from 'axios'
+import ClimateOverview from './ClimateOverview'
 
 const DestinationSingle = () => {
 
@@ -69,7 +70,9 @@ const DestinationSingle = () => {
 
         <div className="destination-middle">
           <h3>Climate Overview</h3>
-
+          <div className="climate-container">
+            { destination && <ClimateOverview weatherdata={destination.weatherdata}/> }
+          </div>
         </div>
       </main>
     </>
