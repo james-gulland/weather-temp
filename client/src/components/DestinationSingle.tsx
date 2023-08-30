@@ -42,9 +42,9 @@ const DestinationSingle = () => {
   return (
     <>
       <header className="sun-gradient">
-        <Nav />
+        <Nav />    
         <h2 className="destination-title">
-          {`${destination?.name}, ${destination?.country}` || 'Loading...'}
+          {destination ? `${destination.name}, ${destination.country}` : 'Loading...'}  
         </h2>
       </header>
 
@@ -60,15 +60,10 @@ const DestinationSingle = () => {
             />
           </div>
           <div className="map-container">
-            { (destination) ? 
-              <Map 
-                longitude={destination.longitude}
-                latitude={destination.latitude}/>
-              :
-              <Map 
-                longitude={0}
-                latitude={0}/>
-            }
+            <Map 
+              longitude={destination ? destination.longitude : 0}
+              latitude={destination ? destination.latitude : 0}
+            />
           </div>
         </div>
       </main>
