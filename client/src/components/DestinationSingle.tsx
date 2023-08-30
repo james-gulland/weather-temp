@@ -59,7 +59,7 @@ const DestinationSingle = () => {
               showBullets={true}
             />
           </div>
-          <div>
+          <div className="map-container">
             { (destination) ? 
               <Map 
                 longitude={destination.longitude}

@@ -7,7 +7,7 @@ interface Props {
   longitude: number
 }
 
-const Map: React.FC<Props> = ( {latitude, longitude} ) => {
+const Map: React.FC<Props> = ({ latitude, longitude }) => {
   
   // Define the type for useRef
   const mapContainer = useRef<HTMLDivElement | null>(null)
@@ -35,9 +35,7 @@ const Map: React.FC<Props> = ( {latitude, longitude} ) => {
   }, [latitude, longitude])
 
   return (
-    <div>
-      <div ref={mapContainer} style={{ width: '100%', height: '400px' }} />
-    </div>
+    <div className="destination-map" ref={mapContainer} />
   )
 }
 
