@@ -57,10 +57,10 @@ const DestinationSingle = () => {
           <div className="destination-image-carousel">
             <ImageCarousel
               items={images} 
-              showThumbnails={true} 
+              showThumbnails={ destination && destination.images.length > 0 ? true : false}
               showFullscreenButton={true} 
               showPlayButton={false} 
-              showBullets={true}
+              showBullets={ destination && destination.images.length > 0 ? true : false}
             />
           </div>
           <div className="map-container">
