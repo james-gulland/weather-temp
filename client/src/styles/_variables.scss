@@ -19,3 +19,26 @@ $medium-font: 1rem;
 $top-image: 14rem;
 $height: 36;
 
+h1, h2 {
+  display: inline;
+}
+
+h1 {
+  padding-right: 0.5rem;
+  font-family: $brand-font;
+  padding-right: 1.5rem;
+  font-size: 3em;
+}
+
+h2, h3 {
+  font-weight: lighter;
+  font-family: $main-font;
+}
+
+h2 {
+  font-size: $header-size;
+}
+
+h3 {
+  font-size: $big-font;
+}

@@ -17,20 +17,3 @@
     z-index: -1;
   }
 }
-
-h1, h2 {
-  display: inline;
-}
-
-h1 {
-  padding-right: 0.5rem;
-  font-family: $brand-font;
-  font-size: 3em;
-  padding-right: 1.5rem;
-}
-
-h2 {
-  font-weight: lighter;
-  font-family: $main-font;
-  font-size: $header-size;
-}

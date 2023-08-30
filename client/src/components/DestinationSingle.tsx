@@ -66,6 +66,11 @@ const DestinationSingle = () => {
             />
           </div>
         </div>
+
+        <div className="destination-middle">
+          <h3>Climate Overview</h3>
+
+        </div>
       </main>
     </>
   )
