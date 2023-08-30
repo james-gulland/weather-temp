@@ -15,7 +15,6 @@ interface Props {
 
 const GridItem: React.FC<Props> = ({ dest, month, averageTemperature, heatIndex, humidity, averageRainfall }) => {
   
-  // const images: { original: string; thumbnail: string; }[] = []
   const [images, setImages] = useState<{ original: string; thumbnail: string }[]>([])
 
   // on load 

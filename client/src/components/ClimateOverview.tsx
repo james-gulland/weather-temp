@@ -7,9 +7,7 @@ interface Props {
 const ClimateOverview: React.FC<Props> = ({ weatherdata }) => {
   return (
     <table>
-
-      {/* COLUMN HEADINGS */}
-      <thead>
+      <thead> {/* COLUMN HEADINGS */}
         <tr>
           <th></th>
           {weatherdata.map((month) => <th key={month.id}>{month.month.substring(0,3)}</th>)}
