@@ -60,7 +60,15 @@ const DestinationSingle = () => {
             />
           </div>
           <div>
-            <Map />
+            { (destination) ? 
+              <Map 
+                longitude={destination.longitude}
+                latitude={destination.latitude}/>
+              :
+              <Map 
+                longitude={0}
+                latitude={0}/>
+            }
           </div>
         </div>
       </main>

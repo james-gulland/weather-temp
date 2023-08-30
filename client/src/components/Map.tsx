@@ -1,7 +1,13 @@
 import { useEffect, useRef } from 'react'
 import mapboxgl from 'mapbox-gl'
+import 'mapbox-gl/dist/mapbox-gl.css'
 
-const Map: React.FC = () => {
+interface Props {
+  latitude: number
+  longitude: number
+}
+
+const Map: React.FC<Props> = ( {latitude, longitude} ) => {
   
   // Define the type for useRef
   const mapContainer = useRef<HTMLDivElement | null>(null)
@@ -18,25 +24,21 @@ const Map: React.FC = () => {
     if (mapContainer.current) {
       const map = new mapboxgl.Map({
         container: mapContainer.current,
-        style: 'mapbox://styles/mapbox/streets-v11',
-        center: [0, 0],
-        zoom: 1
+        style: 'mapbox://styles/mapbox/streets-v12',
+        center: [longitude, latitude],
+        zoom: 10
       })
-
-      // Add navigation control (zoom buttons)
-      map.addControl(new mapboxgl.NavigationControl(), 'bottom-right')
 
       // Cleanup on component unmount
       return () => map.remove()
     }
-  }, [])
+  }, [latitude, longitude])
 
   return (
     <div>
       <div ref={mapContainer} style={{ width: '100%', height: '400px' }} />
     </div>
   )
-
 }
 
 export default Map
