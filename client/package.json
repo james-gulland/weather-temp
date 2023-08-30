@@ -47,6 +47,7 @@
   },
   "proxy": "http://127.0.0.1:8000",
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/mapbox-gl": "^2.7.13",
     "@types/react-image-gallery": "^1.2.0"
   }

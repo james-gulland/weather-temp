@@ -72,7 +72,7 @@ const DestinationSingle = () => {
         </div>
 
         <div className="destination-middle">
-          <h3>Climate Overview</h3>
+          <h3>Climate Snapshot</h3>
           <div className="climate-container">
             { destination && <ClimateOverview weatherdata={destination.weatherdata}/> }
           </div>
