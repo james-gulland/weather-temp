@@ -19,3 +19,32 @@
   font-family: $brand-font;
   font-size: 2em;
 }
+
+.sun-gradient {
+  position: absolute;
+  top: 0;
+  width: 75%;
+  height: 4.75rem;
+  margin: 0 auto;
+  z-index: -1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at center top,
+      $secondary-colour 35%,  /* Yellow core */
+      $secondary-colour 25%,  /* Yellow core */
+      $primary-colour 55%     /* Orange at the edges */
+    );
+    filter: blur(70px);
+  }
+}
+
+.above-gradient {
+  position: relative;  
+  z-index: 1; 
+}

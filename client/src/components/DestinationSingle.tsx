@@ -42,11 +42,20 @@ const DestinationSingle = () => {
 
   return (
     <>
-      <header className="sun-gradient">
+      {/* <header className="sun-gradient">
         <Nav />    
         <h2 className="destination-title">
           {destination ? `${destination.name}, ${destination.country}` : 'Loading...'}  
         </h2>
+      </header> */}
+      <header>
+        <div className="sun-gradient"></div>
+        <div className="above-gradient">
+          <Nav />    
+          <h2 className="destination-title">
+            {destination ? `${destination.name}, ${destination.country}` : 'Loading...'}  
+          </h2>
+        </div>
       </header>
 
       <main>
