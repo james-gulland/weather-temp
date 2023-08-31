@@ -44,6 +44,10 @@
     #min-temp-controls, #max-temp-controls {
       display: flex;
       gap: 0.5rem;
+
+      button {
+        font-family: $utility-font;
+      }
     }
   }
   
@@ -54,7 +58,7 @@
   
     select, .go-btn {
       font-size: $medium-font;
-      font-family: $main-font;
+      font-family: $utility-font;
       padding: 0.5rem;
       border-radius: 5px;
       border: 1px solid lightgray;
