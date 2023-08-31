@@ -44,7 +44,7 @@ const Home: React.FC = () => {
   return (
     <>
       <header>
-        <div className="sun-gradient"></div>
+        <div className="sun-gradient sun-large"></div>
         <div className="above-gradient">
           <HomeNav />
           <h1>OnlySun</h1>

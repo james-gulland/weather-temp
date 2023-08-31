@@ -1,0 +1,26 @@
+.climate-container {
+  max-width: 100%;
+  overflow-x: auto;
+
+  table {
+    width: 100%;
+    padding: 0 1rem;
+    font-family: $utility-font;
+    border-spacing: 1rem;
+
+    thead tr {
+      font-weight: 900;
+    }
+
+    th, td {
+      text-align: center;
+
+      &.table-climate-data {
+        padding: 1rem;
+        margin: 1rem 0;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+      }
+    }
+  }
+}
