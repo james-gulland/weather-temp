@@ -44,6 +44,7 @@ const Home: React.FC = () => {
     getData()
   }
 
+  // ON MOUNT check and retrieve local storage values for temp and month
   useEffect(() => {
     // Fetch from localStorage
     const savedMonth = localStorage.getItem('selectedMonth')
