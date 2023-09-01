@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Destination, WeatherSelection, weatherOptions } from '../types/interfaces'
 import TemperatureControls from './TemperatureControls'
@@ -33,6 +33,9 @@ const Home: React.FC = () => {
       try { 
         const { data } = await axios.get<Destination[]>(`/api/destinations/filter/?month=${month}&min_temp=${minTemp}&max_temp=${maxTemp}&weather_type=${weatherType.value}`)
         setFilteredDestinations(data)
+        localStorage.setItem('selectedMonth', month)
+        localStorage.setItem('selectedMinTemp', minTemp.toString())
+        localStorage.setItem('selectedMaxTemp', maxTemp.toString())
         console.log(`Filtered destinations by ${month} and ${minTemp}-${maxTemp}`, data)
       } catch (err) {
         console.log(err)
@@ -40,6 +43,23 @@ const Home: React.FC = () => {
     }
     getData()
   }
+
+  useEffect(() => {
+    // Fetch from localStorage
+    const savedMonth = localStorage.getItem('selectedMonth')
+    const savedMinTemp = localStorage.getItem('selectedMinTemp')
+    const savedMaxTemp = localStorage.getItem('selectedMaxTemp')
+
+    // Update states if the saved variables are found
+    if (savedMonth) setMonth(savedMonth)
+    if (savedMinTemp) setMinTemp(Number(savedMinTemp))
+    if (savedMaxTemp) setMaxTemp(Number(savedMaxTemp))
+
+    // Call retrieveDestinations if all variables are found
+    if (savedMonth && savedMinTemp && savedMaxTemp) {
+      retrieveDestinations(savedMonth, Number(savedMinTemp), Number(savedMaxTemp), weatherType)
+    }
+  }, [])
 
   return (
     <>
