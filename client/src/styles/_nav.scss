@@ -39,7 +39,6 @@ header {
       content: "";
       position: absolute;
       top: 0;
-      // left: -2.5rem;
       width: 100%;
       height: 100%;
       background-image: radial-gradient(circle at center top,
@@ -52,13 +51,14 @@ header {
   }
 
   .above-gradient {
-    position: relative;
-    // text-align: center;  
+    position: relative; 
     padding: 1rem 1rem 0 1rem;
     z-index: 1;
 
-    @media (min-width: 768px) {
-      text-align: center;
+    &.homepage {
+      @media (min-width: 768px) {
+        text-align: center;
+      }
     }
   }
 

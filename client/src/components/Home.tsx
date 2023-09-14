@@ -66,10 +66,10 @@ const Home: React.FC = () => {
     <>
       <header>
         <div className="sun-gradient sun-large"></div>
-        <div className="above-gradient">
+        <div className="above-gradient homepage">
           <HomeNav />
           <h1>OnlySun</h1>
-          <h2>Helping you find the best place to travel at {minTemp}-{maxTemp}°C in {month}</h2>
+          <h2 className="homepage-h2">Helping you find the best place to travel at {minTemp}-{maxTemp}°C in {month}</h2>
         </div>
       </header>
         
