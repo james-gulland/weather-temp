@@ -2,8 +2,11 @@
   // border: 2px solid green;
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(4, 1fr);
-  // grid-template-columns: repeat(4, minmax(min-content, max-content));
+
+  @media (min-width: 768px) {
+    // grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
 
   .destination-card {
     border: 2px solid lightgrey;
