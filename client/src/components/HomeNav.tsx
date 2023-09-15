@@ -1,8 +1,13 @@
 import NavComponent from "./NavComponent"
 
-const HomeNav = () => {
+interface Props {
+  tempUnit: 'C' | 'F'
+  setTempUnit: React.Dispatch<React.SetStateAction<'C' | 'F'>>
+}
+
+const HomeNav: React.FC<Props> = ( {tempUnit, setTempUnit} ) => {
   return (
-    <NavComponent />
+    <NavComponent tempUnit={tempUnit} setTempUnit={setTempUnit}/>
   )
 }
 

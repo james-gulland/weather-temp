@@ -12,6 +12,7 @@ const DestinationSingle = () => {
 
   // grab the slug data from the params, to cross-reference with API call
   const { slug } = useParams()
+  const [tempUnit, setTempUnit] = useState<'C' | 'F'>('C')
   const [destination, setDestination] = useState<Destination | null>(null)
   const [images, setImages] = useState<{ original: string; thumbnail: string }[]>([])
 
@@ -45,7 +46,7 @@ const DestinationSingle = () => {
       <header>
         <div className="sun-gradient"></div>
         <div className="above-gradient">
-          <Nav />    
+          <Nav tempUnit={tempUnit} setTempUnit={setTempUnit}/>    
           <h2 className="destination-title">
             {destination ? `${destination.name}, ${destination.country}` : 'Loading...'}  
           </h2>

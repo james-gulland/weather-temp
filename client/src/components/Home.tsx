@@ -24,6 +24,7 @@ const Home: React.FC = () => {
   // temperature states and variables
   const [minTemp, setMinTemp] = useState<number>(20)
   const [maxTemp, setMaxTemp] = useState<number>(25)
+  const [tempUnit, setTempUnit] = useState<'C' | 'F'>('C')
   
   // function that retrieves desinations from the API based on:
   // MONTH selected, and the MIN-TEMP and MAX-TEMP ranges selected
@@ -67,7 +68,7 @@ const Home: React.FC = () => {
       <header>
         <div className="sun-gradient sun-large"></div>
         <div className="above-gradient homepage">
-          <HomeNav />
+          <HomeNav tempUnit={tempUnit} setTempUnit={setTempUnit}/>
           <h1>OnlySun</h1>
           <h2 className="homepage-h2">Helping you find the best place to travel at {minTemp}-{maxTemp}°C in {month}</h2>
         </div>
