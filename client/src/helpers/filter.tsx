@@ -58,3 +58,6 @@ export const retrieveImageUrls = async (dest: any, setImages: Function, defaultI
     setImages([defaultImages])
   }
 }
+
+// converts number to Fahrenheit
+export const celsiusToFahrenheit = (c: number) => Math.round((c * 9/5) + 32)

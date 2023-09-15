@@ -70,7 +70,7 @@ const Home: React.FC = () => {
         <div className="above-gradient homepage">
           <HomeNav tempUnit={tempUnit} setTempUnit={setTempUnit}/>
           <h1>OnlySun</h1>
-          <h2 className="homepage-h2">Helping you find the best place to travel at {minTemp}-{maxTemp}°C in {month}</h2>
+          <h2 className="homepage-h2">Helping you find the best place to travel at {minTemp}-{maxTemp}°{tempUnit} in {month}</h2>
         </div>
       </header>
         
@@ -80,7 +80,7 @@ const Home: React.FC = () => {
           
           {/* TEMPERATURE controls container */}
           <div id="temperature-container">
-            <TemperatureControls minTemp={minTemp} maxTemp={maxTemp} setMinTemp={setMinTemp} setMaxTemp={setMaxTemp}/>
+            <TemperatureControls minTemp={minTemp} maxTemp={maxTemp} setMinTemp={setMinTemp} setMaxTemp={setMaxTemp} tempUnit={tempUnit}/>
           </div>
 
           {/* DROP-DOWN containers */}
