@@ -1,8 +1,15 @@
+import Switch from 'rc-switch'
+import 'rc-switch/assets/index.css'
+
 const NavComponent = () => {
   return (
     <div className="nav">
-      <div className="temp-unit">°C</div>
-      <div className="temp-unit">°F</div>
+      <Switch
+        // onChange={onChange}
+        // disabled={disabled}
+        checkedChildren="°C"
+        unCheckedChildren="°F"
+      />
     </div>
   )
 }
