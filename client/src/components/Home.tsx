@@ -6,6 +6,7 @@ import TempType from './TempType'
 import MonthDropdown from './MonthDropdown'
 import HomeNav from './HomeNav'
 import Grid from './Grid'
+import { celsiusToFahrenheit } from '../helpers/filter'
 
 const Home: React.FC = () => {
 
@@ -70,7 +71,7 @@ const Home: React.FC = () => {
         <div className="above-gradient homepage">
           <HomeNav tempUnit={tempUnit} setTempUnit={setTempUnit}/>
           <h1>OnlySun</h1>
-          <h2 className="homepage-h2">Helping you find the best place to travel at {minTemp}-{maxTemp}°{tempUnit} in {month}</h2>
+          <h2 className="homepage-h2">Helping you find the best place to travel at {tempUnit === 'C' ? minTemp : celsiusToFahrenheit(minTemp)}-{tempUnit === 'C' ? maxTemp : celsiusToFahrenheit(maxTemp)}°{tempUnit} in {month}</h2>
         </div>
       </header>
         
@@ -94,7 +95,7 @@ const Home: React.FC = () => {
         
         {/* GRID container */}
         <div className="filtered-destination-container">
-          <Grid filteredDestinations={filteredDestinations} month={month}/>
+          <Grid filteredDestinations={filteredDestinations} month={month} tempUnit={tempUnit}/>
         </div>
       </main>
       

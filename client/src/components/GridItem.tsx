@@ -3,6 +3,7 @@ import ImageCarousel from './ImageCarousel'
 import { retrieveImageUrls, defaultImages } from '../helpers/filter'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { celsiusToFahrenheit } from '../helpers/filter'
 
 interface Props {
   dest: Destination
@@ -11,9 +12,10 @@ interface Props {
   heatIndex: number | string
   humidity: number | string
   averageRainfall: number | string
+  tempUnit: 'C' | 'F'
 }
 
-const GridItem: React.FC<Props> = ({ dest, month, averageTemperature, heatIndex, humidity, averageRainfall }) => {
+const GridItem: React.FC<Props> = ({ dest, month, averageTemperature, heatIndex, humidity, averageRainfall, tempUnit }) => {
   
   const [images, setImages] = useState<{ original: string; thumbnail: string }[]>([])
 
@@ -46,8 +48,9 @@ const GridItem: React.FC<Props> = ({ dest, month, averageTemperature, heatIndex,
           <div className="dest-name">{dest.name}, {dest.country}</div>
           <div className="dest-month">in {month}</div>
           <div className="dest-weather-data">
-            <div className="weather-data">{weatherOptions[0].label}: <span>{averageTemperature}</span></div>
-            <div className="weather-data">{weatherOptions[1].label}: <span>{heatIndex}</span></div>
+            {/* <div className="weather-data">{weatherOptions[0].label}: <span>{averageTemperature}</span></div> */}
+            <div className="weather-data">{weatherOptions[0].label}: <span>{tempUnit === 'C' ? averageTemperature : celsiusToFahrenheit(Number(averageTemperature))}°{tempUnit}</span></div>
+            <div className="weather-data">{weatherOptions[1].label}: <span>{tempUnit === 'C' ? heatIndex : celsiusToFahrenheit(Number(heatIndex))}°{tempUnit}</span></div>
             <div className="weather-data">{weatherOptions[2].label}: <span>{humidity}%</span></div>
             <div className="weather-data">{weatherOptions[3].label}: <span>{averageRainfall}mm</span></div>
           </div>

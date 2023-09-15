@@ -4,9 +4,10 @@ import GridItem from './GridItem'
 interface Props {
   filteredDestinations: Destination[]
   month: string
+  tempUnit: 'C' | 'F'
 }
 
-const Grid: React.FC<Props> = ( { filteredDestinations, month }) => {
+const Grid: React.FC<Props> = ( { filteredDestinations, month, tempUnit }) => {
   return (
     <>
       {filteredDestinations.length > 0 ? 
@@ -20,7 +21,7 @@ const Grid: React.FC<Props> = ( { filteredDestinations, month }) => {
             const averageRainfall = weatherDataForMonth ? weatherDataForMonth.precipitation_levels : 'n/a'
 
             return (
-              <GridItem dest={dest} key={dest.id} month={month} averageTemperature={averageTemperature} heatIndex={heatIndex} humidity={humidity} averageRainfall={averageRainfall}/>
+              <GridItem dest={dest} key={dest.id} month={month} averageTemperature={averageTemperature} heatIndex={heatIndex} humidity={humidity} averageRainfall={averageRainfall} tempUnit={tempUnit}/>
             )
           })}
         </>
