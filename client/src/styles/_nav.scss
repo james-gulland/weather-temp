@@ -13,6 +13,16 @@
   padding-right: 0.5rem;
   font-family: $main-font;
   font-size: 1.25em;
+
+  .rc-switch {
+    background-color: $primary-colour;
+  }
+
+  .rc-switch-checked {
+    border: 1px solid transparent;
+    background-color: darken($secondary-colour, 5%);
+  }
+
 }
 
 .nav-logo {
