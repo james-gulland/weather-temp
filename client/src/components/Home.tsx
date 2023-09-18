@@ -52,17 +52,25 @@ const Home: React.FC = () => {
     const savedMonth = localStorage.getItem('selectedMonth')
     const savedMinTemp = localStorage.getItem('selectedMinTemp')
     const savedMaxTemp = localStorage.getItem('selectedMaxTemp')
+    const savedTempUnit = localStorage.getItem('tempUnit')
+    console.log(savedTempUnit)
 
     // Update states if the saved variables are found
     if (savedMonth) setMonth(savedMonth)
     if (savedMinTemp) setMinTemp(Number(savedMinTemp))
     if (savedMaxTemp) setMaxTemp(Number(savedMaxTemp))
+    if (savedTempUnit === 'C' || savedTempUnit === 'F') setTempUnit(savedTempUnit)
 
     // Call retrieveDestinations if all variables are found
     if (savedMonth && savedMinTemp && savedMaxTemp) {
       retrieveDestinations(savedMonth, Number(savedMinTemp), Number(savedMaxTemp), weatherType)
     }
   }, [])
+
+  // useEffect (() => {
+  //   localStorage.setItem('tempUnit', tempUnit)
+  //   console.log(tempUnit)
+  // }, [tempUnit])
 
   return (
     <>

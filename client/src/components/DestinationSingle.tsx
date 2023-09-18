@@ -23,6 +23,9 @@ const DestinationSingle = () => {
         const { data } = await axios.get<Destination>(`/api/destinations/${slug}/`)
         setDestination(data)
         console.log(`Single destination data:`, data)
+
+        const savedTempUnit = localStorage.getItem('tempUnit')
+        if (savedTempUnit === 'C' || savedTempUnit === 'F') setTempUnit(savedTempUnit)
       } catch (err) {
         console.log(err)
       }
