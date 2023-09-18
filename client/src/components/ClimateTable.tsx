@@ -1,10 +1,12 @@
 import { WeatherData, weatherOptions } from "../types/interfaces"
+import { celsiusToFahrenheit } from "../helpers/filter"
 
 interface Props {
   weatherdata: WeatherData[]
+  tempUnit: 'C' | 'F'
 }
 
-const ClimateOverview: React.FC<Props> = ({ weatherdata }) => {
+const ClimateTable: React.FC<Props> = ({ weatherdata, tempUnit }) => {
   return (
     <table className="climate-table">
       <thead> {/* COLUMN HEADINGS */}
@@ -18,13 +20,13 @@ const ClimateOverview: React.FC<Props> = ({ weatherdata }) => {
         {/* AVG FEELS ROW */}
         <tr>
           <td>{weatherOptions[1].label}</td>
-          {weatherdata.map((month) => <td key={month.id} className="table-climate-data">{month.average_feels_like_temperature}</td>)}
+          {weatherdata.map((month) => <td key={month.id} className="table-climate-data">{tempUnit === 'C' ? month.average_feels_like_temperature : celsiusToFahrenheit(month.average_feels_like_temperature)}</td>)}
         </tr>
 
         {/* AVG TEMP ROW */}
         <tr>
           <td>{weatherOptions[0].label}</td>
-          {weatherdata.map((month) => <td key={month.id} className="table-climate-data">{month.average_temperature}</td>)}
+          {weatherdata.map((month) => <td key={month.id} className="table-climate-data">{tempUnit === 'C' ? month.average_temperature : celsiusToFahrenheit(month.average_temperature)}</td>)}
         </tr>
 
         {/* REL HUMIDITY ROW */}
@@ -43,4 +45,4 @@ const ClimateOverview: React.FC<Props> = ({ weatherdata }) => {
   )
 }
 
-export default ClimateOverview
+export default ClimateTable

@@ -6,7 +6,7 @@ import axios from 'axios'
 import Nav from './Nav'
 import ImageCarousel from './ImageCarousel'
 import Map from './Map'
-import ClimateOverview from './ClimateOverview'
+import ClimateTable from './ClimateTable'
 
 const DestinationSingle = () => {
 
@@ -85,7 +85,7 @@ const DestinationSingle = () => {
         <div className="destination-middle">
           <h3>Climate Snapshot</h3>
           <div className="climate-container">
-            { destination && <ClimateOverview weatherdata={destination.weatherdata}/> }
+            { destination && <ClimateTable weatherdata={destination.weatherdata} tempUnit={tempUnit}/> }
           </div>
         </div>
       </main>
