@@ -13,17 +13,6 @@ const NavComponent: React.FC<Props> = ( {tempUnit, setTempUnit} ) => {
     setTempUnit(prevUnit => prevUnit === 'C' ? 'F' : 'C')
   }
 
-  useEffect (() => {
-    localStorage.setItem('tempUnit', tempUnit)
-    console.log(tempUnit)
-  }, [tempUnit])
-
-  // useEffect (() => {
-  //   const savedTempUnit = localStorage.getItem('tempUnit')
-
-  //   if (savedTempUnit === 'C' || savedTempUnit === 'F') setTempUnit(savedTempUnit)
-  // }, [setTempUnit])
-
   return (
     <div className="nav">
       <Switch

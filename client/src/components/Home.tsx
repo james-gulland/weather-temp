@@ -67,10 +67,10 @@ const Home: React.FC = () => {
     }
   }, [])
 
-  // useEffect (() => {
-  //   localStorage.setItem('tempUnit', tempUnit)
-  //   console.log(tempUnit)
-  // }, [tempUnit])
+  useEffect (() => {
+    localStorage.setItem('tempUnit', tempUnit)
+    console.log(tempUnit)
+  }, [tempUnit])
 
   return (
     <>
