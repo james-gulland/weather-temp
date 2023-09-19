@@ -1,26 +1,29 @@
-import { useParams } from 'react-router-dom'
-import { useState, useEffect } from 'react'
-import { Destination } from '../types/interfaces'
-import { retrieveImageUrls, defaultImages } from '../helpers/filter'
-import axios from 'axios'
-import Nav from './Nav'
-import ImageCarousel from './ImageCarousel'
-import Map from './Map'
-import ClimateTable from './ClimateTable'
+import { useParams } from "react-router-dom"
+import { useState, useEffect } from "react"
+import { Destination } from "../types/interfaces"
+import { retrieveImageUrls, defaultImages } from "../helpers/filter"
+import axios from "axios"
+import Nav from "./Nav"
+import ImageCarousel from "./ImageCarousel"
+import Map from "./Map"
+import ClimateTable from "./ClimateTable"
 
 const DestinationSingle = () => {
-
   // grab the slug data from the params, to cross-reference with API call
   const { slug } = useParams()
-  const [tempUnit, setTempUnit] = useState<'C' | 'F'>('C')
+  const [tempUnit, setTempUnit] = useState<"C" | "F">("C")
   const [destination, setDestination] = useState<Destination | null>(null)
-  const [images, setImages] = useState<{ original: string; thumbnail: string }[]>([])
+  const [images, setImages] = useState<
+    { original: string; thumbnail: string }[]
+  >([])
 
   // get destination data once slug established
   useEffect(() => {
     const getData = async (): Promise<void> => {
-      try { 
-        const { data } = await axios.get<Destination>(`/api/destinations/${slug}/`)
+      try {
+        const { data } = await axios.get<Destination>(
+          `/api/destinations/${slug}/`
+        )
         setDestination(data)
         console.log(`Single destination data:`, data)
       } catch (err) {
@@ -34,20 +37,21 @@ const DestinationSingle = () => {
   useEffect(() => {
     if (destination) {
       if (destination.images.length > 0) {
-        retrieveImageUrls(destination, setImages, defaultImages, 'regular')
+        retrieveImageUrls(destination, setImages, defaultImages, "regular")
       } else {
         setImages([defaultImages])
       }
     }
   }, [destination])
 
-  useEffect (() => {
-    const savedTempUnit = localStorage.getItem('tempUnit')
-    if (savedTempUnit === 'C' || savedTempUnit === 'F') setTempUnit(savedTempUnit)
+  useEffect(() => {
+    const savedTempUnit = localStorage.getItem("tempUnit")
+    if (savedTempUnit === "C" || savedTempUnit === "F")
+      setTempUnit(savedTempUnit)
   }, [])
 
-  useEffect (() => {
-    localStorage.setItem('tempUnit', tempUnit)
+  useEffect(() => {
+    localStorage.setItem("tempUnit", tempUnit)
     console.log(tempUnit)
   }, [tempUnit])
 
@@ -56,9 +60,11 @@ const DestinationSingle = () => {
       <header>
         <div className="sun-gradient"></div>
         <div className="above-gradient">
-          <Nav tempUnit={tempUnit} setTempUnit={setTempUnit}/>    
+          <Nav tempUnit={tempUnit} setTempUnit={setTempUnit} />
           <h2 className="destination-title">
-            {destination ? `${destination.name}, ${destination.country}` : 'Loading...'}  
+            {destination
+              ? `${destination.name}, ${destination.country}`
+              : "Loading..."}
           </h2>
         </div>
       </header>
@@ -67,15 +73,19 @@ const DestinationSingle = () => {
         <div className="destination-top">
           <div className="destination-image-carousel">
             <ImageCarousel
-              items={images} 
-              showThumbnails={ destination && destination.images.length > 0 ? true : false}
-              showFullscreenButton={true} 
-              showPlayButton={false} 
-              showBullets={ destination && destination.images.length > 0 ? true : false}
+              items={images}
+              showThumbnails={
+                destination && destination.images.length > 0 ? true : false
+              }
+              showFullscreenButton={true}
+              showPlayButton={false}
+              showBullets={
+                destination && destination.images.length > 0 ? true : false
+              }
             />
           </div>
           <div className="map-container">
-            <Map 
+            <Map
               longitude={destination ? destination.longitude : 0}
               latitude={destination ? destination.latitude : 0}
             />
@@ -85,7 +95,12 @@ const DestinationSingle = () => {
         <div className="destination-middle">
           <h3>Climate Snapshot</h3>
           <div className="climate-container">
-            { destination && <ClimateTable weatherdata={destination.weatherdata} tempUnit={tempUnit}/> }
+            {destination && (
+              <ClimateTable
+                weatherdata={destination.weatherdata}
+                tempUnit={tempUnit}
+              />
+            )}
           </div>
         </div>
       </main>
