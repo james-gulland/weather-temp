@@ -14,7 +14,7 @@
   font-size: 1.25em;
 
   button {
-    box-shadow: rgba(0, 0, 0, 0.16) 1px 1px 1px;
+    // box-shadow: rgba(0, 0, 0, 0.16) 1px 1px 1px;
   }
 
   .rc-switch {
@@ -22,7 +22,8 @@
   }
 
   .rc-switch-checked {
-    border: 1px solid lightgray;
+    // border: 1px solid lightgray;
+    border: 1px solid transparent;
     background-color: darken($secondary-colour, 5%);
   }
 
