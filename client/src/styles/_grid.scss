@@ -9,11 +9,11 @@
   }
 
   .destination-card {
-    border: 2px solid lightgrey;
     background-color: white;
+    border: 2px solid lightgrey;
     border-radius: 10px;
     overflow: hidden;
-    transition: background-image 0.3s ease, border 0.3s ease, border-radius 0.3s ease;
+    // transition: background-image 0.3s ease, border 0.3s ease, border-radius 0.3s ease;
 
     .top-card {
       // border-bottom: 1px dotted black;
@@ -69,12 +69,13 @@
     &:hover {
       cursor: pointer;
       border: 2px solid transparent;
+      overflow: hidden;
       border-radius: 10px;
       background-image: linear-gradient(white, white), radial-gradient(circle at top left, $primary-colour,$secondary-colour);
       background-origin: border-box;
       background-clip: content-box, border-box;
       animation: gradient-background 8s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
-    }
+    }  
   }
 }
 
