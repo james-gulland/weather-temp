@@ -1,9 +1,9 @@
-import { WeatherData, weatherOptions } from "../types/interfaces"
-import { celsiusToFahrenheit } from "../helpers/filter"
+import { WeatherData, weatherOptions } from '../types/interfaces'
+import { celsiusToFahrenheit } from '../helpers/filter'
 
 interface Props {
   weatherdata: WeatherData[]
-  tempUnit: "C" | "F"
+  tempUnit: 'C' | 'F'
 }
 
 const ClimateTable: React.FC<Props> = ({ weatherdata, tempUnit }) => {
@@ -25,7 +25,7 @@ const ClimateTable: React.FC<Props> = ({ weatherdata, tempUnit }) => {
           <td>{weatherOptions[1].label}</td>
           {weatherdata.map((month) => (
             <td key={month.id} className="table-climate-data">
-              {tempUnit === "C"
+              {tempUnit === 'C'
                 ? month.average_feels_like_temperature
                 : celsiusToFahrenheit(month.average_feels_like_temperature)}
               °{tempUnit}
@@ -38,7 +38,7 @@ const ClimateTable: React.FC<Props> = ({ weatherdata, tempUnit }) => {
           <td>{weatherOptions[0].label}</td>
           {weatherdata.map((month) => (
             <td key={month.id} className="table-climate-data">
-              {tempUnit === "C"
+              {tempUnit === 'C'
                 ? month.average_temperature
                 : celsiusToFahrenheit(month.average_temperature)}
               °{tempUnit}

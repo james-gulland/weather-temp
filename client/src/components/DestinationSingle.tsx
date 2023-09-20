@@ -1,17 +1,17 @@
-import { useParams } from "react-router-dom"
-import { useState, useEffect } from "react"
-import { Destination } from "../types/interfaces"
-import { retrieveImageUrls, defaultImages } from "../helpers/filter"
-import axios from "axios"
-import Nav from "./Nav"
-import ImageCarousel from "./ImageCarousel"
-import Map from "./Map"
-import ClimateTable from "./ClimateTable"
+import { useParams } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Destination } from '../types/interfaces'
+import { retrieveImageUrls, defaultImages } from '../helpers/filter'
+import axios from 'axios'
+import Nav from './Nav'
+import ImageCarousel from './ImageCarousel'
+import Map from './Map'
+import ClimateTable from './ClimateTable'
 
 const DestinationSingle = () => {
   // grab the slug data from the params, to cross-reference with API call
   const { slug } = useParams()
-  const [tempUnit, setTempUnit] = useState<"C" | "F">("C")
+  const [tempUnit, setTempUnit] = useState<'C' | 'F'>('C')
   const [destination, setDestination] = useState<Destination | null>(null)
   const [images, setImages] = useState<
     { original: string; thumbnail: string }[]
@@ -37,7 +37,7 @@ const DestinationSingle = () => {
   useEffect(() => {
     if (destination) {
       if (destination.images.length > 0) {
-        retrieveImageUrls(destination, setImages, defaultImages, "regular")
+        retrieveImageUrls(destination, setImages, defaultImages, 'regular')
       } else {
         setImages([defaultImages])
       }
@@ -45,13 +45,13 @@ const DestinationSingle = () => {
   }, [destination])
 
   useEffect(() => {
-    const savedTempUnit = localStorage.getItem("tempUnit")
-    if (savedTempUnit === "C" || savedTempUnit === "F")
+    const savedTempUnit = localStorage.getItem('tempUnit')
+    if (savedTempUnit === 'C' || savedTempUnit === 'F')
       setTempUnit(savedTempUnit)
   }, [])
 
   useEffect(() => {
-    localStorage.setItem("tempUnit", tempUnit)
+    localStorage.setItem('tempUnit', tempUnit)
     console.log(tempUnit)
   }, [tempUnit])
 
@@ -64,7 +64,7 @@ const DestinationSingle = () => {
           <h2 className="destination-title">
             {destination
               ? `${destination.name}, ${destination.country}`
-              : "Loading..."}
+              : 'Loading...'}
           </h2>
         </div>
       </header>
