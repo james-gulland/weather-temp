@@ -8,7 +8,6 @@ interface Props {
 }
 
 const Map: React.FC<Props> = ({ latitude, longitude }) => {
-  
   // Define the type for useRef
   const mapContainer = useRef<HTMLDivElement | null>(null)
 
@@ -26,7 +25,7 @@ const Map: React.FC<Props> = ({ latitude, longitude }) => {
         container: mapContainer.current,
         style: 'mapbox://styles/mapbox/streets-v12',
         center: [longitude, latitude],
-        zoom: 10
+        zoom: 10,
       })
 
       // Cleanup on component unmount
@@ -34,9 +33,7 @@ const Map: React.FC<Props> = ({ latitude, longitude }) => {
     }
   }, [latitude, longitude])
 
-  return (
-    <div className="destination-map" ref={mapContainer} />
-  )
+  return <div className="destination-map" ref={mapContainer} />
 }
 
 export default Map
