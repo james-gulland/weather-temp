@@ -1,16 +1,15 @@
 import Switch from 'rc-switch'
 import 'rc-switch/assets/index.css'
-import { useEffect } from 'react' 
+import { useEffect } from 'react'
 
 interface Props {
   tempUnit: 'C' | 'F'
   setTempUnit: React.Dispatch<React.SetStateAction<'C' | 'F'>>
 }
 
-const NavComponent: React.FC<Props> = ( {tempUnit, setTempUnit} ) => {
-
+const NavComponent: React.FC<Props> = ({ tempUnit, setTempUnit }) => {
   const toggleTempUnit = () => {
-    setTempUnit(prevUnit => prevUnit === 'C' ? 'F' : 'C')
+    setTempUnit((prevUnit) => (prevUnit === 'C' ? 'F' : 'C'))
   }
 
   return (

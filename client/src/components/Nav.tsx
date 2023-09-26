@@ -1,4 +1,4 @@
-import NavComponent from "./NavComponent"
+import NavComponent from './NavComponent'
 import { Link } from 'react-router-dom'
 
 interface Props {
@@ -6,13 +6,13 @@ interface Props {
   setTempUnit: React.Dispatch<React.SetStateAction<'C' | 'F'>>
 }
 
-const Nav: React.FC<Props> = ( {tempUnit, setTempUnit} ) => {
+const Nav: React.FC<Props> = ({ tempUnit, setTempUnit }) => {
   return (
     <div className="nav-container">
       <div className="nav-logo">
         <Link to="/">OnlySun</Link>
       </div>
-      <NavComponent tempUnit={tempUnit} setTempUnit={setTempUnit}/>
+      <NavComponent tempUnit={tempUnit} setTempUnit={setTempUnit} />
     </div>
   )
 }
