@@ -19,25 +19,24 @@
       // border-bottom: 1px dotted black;
       height: $top-image;
       object-fit: cover;
-      
-        .image-gallery {
-          height: 100%;
-          overflow: hidden;
-          object-fit: cover;
 
-          .image-gallery-svg {
-            height: 4rem;
-          }
+      .image-gallery {
+        height: 100%;
+        overflow: hidden;
+        object-fit: cover;
 
-          .image-gallery-slides {
-            .image-gallery-slide img {
-              width: 100%;
-              height: $top-image;
-              object-fit: cover;
-            }
-          }
-
+        .image-gallery-svg {
+          height: 4rem;
         }
+
+        .image-gallery-slides {
+          .image-gallery-slide img {
+            width: 100%;
+            height: $top-image;
+            object-fit: cover;
+          }
+        }
+      }
     }
 
     .bottom-card {
@@ -71,17 +70,20 @@
       border: 2px solid transparent;
       overflow: hidden;
       border-radius: 10px;
-      background-image: linear-gradient(white, white), radial-gradient(circle at top left, $primary-colour,$secondary-colour);
+      background-image: linear-gradient(white, white),
+        radial-gradient(circle at top left, $primary-colour, $secondary-colour);
       background-origin: border-box;
       background-clip: content-box, border-box;
-      animation: gradient-background 8s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
-    }  
+      animation: gradient-background 8s cubic-bezier(0.645, 0.045, 0.355, 1)
+        infinite;
+    }
   }
 }
 
 // shared image gallery properties on Grid and Destination Single
 .image-gallery {
-  .image-gallery-right-nav, .image-gallery-left-nav {
+  .image-gallery-right-nav,
+  .image-gallery-left-nav {
     height: 100%;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
@@ -91,7 +93,8 @@
   }
 
   &:hover {
-    .image-gallery-right-nav, .image-gallery-left-nav {
+    .image-gallery-right-nav,
+    .image-gallery-left-nav {
       opacity: 1;
     }
   }
@@ -99,25 +102,33 @@
   .image-gallery-bullets {
     .image-gallery-bullet {
       &:hover {
-        border-color: $secondary-colour;;
+        border-color: $secondary-colour;
         background-color: $secondary-colour;
       }
     }
   }
-
 }
 
 @keyframes gradient-background {
-  0%, 100% {
-    background-image: linear-gradient(white, white), radial-gradient(circle at top left, $primary-colour, $secondary-colour);
+  0%,
+  100% {
+    background-image: linear-gradient(white, white),
+      radial-gradient(circle at top left, $primary-colour, $secondary-colour);
   }
   25% {
-    background-image: linear-gradient(white, white), radial-gradient(circle at top right, $primary-colour, $secondary-colour);
+    background-image: linear-gradient(white, white),
+      radial-gradient(circle at top right, $primary-colour, $secondary-colour);
   }
   50% {
-    background-image: linear-gradient(white, white), radial-gradient(circle at bottom right, $primary-colour, $secondary-colour);
+    background-image: linear-gradient(white, white),
+      radial-gradient(
+        circle at bottom right,
+        $primary-colour,
+        $secondary-colour
+      );
   }
   75% {
-    background-image: linear-gradient(white, white), radial-gradient(circle at bottom left, $primary-colour, $secondary-colour);
+    background-image: linear-gradient(white, white),
+      radial-gradient(circle at bottom left, $primary-colour, $secondary-colour);
   }
 }

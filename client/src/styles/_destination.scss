@@ -14,7 +14,7 @@
   @media (min-width: 600px) {
     grid-template-columns: 1fr 1fr;
   }
-  
+
   .destination-image-carousel {
     // border: 1px solid blueviolet;
     overflow: hidden;
@@ -28,11 +28,11 @@
 
       .image-gallery-slides {
         .image-gallery-slide img {
-          overflow: hidden; 
+          overflow: hidden;
           border-radius: 10px 10px 0 0;
           border: 1px solid lightgray;
           // box-shadow: rgba(0, 0, 0, 0.16) 1px 2px 2px;
-          
+
           height: 24rem;
           object-fit: cover;
         }
