@@ -8,7 +8,8 @@
     "continent": "Europe",
     "latitude": 41.29,
     "longitude": 2.16,
-    "description": "Vibrant city with Gaudi\\'s architecture and Mediterranean beaches."
+    "description": "Vibrant city with Gaudi\\'s architecture and Mediterranean beaches.",
+    "slug": "barcelona-spain"
   }
 },
 {
@@ -20,7 +21,8 @@
     "continent": "Europe",
     "latitude": 45.45,
     "longitude": 6.98,
-    "description": "Ski resort in the French Alps with picturesque mountain views."
+    "description": "Ski resort in the French Alps with picturesque mountain views.",
+    "slug": "valdisere-france"
   }
 },
 {
@@ -32,7 +34,8 @@
     "continent": "Europe",
     "latitude": 51.51,
     "longitude": -0.13,
-    "description": "Capital city of England with iconic landmarks and rich history."
+    "description": "Capital city of England with iconic landmarks and rich history.",
+    "slug": "london-england"
   }
 },
 {
@@ -44,7 +47,8 @@
     "continent": "Europe",
     "latitude": 41.89,
     "longitude": 12.51,
-    "description": "Eternal city with ancient ruins and stunning Renaissance art."
+    "description": "Eternal city with ancient ruins and stunning Renaissance art.",
+    "slug": "rome-italy"
   }
 },
 {
@@ -56,7 +60,8 @@
     "continent": "Europe",
     "latitude": 48.14,
     "longitude": 11.58,
-    "description": "German city known for beer gardens and rich cultural heritage."
+    "description": "German city known for beer gardens and rich cultural heritage.",
+    "slug": "munich-germany"
   }
 },
 {
@@ -68,7 +73,8 @@
     "continent": "Europe",
     "latitude": 52.37,
     "longitude": 4.89,
-    "description": "Picturesque city with canals, cycling culture and art museums."
+    "description": "Picturesque city with canals, cycling culture and art museums.",
+    "slug": "amsterdam-netherlands"
   }
 },
 {
@@ -80,7 +86,8 @@
     "continent": "Europe",
     "latitude": 59.33,
     "longitude": 18.07,
-    "description": "Scandinavian city with charming Old Town and modern design."
+    "description": "Scandinavian city with charming Old Town and modern design.",
+    "slug": "stockholm-sweden"
   }
 },
 {
@@ -92,7 +99,8 @@
     "continent": "Europe",
     "latitude": 55.68,
     "longitude": 12.57,
-    "description": "Bicycle-friendly city with colorful waterfront and cozy cafes."
+    "description": "Bicycle-friendly city with colorful waterfront and cozy cafes.",
+    "slug": "copenhagen-denmark"
   }
 },
 {
@@ -104,7 +112,8 @@
     "continent": "Europe",
     "latitude": 48.85,
     "longitude": 2.35,
-    "description": "City of lights with iconic landmarks, art museums, and cuisine."
+    "description": "City of lights with iconic landmarks, art museums, and cuisine.",
+    "slug": "paris-france"
   }
 },
 {
@@ -116,7 +125,8 @@
     "continent": "Europe",
     "latitude": 55.68,
     "longitude": 12.57,
-    "description": "Capital city of Spain with lively nightlife and world-class art."
+    "description": "Capital city of Spain with lively nightlife and world-class art.",
+    "slug": "madrid-spain"
   }
 },
 {
@@ -128,7 +138,8 @@
     "continent": "Europe",
     "latitude": 55.68,
     "longitude": 12.57,
-    "description": "Playground for the rich with glamorous casinos and luxury yachts."
+    "description": "Playground for the rich with glamorous casinos and luxury yachts.",
+    "slug": "monaco-france"
   }
 },
 {
@@ -140,7 +151,8 @@
     "continent": "Europe",
     "latitude": 55.68,
     "longitude": 12.57,
-    "description": "Picturesque city with colourful tiles, charming alleys, and seafood."
+    "description": "Picturesque city with colourful tiles, charming alleys, and seafood.",
+    "slug": "lisbon-portugal"
   }
 },
 {
@@ -152,7 +164,8 @@
     "continent": "Europe",
     "latitude": 55.68,
     "longitude": 12.57,
-    "description": "Swiss city with scenic lake and mountains, and financial district."
+    "description": "Swiss city with scenic lake and mountains, and financial district.",
+    "slug": "zurich-switzerland"
   }
 },
 {
@@ -164,7 +177,8 @@
     "continent": "North America",
     "latitude": 40.71,
     "longitude": -74.01,
-    "description": "City that never sleeps with skyscrapers, Central Park and Broadway."
+    "description": "City that never sleeps with skyscrapers, Central Park and Broadway.",
+    "slug": "newyork-usa"
   }
 },
 {
@@ -176,7 +190,8 @@
     "continent": "North America",
     "latitude": 47.61,
     "longitude": -122.33,
-    "description": "Pacific Northwest city with coffee culture, seafood, and Space Needle."
+    "description": "Pacific Northwest city with coffee culture, seafood, and Space Needle.",
+    "slug": "seattle-usa"
   }
 },
 {
@@ -188,7 +203,8 @@
     "continent": "North America",
     "latitude": 37.77,
     "longitude": -122.42,
-    "description": "City by the bay with Golden Gate Bridge, hills, and tech industry."
+    "description": "City by the bay with Golden Gate Bridge, hills, and tech industry.",
+    "slug": "sanfrancisco-usa"
   }
 },
 {
@@ -200,7 +216,8 @@
     "continent": "South America",
     "latitude": -22.91,
     "longitude": -43.18,
-    "description": "Brazilian city with Copacabana beach, Carnival, and Christ the Redeemer."
+    "description": "Brazilian city with Copacabana beach, Carnival, and Christ the Redeemer.",
+    "slug": "riodajaneiro-brazil"
   }
 },
 {
@@ -212,7 +229,8 @@
     "continent": "South America",
     "latitude": -39.28,
     "longitude": -71.95,
-    "description": "Capital city of Chile with museums, parks, and Andes views."
+    "description": "Capital city of Chile with museums, parks, and Andes views.",
+    "slug": "santiago-chile"
   }
 },
 {
@@ -224,7 +242,8 @@
     "continent": "Asia",
     "latitude": 41.01,
     "longitude": 28.95,
-    "description": "City where Europe meets Asia, with bazaars, mosques, and palaces."
+    "description": "City where Europe meets Asia, with bazaars, mosques, and palaces.",
+    "slug": "istanbul-turkey"
   }
 },
 {
@@ -236,7 +255,8 @@
     "continent": "Europe",
     "latitude": 41.12,
     "longitude": 16.87,
-    "description": "Coastal city in Southern Italy with Old Town and seaside promenade."
+    "description": "Coastal city in Southern Italy with Old Town and seaside promenade.",
+    "slug": "bari-italy"
   }
 },
 {
@@ -248,7 +268,8 @@
     "continent": "Asia",
     "latitude": 50.93,
     "longitude": 0.53,
-    "description": "Metropolis with vibrant nightlife, technology, and traditional culture."
+    "description": "Metropolis with vibrant nightlife, technology, and traditional culture.",
+    "slug": "tokyo-japan"
   }
 },
 {
@@ -260,7 +281,8 @@
     "continent": "Europe",
     "latitude": 45.92,
     "longitude": 6.87,
-    "description": "French Alpine town with Mont Blanc, skiing, and mountaineering."
+    "description": "French Alpine town with Mont Blanc, skiing, and mountaineering.",
+    "slug": "chamonix-france"
   }
 },
 {
@@ -272,7 +294,8 @@
     "continent": "Asia",
     "latitude": 9.94,
     "longitude": 76.26,
-    "description": "Historic city in Kerala, India with backwaters, temples, and spices."
+    "description": "Historic city in Kerala, India with backwaters, temples, and spices.",
+    "slug": "kochi-india"
   }
 },
 {
@@ -284,7 +307,8 @@
     "continent": "Asia",
     "latitude": 13.75,
     "longitude": 100.5,
-    "description": "Thai capital city with street food, temples, and lively nightlife."
+    "description": "Thai capital city with street food, temples, and lively nightlife.",
+    "slug": "bangkok-thailand"
   }
 },
 {
@@ -296,7 +320,8 @@
     "continent": "Europe",
     "latitude": 50.93,
     "longitude": 14.42,
-    "description": "City of a hundred spires with Gothic architecture and beer culture."
+    "description": "City of a hundred spires with Gothic architecture and beer culture.",
+    "slug": "prague-czech"
   }
 },
 {
@@ -308,7 +333,8 @@
     "continent": "Europe",
     "latitude": 43.78,
     "longitude": 11.25,
-    "description": "City of Renaissance art with Duomo, museums, and Tuscan cuisine."
+    "description": "City of Renaissance art with Duomo, museums, and Tuscan cuisine.",
+    "slug": "florence-italy"
   }
 },
 {
@@ -320,7 +346,8 @@
     "continent": "Europe",
     "latitude": 45.44,
     "longitude": 12.33,
-    "description": "City of canals with gondolas, palaces, and Italian cuisine."
+    "description": "City of canals with gondolas, palaces, and Italian cuisine.",
+    "slug": "venice-italy"
   }
 },
 {
@@ -332,7 +359,8 @@
     "continent": "Europe",
     "latitude": 52.52,
     "longitude": 13.41,
-    "description": "German capital city with history, culture, and vibrant nightlife."
+    "description": "German capital city with history, culture, and vibrant nightlife.",
+    "slug": "berlin-germany"
   }
 },
 {
@@ -344,7 +372,8 @@
     "continent": "Europe",
     "latitude": 37.98,
     "longitude": 23.73,
-    "description": "Ancient city with iconic landmarks and Mediterranean charm."
+    "description": "Ancient city with iconic landmarks and Mediterranean charm.",
+    "slug": "athens-greece"
   }
 },
 {
@@ -356,7 +385,8 @@
     "continent": "Europe",
     "latitude": 59.91,
     "longitude": 10.75,
-    "description": "Scenic waterfront city with a rich cultural scene."
+    "description": "Scenic waterfront city with a rich cultural scene.",
+    "slug": "oslo-norway"
   }
 },
 {
@@ -368,7 +398,8 @@
     "continent": "Europe",
     "latitude": 60.32,
     "longitude": 24.96,
-    "description": "Design-centric city with a lively atmosphere and island charm."
+    "description": "Design-centric city with a lively atmosphere and island charm.",
+    "slug": "helsinki-finland"
   }
 },
 {
@@ -380,7 +411,8 @@
     "continent": "Europe",
     "latitude": 50.45,
     "longitude": 30.52,
-    "description": "City of golden domes and historic landmarks in Eastern Europe."
+    "description": "City of golden domes and historic landmarks in Eastern Europe.",
+    "slug": "kyiv-ukraine"
   }
 },
 {
@@ -392,7 +424,8 @@
     "continent": "Europe",
     "latitude": 44.43,
     "longitude": 26.11,
-    "description": "The Paris of the East with vibrant nightlife and cultural heritage."
+    "description": "The Paris of the East with vibrant nightlife and cultural heritage.",
+    "slug": "bucharest-romania"
   }
 },
 {
@@ -404,7 +437,8 @@
     "continent": "Europe",
     "latitude": 47.5,
     "longitude": 19.04,
-    "description": "Picturesque city with grand architecture and thermal baths."
+    "description": "Picturesque city with grand architecture and thermal baths.",
+    "slug": "budapest-hungary"
   }
 },
 {
@@ -416,7 +450,8 @@
     "continent": "Africa",
     "latitude": 36.82,
     "longitude": 10.17,
-    "description": "North African city with ancient ruins and coastal charm."
+    "description": "North African city with ancient ruins and coastal charm.",
+    "slug": "tunis-tunisia"
   }
 },
 {
@@ -428,7 +463,8 @@
     "continent": "Africa",
     "latitude": 31.63,
     "longitude": -8.0,
-    "description": "Moroccan city with vibrant souks and historic palaces."
+    "description": "Moroccan city with vibrant souks and historic palaces.",
+    "slug": "marrakesh-morocco"
   }
 },
 {
@@ -440,7 +476,8 @@
     "continent": "Africa",
     "latitude": -33.93,
     "longitude": 18.42,
-    "description": "South African coastal city with stunning views and rich history."
+    "description": "South African coastal city with stunning views and rich history.",
+    "slug": "capetown-southafrica"
   }
 },
 {
@@ -452,7 +489,8 @@
     "continent": "Africa",
     "latitude": -20.16,
     "longitude": 57.5,
-    "description": "Mauritian capital with colonial architecture and tropical vibes."
+    "description": "Mauritian capital with colonial architecture and tropical vibes.",
+    "slug": "portlouis-mauritius"
   }
 },
 {
@@ -464,7 +502,8 @@
     "continent": "Africa",
     "latitude": 30.06,
     "longitude": 31.25,
-    "description": "City of ancient pyramids and bustling markets in North Africa."
+    "description": "City of ancient pyramids and bustling markets in North Africa.",
+    "slug": "cairo-egypt"
   }
 },
 {
@@ -476,7 +515,8 @@
     "continent": "Asia",
     "latitude": 25.08,
     "longitude": 55.31,
-    "description": "Modern metropolis with towering skyscrapers and luxury shopping."
+    "description": "Modern metropolis with towering skyscrapers and luxury shopping.",
+    "slug": "dubai-uae"
   }
 },
 {
@@ -488,7 +528,8 @@
     "continent": "Asia",
     "latitude": 28.64,
     "longitude": 77.22,
-    "description": "Capital city of India with iconic landmarks and rich culture."
+    "description": "Capital city of India with iconic landmarks and rich culture.",
+    "slug": "newdelhi-india"
   }
 },
 {
@@ -500,7 +541,8 @@
     "continent": "Asia",
     "latitude": 15.47,
     "longitude": 73.9,
-    "description": "Indian state with sandy beaches and historic Portuguese architecture."
+    "description": "Indian state with sandy beaches and historic Portuguese architecture.",
+    "slug": "goa-india"
   }
 },
 {
@@ -512,7 +554,8 @@
     "continent": "Asia",
     "latitude": 27.7,
     "longitude": 85.32,
-    "description": "Nepalese city with ancient temples and Himalayan views."
+    "description": "Nepalese city with ancient temples and Himalayan views.",
+    "slug": "kathmandu-nepal"
   }
 },
 {
@@ -524,7 +567,8 @@
     "continent": "Asia",
     "latitude": 7.89,
     "longitude": 98.4,
-    "description": "Thai island with stunning beaches and vibrant nightlife."
+    "description": "Thai island with stunning beaches and vibrant nightlife.",
+    "slug": "phuket-thailand"
   }
 },
 {
@@ -536,7 +580,8 @@
     "continent": "Asia",
     "latitude": 7.74,
     "longitude": 98.77,
-    "description": "Island paradise in Thailand with crystal-clear waters and natural beauty."
+    "description": "Island paradise in Thailand with crystal-clear waters and natural beauty.",
+    "slug": "kophiphi-thailand"
   }
 },
 {
@@ -548,7 +593,8 @@
     "continent": "Asia",
     "latitude": 20.95,
     "longitude": 107.07,
-    "description": "Vietnamese bay with towering limestone cliffs and peaceful waters."
+    "description": "Vietnamese bay with towering limestone cliffs and peaceful waters.",
+    "slug": "halongbay-vietnam"
   }
 },
 {
@@ -560,7 +606,8 @@
     "continent": "Asia",
     "latitude": 21.02,
     "longitude": 105.84,
-    "description": "Vietnamese city with historic landmarks and delicious cuisine."
+    "description": "Vietnamese city with historic landmarks and delicious cuisine.",
+    "slug": "hanoi-vietnam"
   }
 },
 {
@@ -572,7 +619,8 @@
     "continent": "Asia",
     "latitude": 3.14,
     "longitude": 101.69,
-    "description": "Malaysian capital with modern architecture and vibrant street food."
+    "description": "Malaysian capital with modern architecture and vibrant street food.",
+    "slug": "kualalumpar-malaysia"
   }
 },
 {
@@ -584,7 +632,8 @@
     "continent": "Asia",
     "latitude": 5.37,
     "longitude": 100.25,
-    "description": "Malaysian island with colonial heritage and street art."
+    "description": "Malaysian island with colonial heritage and street art.",
+    "slug": "penang-malaysia"
   }
 }
 ]
