@@ -173,12 +173,12 @@
   "pk": 14,
   "fields": {
     "name": "New York",
-    "country": "United States of America",
+    "country": "USA",
     "continent": "North America",
     "latitude": 40.71,
     "longitude": -74.01,
     "description": "City that never sleeps with skyscrapers, Central Park and Broadway.",
-    "slug": "newyork-usa"
+    "slug": "new-york-usa"
   }
 },
 {
@@ -186,7 +186,7 @@
   "pk": 15,
   "fields": {
     "name": "Seattle",
-    "country": "United States of America",
+    "country": "USA",
     "continent": "North America",
     "latitude": 47.61,
     "longitude": -122.33,
@@ -199,12 +199,12 @@
   "pk": 16,
   "fields": {
     "name": "San Francisco",
-    "country": "United States of America",
+    "country": "USA",
     "continent": "North America",
     "latitude": 37.77,
     "longitude": -122.42,
     "description": "City by the bay with Golden Gate Bridge, hills, and tech industry.",
-    "slug": "sanfrancisco-usa"
+    "slug": "san-francisco-usa"
   }
 },
 {
@@ -994,6 +994,294 @@
     "destination": 34,
     "is_primary": false,
     "image_parameter": "7jW0_pYGqSA"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 41,
+  "fields": {
+    "destination": 4,
+    "is_primary": true,
+    "image_parameter": "haLyuhP6oLE"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 42,
+  "fields": {
+    "destination": 4,
+    "is_primary": false,
+    "image_parameter": "2y6ojwauKJI"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 43,
+  "fields": {
+    "destination": 4,
+    "is_primary": false,
+    "image_parameter": "0Bs3et8FYyg"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 44,
+  "fields": {
+    "destination": 4,
+    "is_primary": false,
+    "image_parameter": "4UT-CDeMgsE"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 45,
+  "fields": {
+    "destination": 10,
+    "is_primary": true,
+    "image_parameter": "VIzeB9tB-J0"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 46,
+  "fields": {
+    "destination": 10,
+    "is_primary": false,
+    "image_parameter": "FFII0f9K5wU"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 47,
+  "fields": {
+    "destination": 10,
+    "is_primary": false,
+    "image_parameter": "OJl4GuVwqvM"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 48,
+  "fields": {
+    "destination": 10,
+    "is_primary": false,
+    "image_parameter": "ChSZETOal-I"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 49,
+  "fields": {
+    "destination": 11,
+    "is_primary": true,
+    "image_parameter": "HQYA_WugkGg"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 50,
+  "fields": {
+    "destination": 11,
+    "is_primary": false,
+    "image_parameter": "Yezks4AuJy4"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 51,
+  "fields": {
+    "destination": 11,
+    "is_primary": false,
+    "image_parameter": "QvEULJG78U8"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 52,
+  "fields": {
+    "destination": 11,
+    "is_primary": false,
+    "image_parameter": "fXT8N2wQ_Y4"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 53,
+  "fields": {
+    "destination": 14,
+    "is_primary": true,
+    "image_parameter": "5omwAMDxmkU"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 54,
+  "fields": {
+    "destination": 14,
+    "is_primary": false,
+    "image_parameter": "l8ypMiU1Hio"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 55,
+  "fields": {
+    "destination": 14,
+    "is_primary": false,
+    "image_parameter": "A2CChTZvzTE"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 56,
+  "fields": {
+    "destination": 14,
+    "is_primary": false,
+    "image_parameter": "PeFk7fzxTdk"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 57,
+  "fields": {
+    "destination": 15,
+    "is_primary": true,
+    "image_parameter": "skUTVJi8-jc"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 58,
+  "fields": {
+    "destination": 15,
+    "is_primary": false,
+    "image_parameter": "tfVi8OAsVLU"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 59,
+  "fields": {
+    "destination": 15,
+    "is_primary": false,
+    "image_parameter": "E7cnqNDSToA"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 60,
+  "fields": {
+    "destination": 15,
+    "is_primary": false,
+    "image_parameter": "NAXwZWYVJPQ"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 61,
+  "fields": {
+    "destination": 16,
+    "is_primary": true,
+    "image_parameter": "Plt0vHDRb9U"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 62,
+  "fields": {
+    "destination": 16,
+    "is_primary": false,
+    "image_parameter": "IWXxaPTzsyM"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 63,
+  "fields": {
+    "destination": 16,
+    "is_primary": false,
+    "image_parameter": "hOBdmv_9dwM"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 64,
+  "fields": {
+    "destination": 16,
+    "is_primary": false,
+    "image_parameter": "3hslPaZKqUM"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 65,
+  "fields": {
+    "destination": 22,
+    "is_primary": true,
+    "image_parameter": "QFFgKQVh3cE"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 66,
+  "fields": {
+    "destination": 22,
+    "is_primary": false,
+    "image_parameter": "mS-xJHSjR54"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 67,
+  "fields": {
+    "destination": 22,
+    "is_primary": false,
+    "image_parameter": "SJnI6him8gY"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 68,
+  "fields": {
+    "destination": 22,
+    "is_primary": false,
+    "image_parameter": "OmIMYsumWJQ"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 69,
+  "fields": {
+    "destination": 29,
+    "is_primary": true,
+    "image_parameter": "yqBvJJ8jGBQ"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 70,
+  "fields": {
+    "destination": 29,
+    "is_primary": false,
+    "image_parameter": "ilQmlVIMN4c"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 71,
+  "fields": {
+    "destination": 29,
+    "is_primary": false,
+    "image_parameter": "IvCKp7SHhxI"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 72,
+  "fields": {
+    "destination": 29,
+    "is_primary": false,
+    "image_parameter": "L0l7gVS-TC0"
   }
 }
 ]
