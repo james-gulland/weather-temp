@@ -635,5 +635,185 @@
     "description": "Malaysian island with colonial heritage and street art.",
     "slug": "penang-malaysia"
   }
+},
+{
+  "model": "destinations.image",
+  "pk": 1,
+  "fields": {
+    "destination": 1,
+    "is_primary": true,
+    "image_parameter": "WBGjg0DsO_g"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 2,
+  "fields": {
+    "destination": 1,
+    "is_primary": false,
+    "image_parameter": "qJQsKl09KHo"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 3,
+  "fields": {
+    "destination": 1,
+    "is_primary": false,
+    "image_parameter": "qiH16d5SRxg"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 4,
+  "fields": {
+    "destination": 1,
+    "is_primary": false,
+    "image_parameter": "Z95viY3WaZs"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 5,
+  "fields": {
+    "destination": 3,
+    "is_primary": true,
+    "image_parameter": "Oja2ty_9ZLM"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 6,
+  "fields": {
+    "destination": 3,
+    "is_primary": false,
+    "image_parameter": "Q6UehpkBSnQ"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 7,
+  "fields": {
+    "destination": 3,
+    "is_primary": false,
+    "image_parameter": "7iNteV_zTRU"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 8,
+  "fields": {
+    "destination": 3,
+    "is_primary": false,
+    "image_parameter": "o6ICDlt5_2k"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 9,
+  "fields": {
+    "destination": 12,
+    "is_primary": true,
+    "image_parameter": "Ss3FBqiWwP4"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 10,
+  "fields": {
+    "destination": 12,
+    "is_primary": false,
+    "image_parameter": "gOLCAOuc7iA"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 11,
+  "fields": {
+    "destination": 12,
+    "is_primary": false,
+    "image_parameter": "2N0PVuB0byQ"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 12,
+  "fields": {
+    "destination": 12,
+    "is_primary": false,
+    "image_parameter": "CVZ0y7APRtU"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 13,
+  "fields": {
+    "destination": 13,
+    "is_primary": true,
+    "image_parameter": "6p-I-X-sPUY"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 14,
+  "fields": {
+    "destination": 13,
+    "is_primary": false,
+    "image_parameter": "a-street-corner-with-tables-and-umbrellas-in-front-of-buildings-IfTI7NmyuMw"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 15,
+  "fields": {
+    "destination": 13,
+    "is_primary": false,
+    "image_parameter": "6v-K4PpCHVw"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 16,
+  "fields": {
+    "destination": 13,
+    "is_primary": false,
+    "image_parameter": "wDffI5dtwUc"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 17,
+  "fields": {
+    "destination": 18,
+    "is_primary": true,
+    "image_parameter": "Y9Wp5keJsn8"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 18,
+  "fields": {
+    "destination": 18,
+    "is_primary": false,
+    "image_parameter": "x71MHPaMCv8"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 19,
+  "fields": {
+    "destination": 18,
+    "is_primary": false,
+    "image_parameter": "IMtEliM53Lc"
+  }
+},
+{
+  "model": "destinations.image",
+  "pk": 20,
+  "fields": {
+    "destination": 18,
+    "is_primary": false,
+    "image_parameter": "LNfG0UYn5jg"
+  }
 }
 ]
