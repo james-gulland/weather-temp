@@ -6,8 +6,8 @@ interface Props {
   setTempUnit: React.Dispatch<React.SetStateAction<'C' | 'F'>>
 }
 
-const Nav: React.FC<Props> = ({ tempUnit, setTempUnit }) => {
-  return (
+const Nav: React.FC<Props> = ({ tempUnit, setTempUnit }) => { 
+return (
     <div className="nav-container">
       <div className="nav-logo">
         <Link to="/">OnlySun</Link>
